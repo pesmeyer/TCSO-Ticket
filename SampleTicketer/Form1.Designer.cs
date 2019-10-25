@@ -33,14 +33,13 @@
             this.label3 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.btnStatistics = new System.Windows.Forms.Button();
-            this.btnCompletedTickets = new System.Windows.Forms.Button();
+            this.btnLookupTickets = new System.Windows.Forms.Button();
             this.btnMyTicket = new System.Windows.Forms.Button();
             this.btnNewTicket = new System.Windows.Forms.Button();
             this.btnOverview = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.lblHello = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.SuspendLayout();
@@ -52,7 +51,7 @@
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.btnStatistics);
-            this.panel1.Controls.Add(this.btnCompletedTickets);
+            this.panel1.Controls.Add(this.btnLookupTickets);
             this.panel1.Controls.Add(this.btnMyTicket);
             this.panel1.Controls.Add(this.btnNewTicket);
             this.panel1.Controls.Add(this.btnOverview);
@@ -108,17 +107,17 @@
             this.btnStatistics.Text = "Statistics";
             this.btnStatistics.UseVisualStyleBackColor = true;
             // 
-            // btnCompletedTickets
+            // btnLookupTickets
             // 
-            this.btnCompletedTickets.FlatAppearance.BorderSize = 0;
-            this.btnCompletedTickets.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCompletedTickets.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnCompletedTickets.Location = new System.Drawing.Point(0, 254);
-            this.btnCompletedTickets.Name = "btnCompletedTickets";
-            this.btnCompletedTickets.Size = new System.Drawing.Size(201, 54);
-            this.btnCompletedTickets.TabIndex = 4;
-            this.btnCompletedTickets.Text = "Completed Tickets";
-            this.btnCompletedTickets.UseVisualStyleBackColor = true;
+            this.btnLookupTickets.FlatAppearance.BorderSize = 0;
+            this.btnLookupTickets.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLookupTickets.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnLookupTickets.Location = new System.Drawing.Point(0, 254);
+            this.btnLookupTickets.Name = "btnLookupTickets";
+            this.btnLookupTickets.Size = new System.Drawing.Size(201, 54);
+            this.btnLookupTickets.TabIndex = 4;
+            this.btnLookupTickets.Text = "Lookup Tickets";
+            this.btnLookupTickets.UseVisualStyleBackColor = true;
             // 
             // btnMyTicket
             // 
@@ -185,23 +184,11 @@
             this.panel2.Size = new System.Drawing.Size(773, 251);
             this.panel2.TabIndex = 1;
             // 
-            // lblHello
-            // 
-            this.lblHello.AutoSize = true;
-            this.lblHello.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblHello.Location = new System.Drawing.Point(220, 18);
-            this.lblHello.Name = "lblHello";
-            this.lblHello.Size = new System.Drawing.Size(55, 23);
-            this.lblHello.TabIndex = 4;
-            this.lblHello.Text = "Hello, ";
-            this.lblHello.Click += new System.EventHandler(this.lblHello_Click);
-            // 
             // Form1
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.SystemColors.GrayText;
             this.ClientSize = new System.Drawing.Size(974, 562);
-            this.Controls.Add(this.lblHello);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Gill Sans MT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -212,7 +199,6 @@
             this.panel1.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -220,7 +206,7 @@
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnStatistics;
-        private System.Windows.Forms.Button btnCompletedTickets;
+        private System.Windows.Forms.Button btnLookupTickets;
         private System.Windows.Forms.Button btnMyTicket;
         private System.Windows.Forms.Button btnNewTicket;
         private System.Windows.Forms.Button btnOverview;
@@ -230,7 +216,6 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button btnSupport;
-        private System.Windows.Forms.Label lblHello;
     }
 }
 
