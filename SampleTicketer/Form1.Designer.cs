@@ -31,7 +31,6 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnSupport = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
             this.btnStatistics = new System.Windows.Forms.Button();
             this.btnLookupTickets = new System.Windows.Forms.Button();
             this.btnMyTicket = new System.Windows.Forms.Button();
@@ -49,7 +48,6 @@
             this.panel1.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.panel1.Controls.Add(this.btnSupport);
             this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.btnStatistics);
             this.panel1.Controls.Add(this.btnLookupTickets);
             this.panel1.Controls.Add(this.btnMyTicket);
@@ -67,7 +65,7 @@
             this.btnSupport.FlatAppearance.BorderSize = 0;
             this.btnSupport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSupport.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnSupport.Location = new System.Drawing.Point(0, 417);
+            this.btnSupport.Location = new System.Drawing.Point(0, 369);
             this.btnSupport.Name = "btnSupport";
             this.btnSupport.Size = new System.Drawing.Size(201, 54);
             this.btnSupport.TabIndex = 7;
@@ -83,24 +81,12 @@
             this.label3.TabIndex = 1;
             this.label3.Text = "Version 0.0.1";
             // 
-            // button1
-            // 
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button1.Location = new System.Drawing.Point(0, 308);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(201, 54);
-            this.button1.TabIndex = 5;
-            this.button1.Text = "Purchase Requests";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
             // btnStatistics
             // 
             this.btnStatistics.FlatAppearance.BorderSize = 0;
             this.btnStatistics.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnStatistics.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnStatistics.Location = new System.Drawing.Point(0, 363);
+            this.btnStatistics.Location = new System.Drawing.Point(0, 315);
             this.btnStatistics.Name = "btnStatistics";
             this.btnStatistics.Size = new System.Drawing.Size(201, 54);
             this.btnStatistics.TabIndex = 6;
@@ -112,7 +98,7 @@
             this.btnLookupTickets.FlatAppearance.BorderSize = 0;
             this.btnLookupTickets.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLookupTickets.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnLookupTickets.Location = new System.Drawing.Point(0, 254);
+            this.btnLookupTickets.Location = new System.Drawing.Point(0, 261);
             this.btnLookupTickets.Name = "btnLookupTickets";
             this.btnLookupTickets.Size = new System.Drawing.Size(201, 54);
             this.btnLookupTickets.TabIndex = 4;
@@ -124,7 +110,7 @@
             this.btnMyTicket.FlatAppearance.BorderSize = 0;
             this.btnMyTicket.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMyTicket.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnMyTicket.Location = new System.Drawing.Point(0, 206);
+            this.btnMyTicket.Location = new System.Drawing.Point(0, 207);
             this.btnMyTicket.Name = "btnMyTicket";
             this.btnMyTicket.Size = new System.Drawing.Size(201, 54);
             this.btnMyTicket.TabIndex = 3;
@@ -214,7 +200,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button btnSupport;
     }
 }
