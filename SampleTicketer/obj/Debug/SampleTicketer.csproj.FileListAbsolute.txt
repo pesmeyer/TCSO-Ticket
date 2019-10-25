@@ -7,3 +7,12 @@ C:\Users\pesmeyer\source\repos\SampleTicketer\SampleTicketer\obj\Debug\SampleTic
 C:\Users\pesmeyer\source\repos\SampleTicketer\SampleTicketer\obj\Debug\SampleTicketer.exe
 C:\Users\pesmeyer\source\repos\SampleTicketer\SampleTicketer\obj\Debug\SampleTicketer.pdb
 C:\Users\pesmeyer\source\repos\SampleTicketer\SampleTicketer\obj\Debug\SampleTicketer.Form1.resources
+G:\Ticket Project\TCSO-Ticket\SampleTicketer\bin\Debug\SampleTicketer.exe.config
+G:\Ticket Project\TCSO-Ticket\SampleTicketer\bin\Debug\SampleTicketer.exe
+G:\Ticket Project\TCSO-Ticket\SampleTicketer\bin\Debug\SampleTicketer.pdb
+G:\Ticket Project\TCSO-Ticket\SampleTicketer\obj\Debug\SampleTicketer.csprojAssemblyReference.cache
+G:\Ticket Project\TCSO-Ticket\SampleTicketer\obj\Debug\SampleTicketer.Form1.resources
+G:\Ticket Project\TCSO-Ticket\SampleTicketer\obj\Debug\SampleTicketer.Properties.Resources.resources
+G:\Ticket Project\TCSO-Ticket\SampleTicketer\obj\Debug\SampleTicketer.csproj.GenerateResource.cache
+G:\Ticket Project\TCSO-Ticket\SampleTicketer\obj\Debug\SampleTicketer.exe
+G:\Ticket Project\TCSO-Ticket\SampleTicketer\obj\Debug\SampleTicketer.pdb
