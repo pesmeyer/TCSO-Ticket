@@ -194,6 +194,7 @@
             this.lblHello.Size = new System.Drawing.Size(55, 23);
             this.lblHello.TabIndex = 4;
             this.lblHello.Text = "Hello, ";
+            this.lblHello.Click += new System.EventHandler(this.lblHello_Click);
             // 
             // Form1
             // 
