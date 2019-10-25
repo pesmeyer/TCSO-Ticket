@@ -1,0 +1,9 @@
+C:\Users\pesmeyer\source\repos\SampleTicketer\SampleTicketer\bin\Debug\SampleTicketer.exe.config
+C:\Users\pesmeyer\source\repos\SampleTicketer\SampleTicketer\bin\Debug\SampleTicketer.exe
+C:\Users\pesmeyer\source\repos\SampleTicketer\SampleTicketer\bin\Debug\SampleTicketer.pdb
+C:\Users\pesmeyer\source\repos\SampleTicketer\SampleTicketer\obj\Debug\SampleTicketer.csprojAssemblyReference.cache
+C:\Users\pesmeyer\source\repos\SampleTicketer\SampleTicketer\obj\Debug\SampleTicketer.Properties.Resources.resources
+C:\Users\pesmeyer\source\repos\SampleTicketer\SampleTicketer\obj\Debug\SampleTicketer.csproj.GenerateResource.cache
+C:\Users\pesmeyer\source\repos\SampleTicketer\SampleTicketer\obj\Debug\SampleTicketer.exe
+C:\Users\pesmeyer\source\repos\SampleTicketer\SampleTicketer\obj\Debug\SampleTicketer.pdb
+C:\Users\pesmeyer\source\repos\SampleTicketer\SampleTicketer\obj\Debug\SampleTicketer.Form1.resources
