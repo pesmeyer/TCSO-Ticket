@@ -38,12 +38,14 @@
             this.btnLookupTickets = new System.Windows.Forms.Button();
             this.btnStatistics = new System.Windows.Forms.Button();
             this.btnSupport = new System.Windows.Forms.Button();
+            this.lblDueDate = new System.Windows.Forms.Label();
+            this.dtpDueDate = new System.Windows.Forms.DateTimePicker();
             this.lblDateCreated = new System.Windows.Forms.Label();
             this.btnSubmit = new System.Windows.Forms.Button();
             this.lblDescription = new System.Windows.Forms.Label();
             this.txtDescription = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dtpDateCreated = new System.Windows.Forms.DateTimePicker();
             this.lblPhoneNumber = new System.Windows.Forms.Label();
             this.txtPhoneNumber = new System.Windows.Forms.TextBox();
             this.lblEmail = new System.Windows.Forms.Label();
@@ -52,6 +54,8 @@
             this.txtLastName = new System.Windows.Forms.TextBox();
             this.lblFirstName = new System.Windows.Forms.Label();
             this.txtFirstName = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.lbPersonAssigned = new System.Windows.Forms.ListBox();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -69,17 +73,22 @@
             // 
             // splitContainer1.Panel1
             // 
+            this.splitContainer1.Panel1.BackColor = System.Drawing.SystemColors.WindowFrame;
             this.splitContainer1.Panel1.Controls.Add(this.panel1);
             this.splitContainer1.Panel1.Controls.Add(this.flowLayoutPanel1);
             // 
             // splitContainer1.Panel2
             // 
+            this.splitContainer1.Panel2.Controls.Add(this.lbPersonAssigned);
+            this.splitContainer1.Panel2.Controls.Add(this.label2);
+            this.splitContainer1.Panel2.Controls.Add(this.lblDueDate);
+            this.splitContainer1.Panel2.Controls.Add(this.dtpDueDate);
             this.splitContainer1.Panel2.Controls.Add(this.lblDateCreated);
             this.splitContainer1.Panel2.Controls.Add(this.btnSubmit);
             this.splitContainer1.Panel2.Controls.Add(this.lblDescription);
             this.splitContainer1.Panel2.Controls.Add(this.txtDescription);
             this.splitContainer1.Panel2.Controls.Add(this.label6);
-            this.splitContainer1.Panel2.Controls.Add(this.dateTimePicker1);
+            this.splitContainer1.Panel2.Controls.Add(this.dtpDateCreated);
             this.splitContainer1.Panel2.Controls.Add(this.lblPhoneNumber);
             this.splitContainer1.Panel2.Controls.Add(this.txtPhoneNumber);
             this.splitContainer1.Panel2.Controls.Add(this.lblEmail);
@@ -88,7 +97,7 @@
             this.splitContainer1.Panel2.Controls.Add(this.txtLastName);
             this.splitContainer1.Panel2.Controls.Add(this.lblFirstName);
             this.splitContainer1.Panel2.Controls.Add(this.txtFirstName);
-            this.splitContainer1.Size = new System.Drawing.Size(1149, 644);
+            this.splitContainer1.Size = new System.Drawing.Size(1149, 676);
             this.splitContainer1.SplitterDistance = 200;
             this.splitContainer1.TabIndex = 0;
             // 
@@ -206,12 +215,34 @@
             this.btnSupport.Text = "Support";
             this.btnSupport.UseVisualStyleBackColor = true;
             // 
+            // lblDueDate
+            // 
+            this.lblDueDate.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lblDueDate.AutoSize = true;
+            this.lblDueDate.Font = new System.Drawing.Font("Gill Sans MT", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDueDate.ForeColor = System.Drawing.SystemColors.Window;
+            this.lblDueDate.Location = new System.Drawing.Point(549, 166);
+            this.lblDueDate.Name = "lblDueDate";
+            this.lblDueDate.Size = new System.Drawing.Size(87, 27);
+            this.lblDueDate.TabIndex = 30;
+            this.lblDueDate.Text = "Due Date";
+            // 
+            // dtpDueDate
+            // 
+            this.dtpDueDate.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.dtpDueDate.CalendarMonthBackground = System.Drawing.SystemColors.ControlDark;
+            this.dtpDueDate.Location = new System.Drawing.Point(672, 166);
+            this.dtpDueDate.Name = "dtpDueDate";
+            this.dtpDueDate.Size = new System.Drawing.Size(246, 26);
+            this.dtpDueDate.TabIndex = 29;
+            // 
             // lblDateCreated
             // 
+            this.lblDateCreated.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblDateCreated.AutoSize = true;
             this.lblDateCreated.Font = new System.Drawing.Font("Gill Sans MT", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDateCreated.ForeColor = System.Drawing.SystemColors.Window;
-            this.lblDateCreated.Location = new System.Drawing.Point(545, 88);
+            this.lblDateCreated.Location = new System.Drawing.Point(549, 88);
             this.lblDateCreated.Name = "lblDateCreated";
             this.lblDateCreated.Size = new System.Drawing.Size(117, 27);
             this.lblDateCreated.TabIndex = 28;
@@ -219,23 +250,26 @@
             // 
             // btnSubmit
             // 
+            this.btnSubmit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnSubmit.BackColor = System.Drawing.SystemColors.ControlDark;
             this.btnSubmit.FlatAppearance.BorderSize = 0;
             this.btnSubmit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSubmit.Font = new System.Drawing.Font("Gill Sans MT", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSubmit.Location = new System.Drawing.Point(819, 591);
+            this.btnSubmit.Location = new System.Drawing.Point(823, 617);
             this.btnSubmit.Name = "btnSubmit";
             this.btnSubmit.Size = new System.Drawing.Size(95, 36);
             this.btnSubmit.TabIndex = 27;
             this.btnSubmit.Text = "Submit";
             this.btnSubmit.UseVisualStyleBackColor = false;
+            this.btnSubmit.Click += new System.EventHandler(this.btnSubmit_Click);
             // 
             // lblDescription
             // 
+            this.lblDescription.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblDescription.AutoSize = true;
             this.lblDescription.Font = new System.Drawing.Font("Gill Sans MT", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDescription.ForeColor = System.Drawing.SystemColors.Window;
-            this.lblDescription.Location = new System.Drawing.Point(31, 384);
+            this.lblDescription.Location = new System.Drawing.Point(26, 384);
             this.lblDescription.Name = "lblDescription";
             this.lblDescription.Size = new System.Drawing.Size(102, 27);
             this.lblDescription.TabIndex = 26;
@@ -243,41 +277,45 @@
             // 
             // txtDescription
             // 
+            this.txtDescription.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.txtDescription.BackColor = System.Drawing.SystemColors.ControlDark;
             this.txtDescription.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtDescription.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.txtDescription.Location = new System.Drawing.Point(36, 414);
+            this.txtDescription.Location = new System.Drawing.Point(31, 414);
             this.txtDescription.MaxLength = 500;
             this.txtDescription.Multiline = true;
             this.txtDescription.Name = "txtDescription";
-            this.txtDescription.Size = new System.Drawing.Size(878, 171);
+            this.txtDescription.Size = new System.Drawing.Size(887, 171);
             this.txtDescription.TabIndex = 25;
             // 
             // label6
             // 
+            this.label6.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Gill Sans MT", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.SystemColors.Window;
-            this.label6.Location = new System.Drawing.Point(414, 18);
+            this.label6.Location = new System.Drawing.Point(410, 18);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(132, 34);
             this.label6.TabIndex = 24;
             this.label6.Text = "New Ticket";
             // 
-            // dateTimePicker1
+            // dtpDateCreated
             // 
-            this.dateTimePicker1.CalendarMonthBackground = System.Drawing.SystemColors.ControlDark;
-            this.dateTimePicker1.Location = new System.Drawing.Point(668, 88);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(246, 26);
-            this.dateTimePicker1.TabIndex = 23;
+            this.dtpDateCreated.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.dtpDateCreated.CalendarMonthBackground = System.Drawing.SystemColors.ControlDark;
+            this.dtpDateCreated.Location = new System.Drawing.Point(672, 88);
+            this.dtpDateCreated.Name = "dtpDateCreated";
+            this.dtpDateCreated.Size = new System.Drawing.Size(246, 26);
+            this.dtpDateCreated.TabIndex = 23;
             // 
             // lblPhoneNumber
             // 
+            this.lblPhoneNumber.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblPhoneNumber.AutoSize = true;
             this.lblPhoneNumber.Font = new System.Drawing.Font("Gill Sans MT", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPhoneNumber.ForeColor = System.Drawing.SystemColors.Window;
-            this.lblPhoneNumber.Location = new System.Drawing.Point(31, 334);
+            this.lblPhoneNumber.Location = new System.Drawing.Point(26, 334);
             this.lblPhoneNumber.Name = "lblPhoneNumber";
             this.lblPhoneNumber.Size = new System.Drawing.Size(77, 27);
             this.lblPhoneNumber.TabIndex = 22;
@@ -285,20 +323,23 @@
             // 
             // txtPhoneNumber
             // 
+            this.txtPhoneNumber.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtPhoneNumber.BackColor = System.Drawing.SystemColors.ControlDark;
             this.txtPhoneNumber.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtPhoneNumber.Font = new System.Drawing.Font("Gill Sans MT", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPhoneNumber.Location = new System.Drawing.Point(126, 334);
+            this.txtPhoneNumber.ForeColor = System.Drawing.SystemColors.Window;
+            this.txtPhoneNumber.Location = new System.Drawing.Point(130, 334);
             this.txtPhoneNumber.Name = "txtPhoneNumber";
             this.txtPhoneNumber.Size = new System.Drawing.Size(174, 23);
             this.txtPhoneNumber.TabIndex = 21;
             // 
             // lblEmail
             // 
+            this.lblEmail.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblEmail.AutoSize = true;
             this.lblEmail.Font = new System.Drawing.Font("Gill Sans MT", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEmail.ForeColor = System.Drawing.SystemColors.Window;
-            this.lblEmail.Location = new System.Drawing.Point(31, 252);
+            this.lblEmail.Location = new System.Drawing.Point(26, 252);
             this.lblEmail.Name = "lblEmail";
             this.lblEmail.Size = new System.Drawing.Size(53, 27);
             this.lblEmail.TabIndex = 20;
@@ -306,20 +347,23 @@
             // 
             // txtEmail
             // 
+            this.txtEmail.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtEmail.BackColor = System.Drawing.SystemColors.ControlDark;
             this.txtEmail.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtEmail.Font = new System.Drawing.Font("Gill Sans MT", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEmail.Location = new System.Drawing.Point(126, 252);
+            this.txtEmail.ForeColor = System.Drawing.SystemColors.Window;
+            this.txtEmail.Location = new System.Drawing.Point(130, 252);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(174, 23);
             this.txtEmail.TabIndex = 19;
             // 
             // lblLastName
             // 
+            this.lblLastName.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblLastName.AutoSize = true;
             this.lblLastName.Font = new System.Drawing.Font("Gill Sans MT", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblLastName.ForeColor = System.Drawing.SystemColors.Window;
-            this.lblLastName.Location = new System.Drawing.Point(31, 170);
+            this.lblLastName.Location = new System.Drawing.Point(26, 168);
             this.lblLastName.Name = "lblLastName";
             this.lblLastName.Size = new System.Drawing.Size(94, 27);
             this.lblLastName.TabIndex = 18;
@@ -327,20 +371,23 @@
             // 
             // txtLastName
             // 
+            this.txtLastName.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtLastName.BackColor = System.Drawing.SystemColors.ControlDark;
             this.txtLastName.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtLastName.Font = new System.Drawing.Font("Gill Sans MT", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtLastName.Location = new System.Drawing.Point(126, 170);
+            this.txtLastName.ForeColor = System.Drawing.SystemColors.Window;
+            this.txtLastName.Location = new System.Drawing.Point(130, 170);
             this.txtLastName.Name = "txtLastName";
             this.txtLastName.Size = new System.Drawing.Size(174, 23);
             this.txtLastName.TabIndex = 17;
             // 
             // lblFirstName
             // 
+            this.lblFirstName.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblFirstName.AutoSize = true;
             this.lblFirstName.Font = new System.Drawing.Font("Gill Sans MT", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFirstName.ForeColor = System.Drawing.SystemColors.Window;
-            this.lblFirstName.Location = new System.Drawing.Point(31, 88);
+            this.lblFirstName.Location = new System.Drawing.Point(26, 88);
             this.lblFirstName.Name = "lblFirstName";
             this.lblFirstName.Size = new System.Drawing.Size(98, 27);
             this.lblFirstName.TabIndex = 16;
@@ -348,21 +395,54 @@
             // 
             // txtFirstName
             // 
+            this.txtFirstName.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtFirstName.BackColor = System.Drawing.SystemColors.ControlDark;
             this.txtFirstName.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtFirstName.Font = new System.Drawing.Font("Gill Sans MT", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtFirstName.Location = new System.Drawing.Point(126, 88);
+            this.txtFirstName.ForeColor = System.Drawing.SystemColors.Window;
+            this.txtFirstName.Location = new System.Drawing.Point(130, 88);
+            this.txtFirstName.MaxLength = 25;
             this.txtFirstName.Name = "txtFirstName";
             this.txtFirstName.Size = new System.Drawing.Size(174, 23);
             this.txtFirstName.TabIndex = 15;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Gill Sans MT", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.Window;
+            this.label2.Location = new System.Drawing.Point(549, 252);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(139, 27);
+            this.label2.TabIndex = 31;
+            this.label2.Text = "Person Assigned";
+            // 
+            // lbPersonAssigned
+            // 
+            this.lbPersonAssigned.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.lbPersonAssigned.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.lbPersonAssigned.Font = new System.Drawing.Font("Gill Sans MT", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbPersonAssigned.ForeColor = System.Drawing.SystemColors.Window;
+            this.lbPersonAssigned.FormattingEnabled = true;
+            this.lbPersonAssigned.ItemHeight = 27;
+            this.lbPersonAssigned.Items.AddRange(new object[] {
+            "Daniel Lutz",
+            "Payton Esmeyer",
+            "Austin Cauley"});
+            this.lbPersonAssigned.Location = new System.Drawing.Point(695, 262);
+            this.lbPersonAssigned.Name = "lbPersonAssigned";
+            this.lbPersonAssigned.Size = new System.Drawing.Size(223, 108);
+            this.lbPersonAssigned.TabIndex = 32;
             // 
             // Form1
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.SystemColors.GrayText;
-            this.ClientSize = new System.Drawing.Size(1149, 644);
+            this.ClientSize = new System.Drawing.Size(1149, 676);
             this.Controls.Add(this.splitContainer1);
             this.Font = new System.Drawing.Font("Gill Sans MT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.MaximizeBox = false;
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "TCSO Tiket";
@@ -395,7 +475,7 @@
         private System.Windows.Forms.Label lblDescription;
         private System.Windows.Forms.TextBox txtDescription;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dtpDateCreated;
         private System.Windows.Forms.Label lblPhoneNumber;
         private System.Windows.Forms.TextBox txtPhoneNumber;
         private System.Windows.Forms.Label lblEmail;
@@ -404,6 +484,10 @@
         private System.Windows.Forms.TextBox txtLastName;
         private System.Windows.Forms.Label lblFirstName;
         private System.Windows.Forms.TextBox txtFirstName;
+        private System.Windows.Forms.Label lblDueDate;
+        private System.Windows.Forms.DateTimePicker dtpDueDate;
+        private System.Windows.Forms.ListBox lbPersonAssigned;
+        private System.Windows.Forms.Label label2;
     }
 }
 

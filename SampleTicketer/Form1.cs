@@ -16,5 +16,10 @@ namespace SampleTicketer
         {
             InitializeComponent();
         }
+
+        private void btnSubmit_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
