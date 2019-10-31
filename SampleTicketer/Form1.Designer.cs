@@ -29,15 +29,15 @@
         private void InitializeComponent()
         {
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnSupport = new System.Windows.Forms.Button();
-            this.btnStatistics = new System.Windows.Forms.Button();
-            this.btnLookupTickets = new System.Windows.Forms.Button();
-            this.btnMyTicket = new System.Windows.Forms.Button();
-            this.btnNewTicket = new System.Windows.Forms.Button();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.btnOverview = new System.Windows.Forms.Button();
+            this.btnNewTicket = new System.Windows.Forms.Button();
+            this.btnMyTicket = new System.Windows.Forms.Button();
+            this.btnLookupTickets = new System.Windows.Forms.Button();
+            this.btnStatistics = new System.Windows.Forms.Button();
+            this.btnSupport = new System.Windows.Forms.Button();
             this.lblDateCreated = new System.Windows.Forms.Label();
             this.btnSubmit = new System.Windows.Forms.Button();
             this.lblDescription = new System.Windows.Forms.Label();
@@ -56,8 +56,8 @@
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
-            this.flowLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
+            this.flowLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // splitContainer1
@@ -92,22 +92,6 @@
             this.splitContainer1.SplitterDistance = 200;
             this.splitContainer1.TabIndex = 0;
             // 
-            // flowLayoutPanel1
-            // 
-            this.flowLayoutPanel1.AllowDrop = true;
-            this.flowLayoutPanel1.BackColor = System.Drawing.SystemColors.WindowFrame;
-            this.flowLayoutPanel1.Controls.Add(this.btnOverview);
-            this.flowLayoutPanel1.Controls.Add(this.btnNewTicket);
-            this.flowLayoutPanel1.Controls.Add(this.btnMyTicket);
-            this.flowLayoutPanel1.Controls.Add(this.btnLookupTickets);
-            this.flowLayoutPanel1.Controls.Add(this.btnStatistics);
-            this.flowLayoutPanel1.Controls.Add(this.btnSupport);
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 100);
-            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(0);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(200, 544);
-            this.flowLayoutPanel1.TabIndex = 1;
-            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.SlateGray;
@@ -128,70 +112,21 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "TCSO-ITicket";
             // 
-            // btnSupport
+            // flowLayoutPanel1
             // 
-            this.btnSupport.FlatAppearance.BorderSize = 0;
-            this.btnSupport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSupport.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnSupport.Location = new System.Drawing.Point(0, 270);
-            this.btnSupport.Margin = new System.Windows.Forms.Padding(0);
-            this.btnSupport.Name = "btnSupport";
-            this.btnSupport.Size = new System.Drawing.Size(201, 54);
-            this.btnSupport.TabIndex = 19;
-            this.btnSupport.Text = "Support";
-            this.btnSupport.UseVisualStyleBackColor = true;
-            // 
-            // btnStatistics
-            // 
-            this.btnStatistics.FlatAppearance.BorderSize = 0;
-            this.btnStatistics.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnStatistics.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnStatistics.Location = new System.Drawing.Point(0, 216);
-            this.btnStatistics.Margin = new System.Windows.Forms.Padding(0);
-            this.btnStatistics.Name = "btnStatistics";
-            this.btnStatistics.Size = new System.Drawing.Size(201, 54);
-            this.btnStatistics.TabIndex = 18;
-            this.btnStatistics.Text = "Statistics";
-            this.btnStatistics.UseVisualStyleBackColor = true;
-            // 
-            // btnLookupTickets
-            // 
-            this.btnLookupTickets.FlatAppearance.BorderSize = 0;
-            this.btnLookupTickets.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLookupTickets.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnLookupTickets.Location = new System.Drawing.Point(0, 162);
-            this.btnLookupTickets.Margin = new System.Windows.Forms.Padding(0);
-            this.btnLookupTickets.Name = "btnLookupTickets";
-            this.btnLookupTickets.Size = new System.Drawing.Size(201, 54);
-            this.btnLookupTickets.TabIndex = 17;
-            this.btnLookupTickets.Text = "Lookup Tickets";
-            this.btnLookupTickets.UseVisualStyleBackColor = true;
-            // 
-            // btnMyTicket
-            // 
-            this.btnMyTicket.FlatAppearance.BorderSize = 0;
-            this.btnMyTicket.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMyTicket.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnMyTicket.Location = new System.Drawing.Point(0, 108);
-            this.btnMyTicket.Margin = new System.Windows.Forms.Padding(0);
-            this.btnMyTicket.Name = "btnMyTicket";
-            this.btnMyTicket.Size = new System.Drawing.Size(201, 54);
-            this.btnMyTicket.TabIndex = 16;
-            this.btnMyTicket.Text = "My Tickets";
-            this.btnMyTicket.UseVisualStyleBackColor = true;
-            // 
-            // btnNewTicket
-            // 
-            this.btnNewTicket.FlatAppearance.BorderSize = 0;
-            this.btnNewTicket.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNewTicket.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnNewTicket.Location = new System.Drawing.Point(0, 54);
-            this.btnNewTicket.Margin = new System.Windows.Forms.Padding(0);
-            this.btnNewTicket.Name = "btnNewTicket";
-            this.btnNewTicket.Size = new System.Drawing.Size(201, 54);
-            this.btnNewTicket.TabIndex = 15;
-            this.btnNewTicket.Text = "New Ticket";
-            this.btnNewTicket.UseVisualStyleBackColor = true;
+            this.flowLayoutPanel1.AllowDrop = true;
+            this.flowLayoutPanel1.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.flowLayoutPanel1.Controls.Add(this.btnOverview);
+            this.flowLayoutPanel1.Controls.Add(this.btnNewTicket);
+            this.flowLayoutPanel1.Controls.Add(this.btnMyTicket);
+            this.flowLayoutPanel1.Controls.Add(this.btnLookupTickets);
+            this.flowLayoutPanel1.Controls.Add(this.btnStatistics);
+            this.flowLayoutPanel1.Controls.Add(this.btnSupport);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 100);
+            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(0);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(200, 544);
+            this.flowLayoutPanel1.TabIndex = 1;
             // 
             // btnOverview
             // 
@@ -206,12 +141,77 @@
             this.btnOverview.Text = "Overview";
             this.btnOverview.UseVisualStyleBackColor = true;
             // 
+            // btnNewTicket
+            // 
+            this.btnNewTicket.FlatAppearance.BorderSize = 0;
+            this.btnNewTicket.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNewTicket.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnNewTicket.Location = new System.Drawing.Point(0, 54);
+            this.btnNewTicket.Margin = new System.Windows.Forms.Padding(0);
+            this.btnNewTicket.Name = "btnNewTicket";
+            this.btnNewTicket.Size = new System.Drawing.Size(201, 54);
+            this.btnNewTicket.TabIndex = 15;
+            this.btnNewTicket.Text = "New Ticket";
+            this.btnNewTicket.UseVisualStyleBackColor = true;
+            // 
+            // btnMyTicket
+            // 
+            this.btnMyTicket.FlatAppearance.BorderSize = 0;
+            this.btnMyTicket.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMyTicket.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnMyTicket.Location = new System.Drawing.Point(0, 108);
+            this.btnMyTicket.Margin = new System.Windows.Forms.Padding(0);
+            this.btnMyTicket.Name = "btnMyTicket";
+            this.btnMyTicket.Size = new System.Drawing.Size(201, 54);
+            this.btnMyTicket.TabIndex = 16;
+            this.btnMyTicket.Text = "My Tickets";
+            this.btnMyTicket.UseVisualStyleBackColor = true;
+            // 
+            // btnLookupTickets
+            // 
+            this.btnLookupTickets.FlatAppearance.BorderSize = 0;
+            this.btnLookupTickets.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLookupTickets.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnLookupTickets.Location = new System.Drawing.Point(0, 162);
+            this.btnLookupTickets.Margin = new System.Windows.Forms.Padding(0);
+            this.btnLookupTickets.Name = "btnLookupTickets";
+            this.btnLookupTickets.Size = new System.Drawing.Size(201, 54);
+            this.btnLookupTickets.TabIndex = 17;
+            this.btnLookupTickets.Text = "Lookup Tickets";
+            this.btnLookupTickets.UseVisualStyleBackColor = true;
+            // 
+            // btnStatistics
+            // 
+            this.btnStatistics.FlatAppearance.BorderSize = 0;
+            this.btnStatistics.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnStatistics.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnStatistics.Location = new System.Drawing.Point(0, 216);
+            this.btnStatistics.Margin = new System.Windows.Forms.Padding(0);
+            this.btnStatistics.Name = "btnStatistics";
+            this.btnStatistics.Size = new System.Drawing.Size(201, 54);
+            this.btnStatistics.TabIndex = 18;
+            this.btnStatistics.Text = "Statistics";
+            this.btnStatistics.UseVisualStyleBackColor = true;
+            // 
+            // btnSupport
+            // 
+            this.btnSupport.FlatAppearance.BorderSize = 0;
+            this.btnSupport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSupport.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnSupport.Location = new System.Drawing.Point(0, 270);
+            this.btnSupport.Margin = new System.Windows.Forms.Padding(0);
+            this.btnSupport.Name = "btnSupport";
+            this.btnSupport.Size = new System.Drawing.Size(201, 54);
+            this.btnSupport.TabIndex = 19;
+            this.btnSupport.Text = "Support";
+            this.btnSupport.UseVisualStyleBackColor = true;
+            // 
             // lblDateCreated
             // 
             this.lblDateCreated.AutoSize = true;
             this.lblDateCreated.Font = new System.Drawing.Font("Gill Sans MT", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDateCreated.ForeColor = System.Drawing.SystemColors.Window;
-            this.lblDateCreated.Location = new System.Drawing.Point(591, 88);
+            this.lblDateCreated.Location = new System.Drawing.Point(545, 88);
             this.lblDateCreated.Name = "lblDateCreated";
             this.lblDateCreated.Size = new System.Drawing.Size(117, 27);
             this.lblDateCreated.TabIndex = 28;
@@ -266,9 +266,10 @@
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(714, 88);
+            this.dateTimePicker1.CalendarMonthBackground = System.Drawing.SystemColors.ControlDark;
+            this.dateTimePicker1.Location = new System.Drawing.Point(668, 88);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 26);
+            this.dateTimePicker1.Size = new System.Drawing.Size(246, 26);
             this.dateTimePicker1.TabIndex = 23;
             // 
             // lblPhoneNumber
@@ -370,9 +371,9 @@
             this.splitContainer1.Panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
-            this.flowLayoutPanel1.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.flowLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
