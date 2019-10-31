@@ -69,6 +69,7 @@
             // 
             // splitContainer1.Panel1
             // 
+            this.splitContainer1.Panel1.Controls.Add(this.panel1);
             this.splitContainer1.Panel1.Controls.Add(this.flowLayoutPanel1);
             // 
             // splitContainer1.Panel2
@@ -95,25 +96,23 @@
             // 
             this.flowLayoutPanel1.AllowDrop = true;
             this.flowLayoutPanel1.BackColor = System.Drawing.SystemColors.WindowFrame;
-            this.flowLayoutPanel1.Controls.Add(this.panel1);
-            this.flowLayoutPanel1.Controls.Add(this.btnSupport);
-            this.flowLayoutPanel1.Controls.Add(this.btnStatistics);
-            this.flowLayoutPanel1.Controls.Add(this.btnLookupTickets);
-            this.flowLayoutPanel1.Controls.Add(this.btnMyTicket);
-            this.flowLayoutPanel1.Controls.Add(this.btnNewTicket);
             this.flowLayoutPanel1.Controls.Add(this.btnOverview);
-            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.flowLayoutPanel1.Controls.Add(this.btnNewTicket);
+            this.flowLayoutPanel1.Controls.Add(this.btnMyTicket);
+            this.flowLayoutPanel1.Controls.Add(this.btnLookupTickets);
+            this.flowLayoutPanel1.Controls.Add(this.btnStatistics);
+            this.flowLayoutPanel1.Controls.Add(this.btnSupport);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 100);
             this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(0);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(200, 644);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(200, 544);
             this.flowLayoutPanel1.TabIndex = 1;
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.SlateGray;
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Location = new System.Drawing.Point(1, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(200, 100);
@@ -134,7 +133,7 @@
             this.btnSupport.FlatAppearance.BorderSize = 0;
             this.btnSupport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSupport.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnSupport.Location = new System.Drawing.Point(0, 100);
+            this.btnSupport.Location = new System.Drawing.Point(0, 270);
             this.btnSupport.Margin = new System.Windows.Forms.Padding(0);
             this.btnSupport.Name = "btnSupport";
             this.btnSupport.Size = new System.Drawing.Size(201, 54);
@@ -147,7 +146,7 @@
             this.btnStatistics.FlatAppearance.BorderSize = 0;
             this.btnStatistics.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnStatistics.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnStatistics.Location = new System.Drawing.Point(0, 154);
+            this.btnStatistics.Location = new System.Drawing.Point(0, 216);
             this.btnStatistics.Margin = new System.Windows.Forms.Padding(0);
             this.btnStatistics.Name = "btnStatistics";
             this.btnStatistics.Size = new System.Drawing.Size(201, 54);
@@ -160,7 +159,7 @@
             this.btnLookupTickets.FlatAppearance.BorderSize = 0;
             this.btnLookupTickets.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLookupTickets.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnLookupTickets.Location = new System.Drawing.Point(0, 208);
+            this.btnLookupTickets.Location = new System.Drawing.Point(0, 162);
             this.btnLookupTickets.Margin = new System.Windows.Forms.Padding(0);
             this.btnLookupTickets.Name = "btnLookupTickets";
             this.btnLookupTickets.Size = new System.Drawing.Size(201, 54);
@@ -173,7 +172,7 @@
             this.btnMyTicket.FlatAppearance.BorderSize = 0;
             this.btnMyTicket.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMyTicket.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnMyTicket.Location = new System.Drawing.Point(0, 262);
+            this.btnMyTicket.Location = new System.Drawing.Point(0, 108);
             this.btnMyTicket.Margin = new System.Windows.Forms.Padding(0);
             this.btnMyTicket.Name = "btnMyTicket";
             this.btnMyTicket.Size = new System.Drawing.Size(201, 54);
@@ -186,7 +185,7 @@
             this.btnNewTicket.FlatAppearance.BorderSize = 0;
             this.btnNewTicket.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNewTicket.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnNewTicket.Location = new System.Drawing.Point(0, 316);
+            this.btnNewTicket.Location = new System.Drawing.Point(0, 54);
             this.btnNewTicket.Margin = new System.Windows.Forms.Padding(0);
             this.btnNewTicket.Name = "btnNewTicket";
             this.btnNewTicket.Size = new System.Drawing.Size(201, 54);
@@ -199,7 +198,7 @@
             this.btnOverview.FlatAppearance.BorderSize = 0;
             this.btnOverview.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnOverview.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnOverview.Location = new System.Drawing.Point(0, 370);
+            this.btnOverview.Location = new System.Drawing.Point(0, 0);
             this.btnOverview.Margin = new System.Windows.Forms.Padding(0);
             this.btnOverview.Name = "btnOverview";
             this.btnOverview.Size = new System.Drawing.Size(201, 54);
