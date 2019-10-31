@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Data.SqlClient;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -19,7 +20,19 @@ namespace SampleTicketer
 
         private void btnSubmit_Click(object sender, EventArgs e)
         {
-
+            string connetionString;
+            SqlConnection cnn;
+            connetionString = @"Data Source=tulsa002\SQLEXPRESS,53949;Initial Catalog=ITicket;User ID=iticket;Password=password";
+            cnn = new SqlConnection(connetionString);
+            try
+            {
+                cnn.Open();
+                MessageBox.Show("Connection Open!");
+                cnn.Close();
+            } catch (SqlException ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }
