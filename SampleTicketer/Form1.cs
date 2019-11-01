@@ -16,8 +16,8 @@ namespace SampleTicketer
 
             string connetionString;
             SqlConnection cnn;
-            connetionString = @"Server=SO-DM-00615\SQLEXPRESS;Database=test;Trusted_Connection=True;";
-            //connetionString = @"Server=tulsa002\sqlexpress;Database=iticket;Trusted_Connection=True;";
+            //connetionString = @"Server=SO-DM-00615\SQLEXPRESS,60491;Database=test;Trusted_Connection=True;";
+            connetionString = @"Server=tulsa002\sqlexpress;Database=iticket;User ID=iticket;Password=password";
             using (cnn = new SqlConnection(connetionString))
             {
                 try
