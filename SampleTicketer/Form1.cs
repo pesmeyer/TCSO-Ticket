@@ -1,12 +1,5 @@
 ﻿using System;
 using System.Data.SqlClient;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace SampleTicketer
@@ -20,19 +13,34 @@ namespace SampleTicketer
 
         private void btnSubmit_Click(object sender, EventArgs e)
         {
+
             string connetionString;
             SqlConnection cnn;
-            connetionString = @"Data Source=tulsa002\SQLEXPRESS,53949;Initial Catalog=ITicket;User ID=iticket;Password=password";
-            cnn = new SqlConnection(connetionString);
-            try
+            connetionString = @"Server=SO-DM-00615\SQLEXPRESS;Database=test;Trusted_Connection=True;";
+            //connetionString = @"Server=tulsa002\sqlexpress;Database=iticket;Trusted_Connection=True;";
+            using (cnn = new SqlConnection(connetionString))
             {
-                cnn.Open();
-                MessageBox.Show("Connection Open!");
-                cnn.Close();
-            } catch (SqlException ex)
-            {
-                MessageBox.Show(ex.Message);
+                try
+                {
+                    cnn.Open();
+                    MessageBox.Show("Connection Open!");
+                    cnn.Close();
+                }
+                catch (SqlException ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
             }
+
+            //var con = ConfigurationManager.ConnectionStrings["SampleTicketer.Properties.Settings.ITicketConnectionString"].ToString();
+            //using (SqlConnection cnn = new SqlConnection(con))
+            //{
+            //    cnn.Open();
+            //    MessageBox.Show("Connection Successful!");
+            //}
+
+            //Form2 f2 = new Form2();
+            //f2.ShowDialog();
         }
     }
 }
