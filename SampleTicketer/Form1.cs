@@ -21,23 +21,23 @@ namespace SampleTicketer
             connetionString = @"Server=tulsa002\sqlexpress;Database=iticket;User ID=iticket;Password=password";
             using (cnn = new SqlConnection(connetionString))
             {
-                int ticketNum = 0;
-                var fName = txtFirstName.Text;
-                var lName = txtLastName.Text;
-                var email = txtEmail.Text;
-                var phoneNumber = txtPhoneNumber.Text;
-                var dateCreated = dtpDateCreated.Value.Date;
-                var dateDue = dtpDueDate.Value.Date;
-                string assignedPriority = null;
-                var origPerson = lbPersonAssigned.SelectedItem.ToString();
-                var personAssigned = origPerson;
-                var description = txtDescription.Text;
-                string status = null;
-                int timeSpentWorking = 0;
-
-
                 try
                 {
+                    //Initialize variables
+                    int ticketNum = 0;
+                    string fName = txtFirstName.Text;
+                    string lName = txtLastName.Text;
+                    string email = txtEmail.Text;
+                    string phoneNumber = txtPhoneNumber.Text;
+                    var dateCreated = dtpDateCreated.Value.Date;
+                    var dateDue = dtpDueDate.Value.Date;
+                    string assignedPriority = null;
+                    string origPerson = lbPersonAssigned.SelectedItem.ToString();
+                    string personAssigned = origPerson;
+                    string description = txtDescription.Text;
+                    string status = null;
+                    int timeSpentWorking = 0;
+
                     cnn.Open();
 
                     //Assign ticket number to submitted ticket
@@ -48,6 +48,21 @@ namespace SampleTicketer
                         {
                             ticketNum = reader.GetInt32(0) + 1;
                         }
+                    }
+
+                    //Remove non-numeric characters from phone number
+                    foreach (char ch in phoneNumber)
+                    {
+                        if (!char.IsNumber(ch))
+                        {
+                            phoneNumber = phoneNumber.Replace(ch.ToString(), "");
+                        }
+                    }
+
+                    //Data Validation
+                    if (email == string.Empty || phoneNumber == string.Empty || origPerson == string.Empty || description == string.Empty)
+                    {
+                        throw new Exception();
                     }
 
                     //Set ticket information into the database
@@ -74,7 +89,15 @@ namespace SampleTicketer
                 }
                 catch (SqlException ex)
                 {
-                    MessageBox.Show(ex.Message);
+                    MessageBox.Show(ex.Message, "SQL Connection Failed");
+                }
+                catch (NullReferenceException)
+                {
+                    MessageBox.Show("Please Select a Technician", "Error");
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("Please fill out required information", "Incomplete");
                 }
             }
         }
