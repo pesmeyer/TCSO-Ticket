@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
@@ -38,6 +39,8 @@
             this.btnLookupTickets = new System.Windows.Forms.Button();
             this.btnStatistics = new System.Windows.Forms.Button();
             this.btnSupport = new System.Windows.Forms.Button();
+            this.lbPersonAssigned = new System.Windows.Forms.ListBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.lblDueDate = new System.Windows.Forms.Label();
             this.dtpDueDate = new System.Windows.Forms.DateTimePicker();
             this.lblDateCreated = new System.Windows.Forms.Label();
@@ -54,8 +57,6 @@
             this.txtLastName = new System.Windows.Forms.TextBox();
             this.lblFirstName = new System.Windows.Forms.Label();
             this.txtFirstName = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.lbPersonAssigned = new System.Windows.Forms.ListBox();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -214,6 +215,34 @@
             this.btnSupport.TabIndex = 19;
             this.btnSupport.Text = "Support";
             this.btnSupport.UseVisualStyleBackColor = true;
+            // 
+            // lbPersonAssigned
+            // 
+            this.lbPersonAssigned.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.lbPersonAssigned.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.lbPersonAssigned.Font = new System.Drawing.Font("Gill Sans MT", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbPersonAssigned.ForeColor = System.Drawing.SystemColors.Window;
+            this.lbPersonAssigned.FormattingEnabled = true;
+            this.lbPersonAssigned.ItemHeight = 27;
+            this.lbPersonAssigned.Items.AddRange(new object[] {
+            "Daniel Lutz",
+            "Payton Esmeyer",
+            "Austin Cauley"});
+            this.lbPersonAssigned.Location = new System.Drawing.Point(695, 262);
+            this.lbPersonAssigned.Name = "lbPersonAssigned";
+            this.lbPersonAssigned.Size = new System.Drawing.Size(223, 108);
+            this.lbPersonAssigned.TabIndex = 32;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Gill Sans MT", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.Window;
+            this.label2.Location = new System.Drawing.Point(549, 252);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(139, 27);
+            this.label2.TabIndex = 31;
+            this.label2.Text = "Person Assigned";
             // 
             // lblDueDate
             // 
@@ -406,34 +435,6 @@
             this.txtFirstName.Size = new System.Drawing.Size(174, 23);
             this.txtFirstName.TabIndex = 15;
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Gill Sans MT", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.SystemColors.Window;
-            this.label2.Location = new System.Drawing.Point(549, 252);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(139, 27);
-            this.label2.TabIndex = 31;
-            this.label2.Text = "Person Assigned";
-            // 
-            // lbPersonAssigned
-            // 
-            this.lbPersonAssigned.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.lbPersonAssigned.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.lbPersonAssigned.Font = new System.Drawing.Font("Gill Sans MT", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbPersonAssigned.ForeColor = System.Drawing.SystemColors.Window;
-            this.lbPersonAssigned.FormattingEnabled = true;
-            this.lbPersonAssigned.ItemHeight = 27;
-            this.lbPersonAssigned.Items.AddRange(new object[] {
-            "Daniel Lutz",
-            "Payton Esmeyer",
-            "Austin Cauley"});
-            this.lbPersonAssigned.Location = new System.Drawing.Point(695, 262);
-            this.lbPersonAssigned.Name = "lbPersonAssigned";
-            this.lbPersonAssigned.Size = new System.Drawing.Size(223, 108);
-            this.lbPersonAssigned.TabIndex = 32;
-            // 
             // Form1
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -442,6 +443,7 @@
             this.Controls.Add(this.splitContainer1);
             this.Font = new System.Drawing.Font("Gill Sans MT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

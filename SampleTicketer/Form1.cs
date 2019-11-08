@@ -37,6 +37,7 @@ namespace SampleTicketer
                     string description = txtDescription.Text;
                     string status = null;
                     int timeSpentWorking = 0;
+                    string userName = System.Security.Principal.WindowsIdentity.GetCurrent().Name;
 
                     cnn.Open();
 
@@ -66,7 +67,7 @@ namespace SampleTicketer
                     }
 
                     //Set ticket information into the database
-                    string sql = "Insert into ticket values(@param1,@param2,@param3,@param4,@param5,@param6,@param7,@param8,@param9,@param10,@param11,@param12,@param13)";
+                    string sql = "Insert into ticket values(@param1,@param2,@param3,@param4,@param5,@param6,@param7,@param8,@param9,@param10,@param11,@param12,@param13,@param14)";
                     using (SqlCommand cmd = new SqlCommand(sql, cnn))
                     {
                         cmd.Parameters.Add("@param1", System.Data.SqlDbType.Int).Value = ticketNum;
@@ -82,6 +83,7 @@ namespace SampleTicketer
                         cmd.Parameters.Add("@param11", System.Data.SqlDbType.VarChar, 1500).Value = description;
                         cmd.Parameters.Add("@param12", System.Data.SqlDbType.VarChar, 20).Value = DBNull.Value;
                         cmd.Parameters.Add("@param13", System.Data.SqlDbType.VarChar, 30).Value = timeSpentWorking;
+                        cmd.Parameters.Add("@param14", System.Data.SqlDbType.VarChar, 30).Value = userName;
 
                         cmd.ExecuteNonQuery();
                         MessageBox.Show("Finished! :)");
