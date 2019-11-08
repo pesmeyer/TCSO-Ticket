@@ -37,7 +37,7 @@ namespace SampleTicketer
                     string description = txtDescription.Text;
                     string status = null;
                     int timeSpentWorking = 0;
-                    string userName = System.Security.Principal.WindowsIdentity.GetCurrent().Name;
+                    string userName = Environment.UserName;
 
                     cnn.Open();
 
