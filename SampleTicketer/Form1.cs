@@ -17,8 +17,13 @@ namespace SampleTicketer
             //NOTE:The user account running this program MUST be able to create a remote connection to the server (See: RDP capabilities)
             string connetionString;
             SqlConnection cnn;
+<<<<<<< Updated upstream
 
             connetionString = @"Server=tulsa002\sqlexpress;Database=iticket;User ID=iticket;Password=password";
+=======
+            connetionString = @"Server=tcp:172.30.32.61\SQLEXPRESS,60491;Database=test;Trusted_Connection=True;";
+            //connetionString = @"Server=tulsa002\sqlexpress;Database=iticket;Trusted_Connection=True;";
+>>>>>>> Stashed changes
             using (cnn = new SqlConnection(connetionString))
             {
                 try
