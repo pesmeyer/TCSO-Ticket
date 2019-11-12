@@ -16,3 +16,21 @@ G:\Ticket Project\TCSO-Ticket\SampleTicketer\obj\Debug\SampleTicketer.Properties
 G:\Ticket Project\TCSO-Ticket\SampleTicketer\obj\Debug\SampleTicketer.csproj.GenerateResource.cache
 G:\Ticket Project\TCSO-Ticket\SampleTicketer\obj\Debug\SampleTicketer.exe
 G:\Ticket Project\TCSO-Ticket\SampleTicketer\obj\Debug\SampleTicketer.pdb
+G:\TCSO Ticket\TCSO-Ticket\SampleTicketer\bin\Debug\SampleTicketer.exe.config
+G:\TCSO Ticket\TCSO-Ticket\SampleTicketer\bin\Debug\SampleTicketer.exe
+G:\TCSO Ticket\TCSO-Ticket\SampleTicketer\bin\Debug\SampleTicketer.pdb
+G:\TCSO Ticket\TCSO-Ticket\SampleTicketer\obj\Debug\SampleTicketer.csprojAssemblyReference.cache
+G:\TCSO Ticket\TCSO-Ticket\SampleTicketer\obj\Debug\SampleTicketer.Form1.resources
+G:\TCSO Ticket\TCSO-Ticket\SampleTicketer\obj\Debug\SampleTicketer.Properties.Resources.resources
+G:\TCSO Ticket\TCSO-Ticket\SampleTicketer\obj\Debug\SampleTicketer.csproj.GenerateResource.cache
+G:\TCSO Ticket\TCSO-Ticket\SampleTicketer\obj\Debug\SampleTicketer.exe
+G:\TCSO Ticket\TCSO-Ticket\SampleTicketer\obj\Debug\SampleTicketer.pdb
+C:\Users\acauley\Desktop\TCSO-Ticket\TCSO-Ticket\SampleTicketer\bin\Debug\SampleTicketer.exe.config
+C:\Users\acauley\Desktop\TCSO-Ticket\TCSO-Ticket\SampleTicketer\bin\Debug\SampleTicketer.exe
+C:\Users\acauley\Desktop\TCSO-Ticket\TCSO-Ticket\SampleTicketer\bin\Debug\SampleTicketer.pdb
+C:\Users\acauley\Desktop\TCSO-Ticket\TCSO-Ticket\SampleTicketer\obj\Debug\SampleTicketer.csprojAssemblyReference.cache
+C:\Users\acauley\Desktop\TCSO-Ticket\TCSO-Ticket\SampleTicketer\obj\Debug\SampleTicketer.Form1.resources
+C:\Users\acauley\Desktop\TCSO-Ticket\TCSO-Ticket\SampleTicketer\obj\Debug\SampleTicketer.Properties.Resources.resources
+C:\Users\acauley\Desktop\TCSO-Ticket\TCSO-Ticket\SampleTicketer\obj\Debug\SampleTicketer.csproj.GenerateResource.cache
+C:\Users\acauley\Desktop\TCSO-Ticket\TCSO-Ticket\SampleTicketer\obj\Debug\SampleTicketer.exe
+C:\Users\acauley\Desktop\TCSO-Ticket\TCSO-Ticket\SampleTicketer\obj\Debug\SampleTicketer.pdb
