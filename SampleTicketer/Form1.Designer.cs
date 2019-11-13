@@ -60,7 +60,7 @@
             this.lblFirstName = new System.Windows.Forms.Label();
             this.txtFirstName = new System.Windows.Forms.TextBox();
             this.pnlMyTickets = new System.Windows.Forms.Panel();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dvgTicketViewer = new System.Windows.Forms.DataGridView();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.lblWelcome = new System.Windows.Forms.Label();
@@ -89,7 +89,7 @@
             this.flowLayoutPanel1.SuspendLayout();
             this.pnlNewTicket.SuspendLayout();
             this.pnlMyTickets.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dvgTicketViewer)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ticketBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iTicketDataSet)).BeginInit();
@@ -481,7 +481,7 @@
             // pnlMyTickets
             // 
             this.pnlMyTickets.AccessibleName = "";
-            this.pnlMyTickets.Controls.Add(this.dataGridView1);
+            this.pnlMyTickets.Controls.Add(this.dvgTicketViewer);
             this.pnlMyTickets.Controls.Add(this.panel2);
             this.pnlMyTickets.Location = new System.Drawing.Point(0, 0);
             this.pnlMyTickets.Name = "pnlMyTickets";
@@ -489,12 +489,12 @@
             this.pnlMyTickets.TabIndex = 52;
             this.pnlMyTickets.Visible = false;
             // 
-            // dataGridView1
+            // dvgTicketViewer
             // 
-            this.dataGridView1.AutoGenerateColumns = false;
-            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dvgTicketViewer.AutoGenerateColumns = false;
+            this.dvgTicketViewer.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dvgTicketViewer.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dvgTicketViewer.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ticketNumDataGridViewTextBoxColumn,
             this.fnameDataGridViewTextBoxColumn,
             this.lnameDataGridViewTextBoxColumn,
@@ -509,11 +509,11 @@
             this.statusTypeDataGridViewTextBoxColumn,
             this.timeSpentWorkingDataGridViewTextBoxColumn,
             this.userNameDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.ticketBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(19, 123);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(906, 211);
-            this.dataGridView1.TabIndex = 1;
+            this.dvgTicketViewer.DataSource = this.ticketBindingSource;
+            this.dvgTicketViewer.Location = new System.Drawing.Point(19, 123);
+            this.dvgTicketViewer.Name = "dvgTicketViewer";
+            this.dvgTicketViewer.Size = new System.Drawing.Size(906, 211);
+            this.dvgTicketViewer.TabIndex = 1;
             // 
             // panel2
             // 
@@ -670,7 +670,7 @@
             this.pnlNewTicket.ResumeLayout(false);
             this.pnlNewTicket.PerformLayout();
             this.pnlMyTickets.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dvgTicketViewer)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ticketBindingSource)).EndInit();
@@ -692,7 +692,7 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel pnlMyTickets;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dvgTicketViewer;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label lblWelcome;

@@ -136,6 +136,7 @@ namespace SampleTicketer
         {
             try
             {
+                this.ticketTableAdapter.Fill(this.iTicketDataSet.Ticket);
                 pnlMyTickets.Show();
                 pnlNewTicket.Hide();
             }

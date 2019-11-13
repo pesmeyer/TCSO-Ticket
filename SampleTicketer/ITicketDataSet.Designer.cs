@@ -1324,13 +1324,74 @@ SELECT ticketNum, fname, lname, email, phoneNumber, dateCreated, dateDue, assign
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[2];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT ticketNum, fname, lname, email, phoneNumber, dateCreated, dateDue, assigne" +
                 "dPriority, personOriginallyAssigned, personAssigned, descriptionInput, statusTyp" +
                 "e, timeSpentWorking, userName FROM dbo.Ticket";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[1].Connection = this.Connection;
+            this._commandCollection[1].CommandText = "UPDATE [dbo].[Ticket] SET [ticketNum] = @ticketNum, [fname] = @fname, [lname] = @" +
+                "lname, [email] = @email, [phoneNumber] = @phoneNumber, [dateCreated] = @dateCrea" +
+                "ted, [dateDue] = @dateDue, [assignedPriority] = @assignedPriority, [personOrigin" +
+                "allyAssigned] = @personOriginallyAssigned, [personAssigned] = @personAssigned, [" +
+                "descriptionInput] = @descriptionInput, [statusType] = @statusType, [timeSpentWor" +
+                "king] = @timeSpentWorking, [userName] = @userName WHERE (([ticketNum] = @Origina" +
+                "l_ticketNum) AND ((@IsNull_fname = 1 AND [fname] IS NULL) OR ([fname] = @Origina" +
+                "l_fname)) AND ((@IsNull_lname = 1 AND [lname] IS NULL) OR ([lname] = @Original_l" +
+                "name)) AND ([email] = @Original_email) AND ([phoneNumber] = @Original_phoneNumbe" +
+                "r) AND ([dateCreated] = @Original_dateCreated) AND ((@IsNull_dateDue = 1 AND [da" +
+                "teDue] IS NULL) OR ([dateDue] = @Original_dateDue)) AND ((@IsNull_assignedPriori" +
+                "ty = 1 AND [assignedPriority] IS NULL) OR ([assignedPriority] = @Original_assign" +
+                "edPriority)) AND ([personOriginallyAssigned] = @Original_personOriginallyAssigne" +
+                "d) AND ((@IsNull_personAssigned = 1 AND [personAssigned] IS NULL) OR ([personAss" +
+                "igned] = @Original_personAssigned)) AND ([descriptionInput] = @Original_descript" +
+                "ionInput) AND ((@IsNull_statusType = 1 AND [statusType] IS NULL) OR ([statusType" +
+                "] = @Original_statusType)) AND ((@IsNull_timeSpentWorking = 1 AND [timeSpentWork" +
+                "ing] IS NULL) OR ([timeSpentWorking] = @Original_timeSpentWorking)) AND ((@IsNul" +
+                "l_userName = 1 AND [userName] IS NULL) OR ([userName] = @Original_userName)));\r\n" +
+                "SELECT ticketNum, fname, lname, email, phoneNumber, dateCreated, dateDue, assign" +
+                "edPriority, personOriginallyAssigned, personAssigned, descriptionInput, statusTy" +
+                "pe, timeSpentWorking, userName FROM Ticket WHERE (ticketNum = @ticketNum)";
+            this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ticketNum", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "ticketNum", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@fname", global::System.Data.SqlDbType.VarChar, 20, global::System.Data.ParameterDirection.Input, 0, 0, "fname", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@lname", global::System.Data.SqlDbType.VarChar, 20, global::System.Data.ParameterDirection.Input, 0, 0, "lname", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@email", global::System.Data.SqlDbType.VarChar, 75, global::System.Data.ParameterDirection.Input, 0, 0, "email", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@phoneNumber", global::System.Data.SqlDbType.VarChar, 15, global::System.Data.ParameterDirection.Input, 0, 0, "phoneNumber", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@dateCreated", global::System.Data.SqlDbType.Date, 3, global::System.Data.ParameterDirection.Input, 0, 0, "dateCreated", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@dateDue", global::System.Data.SqlDbType.Date, 3, global::System.Data.ParameterDirection.Input, 0, 0, "dateDue", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@assignedPriority", global::System.Data.SqlDbType.VarChar, 30, global::System.Data.ParameterDirection.Input, 0, 0, "assignedPriority", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@personOriginallyAssigned", global::System.Data.SqlDbType.VarChar, 30, global::System.Data.ParameterDirection.Input, 0, 0, "personOriginallyAssigned", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@personAssigned", global::System.Data.SqlDbType.VarChar, 30, global::System.Data.ParameterDirection.Input, 0, 0, "personAssigned", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@descriptionInput", global::System.Data.SqlDbType.VarChar, 1500, global::System.Data.ParameterDirection.Input, 0, 0, "descriptionInput", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@statusType", global::System.Data.SqlDbType.VarChar, 20, global::System.Data.ParameterDirection.Input, 0, 0, "statusType", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@timeSpentWorking", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "timeSpentWorking", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@userName", global::System.Data.SqlDbType.VarChar, 30, global::System.Data.ParameterDirection.Input, 0, 0, "userName", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ticketNum", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "ticketNum", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_fname", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "fname", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_fname", global::System.Data.SqlDbType.VarChar, 20, global::System.Data.ParameterDirection.Input, 0, 0, "fname", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_lname", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "lname", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_lname", global::System.Data.SqlDbType.VarChar, 20, global::System.Data.ParameterDirection.Input, 0, 0, "lname", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_email", global::System.Data.SqlDbType.VarChar, 75, global::System.Data.ParameterDirection.Input, 0, 0, "email", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_phoneNumber", global::System.Data.SqlDbType.VarChar, 15, global::System.Data.ParameterDirection.Input, 0, 0, "phoneNumber", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_dateCreated", global::System.Data.SqlDbType.Date, 3, global::System.Data.ParameterDirection.Input, 0, 0, "dateCreated", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_dateDue", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "dateDue", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_dateDue", global::System.Data.SqlDbType.Date, 3, global::System.Data.ParameterDirection.Input, 0, 0, "dateDue", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_assignedPriority", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "assignedPriority", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_assignedPriority", global::System.Data.SqlDbType.VarChar, 30, global::System.Data.ParameterDirection.Input, 0, 0, "assignedPriority", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_personOriginallyAssigned", global::System.Data.SqlDbType.VarChar, 30, global::System.Data.ParameterDirection.Input, 0, 0, "personOriginallyAssigned", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_personAssigned", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "personAssigned", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_personAssigned", global::System.Data.SqlDbType.VarChar, 30, global::System.Data.ParameterDirection.Input, 0, 0, "personAssigned", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_descriptionInput", global::System.Data.SqlDbType.VarChar, 1500, global::System.Data.ParameterDirection.Input, 0, 0, "descriptionInput", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_statusType", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "statusType", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_statusType", global::System.Data.SqlDbType.VarChar, 20, global::System.Data.ParameterDirection.Input, 0, 0, "statusType", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_timeSpentWorking", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "timeSpentWorking", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_timeSpentWorking", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "timeSpentWorking", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_userName", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "userName", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_userName", global::System.Data.SqlDbType.VarChar, 30, global::System.Data.ParameterDirection.Input, 0, 0, "userName", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1838,6 +1899,271 @@ SELECT ticketNum, fname, lname, email, phoneNumber, dateCreated, dateDue, assign
                     global::System.Nullable<int> Original_timeSpentWorking, 
                     string Original_userName) {
             return this.Update(Original_ticketNum, fname, lname, email, phoneNumber, dateCreated, dateDue, assignedPriority, personOriginallyAssigned, personAssigned, descriptionInput, statusType, timeSpentWorking, userName, Original_ticketNum, Original_fname, Original_lname, Original_email, Original_phoneNumber, Original_dateCreated, Original_dateDue, Original_assignedPriority, Original_personOriginallyAssigned, Original_personAssigned, Original_descriptionInput, Original_statusType, Original_timeSpentWorking, Original_userName);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, false)]
+        public virtual int UpdateTicket(
+                    int ticketNum, 
+                    string fname, 
+                    string lname, 
+                    string email, 
+                    string phoneNumber, 
+                    string dateCreated, 
+                    string dateDue, 
+                    string assignedPriority, 
+                    string personOriginallyAssigned, 
+                    string personAssigned, 
+                    string descriptionInput, 
+                    string statusType, 
+                    global::System.Nullable<int> timeSpentWorking, 
+                    string userName, 
+                    int Original_ticketNum, 
+                    global::System.Nullable<int> IsNull_fname, 
+                    string Original_fname, 
+                    global::System.Nullable<int> IsNull_lname, 
+                    string Original_lname, 
+                    string Original_email, 
+                    string Original_phoneNumber, 
+                    string Original_dateCreated, 
+                    global::System.Nullable<int> IsNull_dateDue, 
+                    string Original_dateDue, 
+                    global::System.Nullable<int> IsNull_assignedPriority, 
+                    string Original_assignedPriority, 
+                    string Original_personOriginallyAssigned, 
+                    global::System.Nullable<int> IsNull_personAssigned, 
+                    string Original_personAssigned, 
+                    string Original_descriptionInput, 
+                    global::System.Nullable<int> IsNull_statusType, 
+                    string Original_statusType, 
+                    global::System.Nullable<int> IsNull_timeSpentWorking, 
+                    global::System.Nullable<int> Original_timeSpentWorking, 
+                    global::System.Nullable<int> IsNull_userName, 
+                    string Original_userName) {
+            global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[1];
+            command.Parameters[0].Value = ((int)(ticketNum));
+            if ((fname == null)) {
+                command.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            else {
+                command.Parameters[1].Value = ((string)(fname));
+            }
+            if ((lname == null)) {
+                command.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            else {
+                command.Parameters[2].Value = ((string)(lname));
+            }
+            if ((email == null)) {
+                throw new global::System.ArgumentNullException("email");
+            }
+            else {
+                command.Parameters[3].Value = ((string)(email));
+            }
+            if ((phoneNumber == null)) {
+                throw new global::System.ArgumentNullException("phoneNumber");
+            }
+            else {
+                command.Parameters[4].Value = ((string)(phoneNumber));
+            }
+            if ((dateCreated == null)) {
+                throw new global::System.ArgumentNullException("dateCreated");
+            }
+            else {
+                command.Parameters[5].Value = ((string)(dateCreated));
+            }
+            if ((dateDue == null)) {
+                command.Parameters[6].Value = global::System.DBNull.Value;
+            }
+            else {
+                command.Parameters[6].Value = ((string)(dateDue));
+            }
+            if ((assignedPriority == null)) {
+                command.Parameters[7].Value = global::System.DBNull.Value;
+            }
+            else {
+                command.Parameters[7].Value = ((string)(assignedPriority));
+            }
+            if ((personOriginallyAssigned == null)) {
+                throw new global::System.ArgumentNullException("personOriginallyAssigned");
+            }
+            else {
+                command.Parameters[8].Value = ((string)(personOriginallyAssigned));
+            }
+            if ((personAssigned == null)) {
+                command.Parameters[9].Value = global::System.DBNull.Value;
+            }
+            else {
+                command.Parameters[9].Value = ((string)(personAssigned));
+            }
+            if ((descriptionInput == null)) {
+                throw new global::System.ArgumentNullException("descriptionInput");
+            }
+            else {
+                command.Parameters[10].Value = ((string)(descriptionInput));
+            }
+            if ((statusType == null)) {
+                command.Parameters[11].Value = global::System.DBNull.Value;
+            }
+            else {
+                command.Parameters[11].Value = ((string)(statusType));
+            }
+            if ((timeSpentWorking.HasValue == true)) {
+                command.Parameters[12].Value = ((int)(timeSpentWorking.Value));
+            }
+            else {
+                command.Parameters[12].Value = global::System.DBNull.Value;
+            }
+            if ((userName == null)) {
+                command.Parameters[13].Value = global::System.DBNull.Value;
+            }
+            else {
+                command.Parameters[13].Value = ((string)(userName));
+            }
+            command.Parameters[14].Value = ((int)(Original_ticketNum));
+            if ((IsNull_fname.HasValue == true)) {
+                command.Parameters[15].Value = ((int)(IsNull_fname.Value));
+            }
+            else {
+                command.Parameters[15].Value = global::System.DBNull.Value;
+            }
+            if ((Original_fname == null)) {
+                command.Parameters[16].Value = global::System.DBNull.Value;
+            }
+            else {
+                command.Parameters[16].Value = ((string)(Original_fname));
+            }
+            if ((IsNull_lname.HasValue == true)) {
+                command.Parameters[17].Value = ((int)(IsNull_lname.Value));
+            }
+            else {
+                command.Parameters[17].Value = global::System.DBNull.Value;
+            }
+            if ((Original_lname == null)) {
+                command.Parameters[18].Value = global::System.DBNull.Value;
+            }
+            else {
+                command.Parameters[18].Value = ((string)(Original_lname));
+            }
+            if ((Original_email == null)) {
+                throw new global::System.ArgumentNullException("Original_email");
+            }
+            else {
+                command.Parameters[19].Value = ((string)(Original_email));
+            }
+            if ((Original_phoneNumber == null)) {
+                throw new global::System.ArgumentNullException("Original_phoneNumber");
+            }
+            else {
+                command.Parameters[20].Value = ((string)(Original_phoneNumber));
+            }
+            if ((Original_dateCreated == null)) {
+                throw new global::System.ArgumentNullException("Original_dateCreated");
+            }
+            else {
+                command.Parameters[21].Value = ((string)(Original_dateCreated));
+            }
+            if ((IsNull_dateDue.HasValue == true)) {
+                command.Parameters[22].Value = ((int)(IsNull_dateDue.Value));
+            }
+            else {
+                command.Parameters[22].Value = global::System.DBNull.Value;
+            }
+            if ((Original_dateDue == null)) {
+                command.Parameters[23].Value = global::System.DBNull.Value;
+            }
+            else {
+                command.Parameters[23].Value = ((string)(Original_dateDue));
+            }
+            if ((IsNull_assignedPriority.HasValue == true)) {
+                command.Parameters[24].Value = ((int)(IsNull_assignedPriority.Value));
+            }
+            else {
+                command.Parameters[24].Value = global::System.DBNull.Value;
+            }
+            if ((Original_assignedPriority == null)) {
+                command.Parameters[25].Value = global::System.DBNull.Value;
+            }
+            else {
+                command.Parameters[25].Value = ((string)(Original_assignedPriority));
+            }
+            if ((Original_personOriginallyAssigned == null)) {
+                throw new global::System.ArgumentNullException("Original_personOriginallyAssigned");
+            }
+            else {
+                command.Parameters[26].Value = ((string)(Original_personOriginallyAssigned));
+            }
+            if ((IsNull_personAssigned.HasValue == true)) {
+                command.Parameters[27].Value = ((int)(IsNull_personAssigned.Value));
+            }
+            else {
+                command.Parameters[27].Value = global::System.DBNull.Value;
+            }
+            if ((Original_personAssigned == null)) {
+                command.Parameters[28].Value = global::System.DBNull.Value;
+            }
+            else {
+                command.Parameters[28].Value = ((string)(Original_personAssigned));
+            }
+            if ((Original_descriptionInput == null)) {
+                throw new global::System.ArgumentNullException("Original_descriptionInput");
+            }
+            else {
+                command.Parameters[29].Value = ((string)(Original_descriptionInput));
+            }
+            if ((IsNull_statusType.HasValue == true)) {
+                command.Parameters[30].Value = ((int)(IsNull_statusType.Value));
+            }
+            else {
+                command.Parameters[30].Value = global::System.DBNull.Value;
+            }
+            if ((Original_statusType == null)) {
+                command.Parameters[31].Value = global::System.DBNull.Value;
+            }
+            else {
+                command.Parameters[31].Value = ((string)(Original_statusType));
+            }
+            if ((IsNull_timeSpentWorking.HasValue == true)) {
+                command.Parameters[32].Value = ((int)(IsNull_timeSpentWorking.Value));
+            }
+            else {
+                command.Parameters[32].Value = global::System.DBNull.Value;
+            }
+            if ((Original_timeSpentWorking.HasValue == true)) {
+                command.Parameters[33].Value = ((int)(Original_timeSpentWorking.Value));
+            }
+            else {
+                command.Parameters[33].Value = global::System.DBNull.Value;
+            }
+            if ((IsNull_userName.HasValue == true)) {
+                command.Parameters[34].Value = ((int)(IsNull_userName.Value));
+            }
+            else {
+                command.Parameters[34].Value = global::System.DBNull.Value;
+            }
+            if ((Original_userName == null)) {
+                command.Parameters[35].Value = global::System.DBNull.Value;
+            }
+            else {
+                command.Parameters[35].Value = ((string)(Original_userName));
+            }
+            global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
+            if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                command.Connection.Open();
+            }
+            int returnValue;
+            try {
+                returnValue = command.ExecuteNonQuery();
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    command.Connection.Close();
+                }
+            }
+            return returnValue;
         }
     }
     
