@@ -34,3 +34,12 @@ C:\Users\acauley\Desktop\TCSO-Ticket\TCSO-Ticket\SampleTicketer\obj\Debug\Sample
 C:\Users\acauley\Desktop\TCSO-Ticket\TCSO-Ticket\SampleTicketer\obj\Debug\SampleTicketer.csproj.GenerateResource.cache
 C:\Users\acauley\Desktop\TCSO-Ticket\TCSO-Ticket\SampleTicketer\obj\Debug\SampleTicketer.exe
 C:\Users\acauley\Desktop\TCSO-Ticket\TCSO-Ticket\SampleTicketer\obj\Debug\SampleTicketer.pdb
+C:\Users\pesmeyer\Documents\SampleTicketer V2.0\TCSO-Ticket\SampleTicketer\obj\Debug\SampleTicketer.csprojAssemblyReference.cache
+C:\Users\pesmeyer\Documents\SampleTicketer V2.0\TCSO-Ticket\SampleTicketer\obj\Debug\SampleTicketer.Form1.resources
+C:\Users\pesmeyer\Documents\SampleTicketer V2.0\TCSO-Ticket\SampleTicketer\obj\Debug\SampleTicketer.Properties.Resources.resources
+C:\Users\pesmeyer\Documents\SampleTicketer V2.0\TCSO-Ticket\SampleTicketer\obj\Debug\SampleTicketer.csproj.GenerateResource.cache
+C:\Users\pesmeyer\Documents\SampleTicketer V2.0\TCSO-Ticket\SampleTicketer\obj\Debug\SampleTicketer.exe
+C:\Users\pesmeyer\Documents\SampleTicketer V2.0\TCSO-Ticket\SampleTicketer\obj\Debug\SampleTicketer.pdb
+C:\Users\pesmeyer\Documents\SampleTicketer V2.0\TCSO-Ticket\SampleTicketer\bin\Debug\SampleTicketer.exe.config
+C:\Users\pesmeyer\Documents\SampleTicketer V2.0\TCSO-Ticket\SampleTicketer\bin\Debug\SampleTicketer.exe
+C:\Users\pesmeyer\Documents\SampleTicketer V2.0\TCSO-Ticket\SampleTicketer\bin\Debug\SampleTicketer.pdb

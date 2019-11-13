@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -39,6 +40,7 @@
             this.btnLookupTickets = new System.Windows.Forms.Button();
             this.btnStatistics = new System.Windows.Forms.Button();
             this.btnSupport = new System.Windows.Forms.Button();
+            this.pnlNewTicket = new System.Windows.Forms.Panel();
             this.lbPersonAssigned = new System.Windows.Forms.ListBox();
             this.label2 = new System.Windows.Forms.Label();
             this.lblDueDate = new System.Windows.Forms.Label();
@@ -57,12 +59,40 @@
             this.txtLastName = new System.Windows.Forms.TextBox();
             this.lblFirstName = new System.Windows.Forms.Label();
             this.txtFirstName = new System.Windows.Forms.TextBox();
+            this.pnlMyTickets = new System.Windows.Forms.Panel();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
+            this.lblWelcome = new System.Windows.Forms.Label();
+            this.ticketNumDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.emailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.phoneNumberDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dateCreatedDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dateDueDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.assignedPriorityDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.personOriginallyAssignedDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.personAssignedDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.descriptionInputDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.statusTypeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.timeSpentWorkingDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.userNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ticketBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.iTicketDataSet = new SampleTicketer.ITicketDataSet();
+            this.ticketTableAdapter = new SampleTicketer.ITicketDataSetTableAdapters.TicketTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
+            this.pnlNewTicket.SuspendLayout();
+            this.pnlMyTickets.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ticketBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iTicketDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // splitContainer1
@@ -80,24 +110,8 @@
             // 
             // splitContainer1.Panel2
             // 
-            this.splitContainer1.Panel2.Controls.Add(this.lbPersonAssigned);
-            this.splitContainer1.Panel2.Controls.Add(this.label2);
-            this.splitContainer1.Panel2.Controls.Add(this.lblDueDate);
-            this.splitContainer1.Panel2.Controls.Add(this.dtpDueDate);
-            this.splitContainer1.Panel2.Controls.Add(this.lblDateCreated);
-            this.splitContainer1.Panel2.Controls.Add(this.btnSubmit);
-            this.splitContainer1.Panel2.Controls.Add(this.lblDescription);
-            this.splitContainer1.Panel2.Controls.Add(this.txtDescription);
-            this.splitContainer1.Panel2.Controls.Add(this.label6);
-            this.splitContainer1.Panel2.Controls.Add(this.dtpDateCreated);
-            this.splitContainer1.Panel2.Controls.Add(this.lblPhoneNumber);
-            this.splitContainer1.Panel2.Controls.Add(this.txtPhoneNumber);
-            this.splitContainer1.Panel2.Controls.Add(this.lblEmail);
-            this.splitContainer1.Panel2.Controls.Add(this.txtEmail);
-            this.splitContainer1.Panel2.Controls.Add(this.lblLastName);
-            this.splitContainer1.Panel2.Controls.Add(this.txtLastName);
-            this.splitContainer1.Panel2.Controls.Add(this.lblFirstName);
-            this.splitContainer1.Panel2.Controls.Add(this.txtFirstName);
+            this.splitContainer1.Panel2.Controls.Add(this.pnlMyTickets);
+            this.splitContainer1.Panel2.Controls.Add(this.pnlNewTicket);
             this.splitContainer1.Size = new System.Drawing.Size(1149, 676);
             this.splitContainer1.SplitterDistance = 200;
             this.splitContainer1.TabIndex = 0;
@@ -163,6 +177,7 @@
             this.btnNewTicket.TabIndex = 15;
             this.btnNewTicket.Text = "New Ticket";
             this.btnNewTicket.UseVisualStyleBackColor = true;
+            this.btnNewTicket.Click += new System.EventHandler(this.btnNewTicket_Click);
             // 
             // btnMyTicket
             // 
@@ -176,6 +191,7 @@
             this.btnMyTicket.TabIndex = 16;
             this.btnMyTicket.Text = "My Tickets";
             this.btnMyTicket.UseVisualStyleBackColor = true;
+            this.btnMyTicket.Click += new System.EventHandler(this.btnMyTicket_Click);
             // 
             // btnLookupTickets
             // 
@@ -216,6 +232,32 @@
             this.btnSupport.Text = "Support";
             this.btnSupport.UseVisualStyleBackColor = true;
             // 
+            // pnlNewTicket
+            // 
+            this.pnlNewTicket.AccessibleName = "pnlMyTickets";
+            this.pnlNewTicket.Controls.Add(this.lbPersonAssigned);
+            this.pnlNewTicket.Controls.Add(this.label2);
+            this.pnlNewTicket.Controls.Add(this.lblDueDate);
+            this.pnlNewTicket.Controls.Add(this.dtpDueDate);
+            this.pnlNewTicket.Controls.Add(this.lblDateCreated);
+            this.pnlNewTicket.Controls.Add(this.btnSubmit);
+            this.pnlNewTicket.Controls.Add(this.lblDescription);
+            this.pnlNewTicket.Controls.Add(this.txtDescription);
+            this.pnlNewTicket.Controls.Add(this.label6);
+            this.pnlNewTicket.Controls.Add(this.dtpDateCreated);
+            this.pnlNewTicket.Controls.Add(this.lblPhoneNumber);
+            this.pnlNewTicket.Controls.Add(this.txtPhoneNumber);
+            this.pnlNewTicket.Controls.Add(this.lblEmail);
+            this.pnlNewTicket.Controls.Add(this.txtEmail);
+            this.pnlNewTicket.Controls.Add(this.lblLastName);
+            this.pnlNewTicket.Controls.Add(this.txtLastName);
+            this.pnlNewTicket.Controls.Add(this.lblFirstName);
+            this.pnlNewTicket.Controls.Add(this.txtFirstName);
+            this.pnlNewTicket.Location = new System.Drawing.Point(1, 0);
+            this.pnlNewTicket.Name = "pnlNewTicket";
+            this.pnlNewTicket.Size = new System.Drawing.Size(942, 676);
+            this.pnlNewTicket.TabIndex = 34;
+            // 
             // lbPersonAssigned
             // 
             this.lbPersonAssigned.BackColor = System.Drawing.SystemColors.ControlDark;
@@ -228,20 +270,20 @@
             "Daniel Lutz",
             "Payton Esmeyer",
             "Austin Cauley"});
-            this.lbPersonAssigned.Location = new System.Drawing.Point(695, 262);
+            this.lbPersonAssigned.Location = new System.Drawing.Point(694, 265);
             this.lbPersonAssigned.Name = "lbPersonAssigned";
             this.lbPersonAssigned.Size = new System.Drawing.Size(223, 108);
-            this.lbPersonAssigned.TabIndex = 32;
+            this.lbPersonAssigned.TabIndex = 50;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Gill Sans MT", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.Window;
-            this.label2.Location = new System.Drawing.Point(549, 252);
+            this.label2.Location = new System.Drawing.Point(548, 255);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(139, 27);
-            this.label2.TabIndex = 31;
+            this.label2.TabIndex = 49;
             this.label2.Text = "Person Assigned";
             // 
             // lblDueDate
@@ -250,20 +292,20 @@
             this.lblDueDate.AutoSize = true;
             this.lblDueDate.Font = new System.Drawing.Font("Gill Sans MT", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDueDate.ForeColor = System.Drawing.SystemColors.Window;
-            this.lblDueDate.Location = new System.Drawing.Point(549, 166);
+            this.lblDueDate.Location = new System.Drawing.Point(548, 169);
             this.lblDueDate.Name = "lblDueDate";
             this.lblDueDate.Size = new System.Drawing.Size(87, 27);
-            this.lblDueDate.TabIndex = 30;
+            this.lblDueDate.TabIndex = 48;
             this.lblDueDate.Text = "Due Date";
             // 
             // dtpDueDate
             // 
             this.dtpDueDate.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.dtpDueDate.CalendarMonthBackground = System.Drawing.SystemColors.ControlDark;
-            this.dtpDueDate.Location = new System.Drawing.Point(672, 166);
+            this.dtpDueDate.Location = new System.Drawing.Point(671, 169);
             this.dtpDueDate.Name = "dtpDueDate";
             this.dtpDueDate.Size = new System.Drawing.Size(246, 26);
-            this.dtpDueDate.TabIndex = 29;
+            this.dtpDueDate.TabIndex = 47;
             // 
             // lblDateCreated
             // 
@@ -271,23 +313,24 @@
             this.lblDateCreated.AutoSize = true;
             this.lblDateCreated.Font = new System.Drawing.Font("Gill Sans MT", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDateCreated.ForeColor = System.Drawing.SystemColors.Window;
-            this.lblDateCreated.Location = new System.Drawing.Point(549, 88);
+            this.lblDateCreated.Location = new System.Drawing.Point(548, 91);
             this.lblDateCreated.Name = "lblDateCreated";
             this.lblDateCreated.Size = new System.Drawing.Size(117, 27);
-            this.lblDateCreated.TabIndex = 28;
+            this.lblDateCreated.TabIndex = 46;
             this.lblDateCreated.Text = "Date Created";
             // 
             // btnSubmit
             // 
             this.btnSubmit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnSubmit.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.btnSubmit.CausesValidation = false;
             this.btnSubmit.FlatAppearance.BorderSize = 0;
             this.btnSubmit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSubmit.Font = new System.Drawing.Font("Gill Sans MT", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSubmit.Location = new System.Drawing.Point(823, 617);
+            this.btnSubmit.Location = new System.Drawing.Point(822, 620);
             this.btnSubmit.Name = "btnSubmit";
             this.btnSubmit.Size = new System.Drawing.Size(95, 36);
-            this.btnSubmit.TabIndex = 27;
+            this.btnSubmit.TabIndex = 45;
             this.btnSubmit.Text = "Submit";
             this.btnSubmit.UseVisualStyleBackColor = false;
             this.btnSubmit.Click += new System.EventHandler(this.btnSubmit_Click);
@@ -298,10 +341,10 @@
             this.lblDescription.AutoSize = true;
             this.lblDescription.Font = new System.Drawing.Font("Gill Sans MT", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDescription.ForeColor = System.Drawing.SystemColors.Window;
-            this.lblDescription.Location = new System.Drawing.Point(26, 384);
+            this.lblDescription.Location = new System.Drawing.Point(25, 387);
             this.lblDescription.Name = "lblDescription";
             this.lblDescription.Size = new System.Drawing.Size(102, 27);
-            this.lblDescription.TabIndex = 26;
+            this.lblDescription.TabIndex = 44;
             this.lblDescription.Text = "Description";
             // 
             // txtDescription
@@ -310,12 +353,12 @@
             this.txtDescription.BackColor = System.Drawing.SystemColors.ControlDark;
             this.txtDescription.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtDescription.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.txtDescription.Location = new System.Drawing.Point(31, 414);
+            this.txtDescription.Location = new System.Drawing.Point(30, 417);
             this.txtDescription.MaxLength = 500;
             this.txtDescription.Multiline = true;
             this.txtDescription.Name = "txtDescription";
             this.txtDescription.Size = new System.Drawing.Size(887, 171);
-            this.txtDescription.TabIndex = 25;
+            this.txtDescription.TabIndex = 43;
             // 
             // label6
             // 
@@ -323,20 +366,20 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Gill Sans MT", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.SystemColors.Window;
-            this.label6.Location = new System.Drawing.Point(410, 18);
+            this.label6.Location = new System.Drawing.Point(409, 21);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(132, 34);
-            this.label6.TabIndex = 24;
+            this.label6.TabIndex = 42;
             this.label6.Text = "New Ticket";
             // 
             // dtpDateCreated
             // 
             this.dtpDateCreated.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.dtpDateCreated.CalendarMonthBackground = System.Drawing.SystemColors.ControlDark;
-            this.dtpDateCreated.Location = new System.Drawing.Point(672, 88);
+            this.dtpDateCreated.Location = new System.Drawing.Point(671, 91);
             this.dtpDateCreated.Name = "dtpDateCreated";
             this.dtpDateCreated.Size = new System.Drawing.Size(246, 26);
-            this.dtpDateCreated.TabIndex = 23;
+            this.dtpDateCreated.TabIndex = 41;
             // 
             // lblPhoneNumber
             // 
@@ -344,10 +387,10 @@
             this.lblPhoneNumber.AutoSize = true;
             this.lblPhoneNumber.Font = new System.Drawing.Font("Gill Sans MT", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPhoneNumber.ForeColor = System.Drawing.SystemColors.Window;
-            this.lblPhoneNumber.Location = new System.Drawing.Point(26, 334);
+            this.lblPhoneNumber.Location = new System.Drawing.Point(25, 337);
             this.lblPhoneNumber.Name = "lblPhoneNumber";
             this.lblPhoneNumber.Size = new System.Drawing.Size(77, 27);
-            this.lblPhoneNumber.TabIndex = 22;
+            this.lblPhoneNumber.TabIndex = 40;
             this.lblPhoneNumber.Text = "Phone #";
             // 
             // txtPhoneNumber
@@ -357,10 +400,10 @@
             this.txtPhoneNumber.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtPhoneNumber.Font = new System.Drawing.Font("Gill Sans MT", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPhoneNumber.ForeColor = System.Drawing.SystemColors.Window;
-            this.txtPhoneNumber.Location = new System.Drawing.Point(130, 334);
+            this.txtPhoneNumber.Location = new System.Drawing.Point(129, 337);
             this.txtPhoneNumber.Name = "txtPhoneNumber";
             this.txtPhoneNumber.Size = new System.Drawing.Size(174, 23);
-            this.txtPhoneNumber.TabIndex = 21;
+            this.txtPhoneNumber.TabIndex = 39;
             // 
             // lblEmail
             // 
@@ -368,10 +411,10 @@
             this.lblEmail.AutoSize = true;
             this.lblEmail.Font = new System.Drawing.Font("Gill Sans MT", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEmail.ForeColor = System.Drawing.SystemColors.Window;
-            this.lblEmail.Location = new System.Drawing.Point(26, 252);
+            this.lblEmail.Location = new System.Drawing.Point(25, 255);
             this.lblEmail.Name = "lblEmail";
             this.lblEmail.Size = new System.Drawing.Size(53, 27);
-            this.lblEmail.TabIndex = 20;
+            this.lblEmail.TabIndex = 38;
             this.lblEmail.Text = "Email";
             // 
             // txtEmail
@@ -381,10 +424,10 @@
             this.txtEmail.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtEmail.Font = new System.Drawing.Font("Gill Sans MT", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEmail.ForeColor = System.Drawing.SystemColors.Window;
-            this.txtEmail.Location = new System.Drawing.Point(130, 252);
+            this.txtEmail.Location = new System.Drawing.Point(129, 255);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(174, 23);
-            this.txtEmail.TabIndex = 19;
+            this.txtEmail.TabIndex = 37;
             // 
             // lblLastName
             // 
@@ -392,10 +435,10 @@
             this.lblLastName.AutoSize = true;
             this.lblLastName.Font = new System.Drawing.Font("Gill Sans MT", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblLastName.ForeColor = System.Drawing.SystemColors.Window;
-            this.lblLastName.Location = new System.Drawing.Point(26, 168);
+            this.lblLastName.Location = new System.Drawing.Point(25, 171);
             this.lblLastName.Name = "lblLastName";
             this.lblLastName.Size = new System.Drawing.Size(94, 27);
-            this.lblLastName.TabIndex = 18;
+            this.lblLastName.TabIndex = 36;
             this.lblLastName.Text = "Last Name";
             // 
             // txtLastName
@@ -405,10 +448,10 @@
             this.txtLastName.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtLastName.Font = new System.Drawing.Font("Gill Sans MT", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtLastName.ForeColor = System.Drawing.SystemColors.Window;
-            this.txtLastName.Location = new System.Drawing.Point(130, 170);
+            this.txtLastName.Location = new System.Drawing.Point(129, 173);
             this.txtLastName.Name = "txtLastName";
             this.txtLastName.Size = new System.Drawing.Size(174, 23);
-            this.txtLastName.TabIndex = 17;
+            this.txtLastName.TabIndex = 35;
             // 
             // lblFirstName
             // 
@@ -416,10 +459,10 @@
             this.lblFirstName.AutoSize = true;
             this.lblFirstName.Font = new System.Drawing.Font("Gill Sans MT", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFirstName.ForeColor = System.Drawing.SystemColors.Window;
-            this.lblFirstName.Location = new System.Drawing.Point(26, 88);
+            this.lblFirstName.Location = new System.Drawing.Point(25, 91);
             this.lblFirstName.Name = "lblFirstName";
             this.lblFirstName.Size = new System.Drawing.Size(98, 27);
-            this.lblFirstName.TabIndex = 16;
+            this.lblFirstName.TabIndex = 34;
             this.lblFirstName.Text = "First Name";
             // 
             // txtFirstName
@@ -429,11 +472,179 @@
             this.txtFirstName.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtFirstName.Font = new System.Drawing.Font("Gill Sans MT", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtFirstName.ForeColor = System.Drawing.SystemColors.Window;
-            this.txtFirstName.Location = new System.Drawing.Point(130, 88);
+            this.txtFirstName.Location = new System.Drawing.Point(129, 91);
             this.txtFirstName.MaxLength = 25;
             this.txtFirstName.Name = "txtFirstName";
             this.txtFirstName.Size = new System.Drawing.Size(174, 23);
-            this.txtFirstName.TabIndex = 15;
+            this.txtFirstName.TabIndex = 33;
+            // 
+            // pnlMyTickets
+            // 
+            this.pnlMyTickets.AccessibleName = "";
+            this.pnlMyTickets.Controls.Add(this.dataGridView1);
+            this.pnlMyTickets.Controls.Add(this.panel2);
+            this.pnlMyTickets.Location = new System.Drawing.Point(0, 0);
+            this.pnlMyTickets.Name = "pnlMyTickets";
+            this.pnlMyTickets.Size = new System.Drawing.Size(945, 676);
+            this.pnlMyTickets.TabIndex = 52;
+            this.pnlMyTickets.Visible = false;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AutoGenerateColumns = false;
+            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ticketNumDataGridViewTextBoxColumn,
+            this.fnameDataGridViewTextBoxColumn,
+            this.lnameDataGridViewTextBoxColumn,
+            this.emailDataGridViewTextBoxColumn,
+            this.phoneNumberDataGridViewTextBoxColumn,
+            this.dateCreatedDataGridViewTextBoxColumn,
+            this.dateDueDataGridViewTextBoxColumn,
+            this.assignedPriorityDataGridViewTextBoxColumn,
+            this.personOriginallyAssignedDataGridViewTextBoxColumn,
+            this.personAssignedDataGridViewTextBoxColumn,
+            this.descriptionInputDataGridViewTextBoxColumn,
+            this.statusTypeDataGridViewTextBoxColumn,
+            this.timeSpentWorkingDataGridViewTextBoxColumn,
+            this.userNameDataGridViewTextBoxColumn});
+            this.dataGridView1.DataSource = this.ticketBindingSource;
+            this.dataGridView1.Location = new System.Drawing.Point(19, 123);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(906, 211);
+            this.dataGridView1.TabIndex = 1;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.panel2.Controls.Add(this.label3);
+            this.panel2.Controls.Add(this.lblWelcome);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(945, 100);
+            this.panel2.TabIndex = 0;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Gill Sans MT", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.SystemColors.Window;
+            this.label3.Location = new System.Drawing.Point(346, 35);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(250, 30);
+            this.label3.TabIndex = 1;
+            this.label3.Text = "See what\'s been happening:";
+            // 
+            // lblWelcome
+            // 
+            this.lblWelcome.AutoSize = true;
+            this.lblWelcome.Font = new System.Drawing.Font("Gill Sans MT", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblWelcome.ForeColor = System.Drawing.SystemColors.Window;
+            this.lblWelcome.Location = new System.Drawing.Point(45, 31);
+            this.lblWelcome.Name = "lblWelcome";
+            this.lblWelcome.Size = new System.Drawing.Size(172, 38);
+            this.lblWelcome.TabIndex = 0;
+            this.lblWelcome.Text = "Hello, Default";
+            // 
+            // ticketNumDataGridViewTextBoxColumn
+            // 
+            this.ticketNumDataGridViewTextBoxColumn.DataPropertyName = "ticketNum";
+            this.ticketNumDataGridViewTextBoxColumn.HeaderText = "ticketNum";
+            this.ticketNumDataGridViewTextBoxColumn.Name = "ticketNumDataGridViewTextBoxColumn";
+            // 
+            // fnameDataGridViewTextBoxColumn
+            // 
+            this.fnameDataGridViewTextBoxColumn.DataPropertyName = "fname";
+            this.fnameDataGridViewTextBoxColumn.HeaderText = "fname";
+            this.fnameDataGridViewTextBoxColumn.Name = "fnameDataGridViewTextBoxColumn";
+            // 
+            // lnameDataGridViewTextBoxColumn
+            // 
+            this.lnameDataGridViewTextBoxColumn.DataPropertyName = "lname";
+            this.lnameDataGridViewTextBoxColumn.HeaderText = "lname";
+            this.lnameDataGridViewTextBoxColumn.Name = "lnameDataGridViewTextBoxColumn";
+            // 
+            // emailDataGridViewTextBoxColumn
+            // 
+            this.emailDataGridViewTextBoxColumn.DataPropertyName = "email";
+            this.emailDataGridViewTextBoxColumn.HeaderText = "email";
+            this.emailDataGridViewTextBoxColumn.Name = "emailDataGridViewTextBoxColumn";
+            // 
+            // phoneNumberDataGridViewTextBoxColumn
+            // 
+            this.phoneNumberDataGridViewTextBoxColumn.DataPropertyName = "phoneNumber";
+            this.phoneNumberDataGridViewTextBoxColumn.HeaderText = "phoneNumber";
+            this.phoneNumberDataGridViewTextBoxColumn.Name = "phoneNumberDataGridViewTextBoxColumn";
+            // 
+            // dateCreatedDataGridViewTextBoxColumn
+            // 
+            this.dateCreatedDataGridViewTextBoxColumn.DataPropertyName = "dateCreated";
+            this.dateCreatedDataGridViewTextBoxColumn.HeaderText = "dateCreated";
+            this.dateCreatedDataGridViewTextBoxColumn.Name = "dateCreatedDataGridViewTextBoxColumn";
+            // 
+            // dateDueDataGridViewTextBoxColumn
+            // 
+            this.dateDueDataGridViewTextBoxColumn.DataPropertyName = "dateDue";
+            this.dateDueDataGridViewTextBoxColumn.HeaderText = "dateDue";
+            this.dateDueDataGridViewTextBoxColumn.Name = "dateDueDataGridViewTextBoxColumn";
+            // 
+            // assignedPriorityDataGridViewTextBoxColumn
+            // 
+            this.assignedPriorityDataGridViewTextBoxColumn.DataPropertyName = "assignedPriority";
+            this.assignedPriorityDataGridViewTextBoxColumn.HeaderText = "assignedPriority";
+            this.assignedPriorityDataGridViewTextBoxColumn.Name = "assignedPriorityDataGridViewTextBoxColumn";
+            // 
+            // personOriginallyAssignedDataGridViewTextBoxColumn
+            // 
+            this.personOriginallyAssignedDataGridViewTextBoxColumn.DataPropertyName = "personOriginallyAssigned";
+            this.personOriginallyAssignedDataGridViewTextBoxColumn.HeaderText = "personOriginallyAssigned";
+            this.personOriginallyAssignedDataGridViewTextBoxColumn.Name = "personOriginallyAssignedDataGridViewTextBoxColumn";
+            // 
+            // personAssignedDataGridViewTextBoxColumn
+            // 
+            this.personAssignedDataGridViewTextBoxColumn.DataPropertyName = "personAssigned";
+            this.personAssignedDataGridViewTextBoxColumn.HeaderText = "personAssigned";
+            this.personAssignedDataGridViewTextBoxColumn.Name = "personAssignedDataGridViewTextBoxColumn";
+            // 
+            // descriptionInputDataGridViewTextBoxColumn
+            // 
+            this.descriptionInputDataGridViewTextBoxColumn.DataPropertyName = "descriptionInput";
+            this.descriptionInputDataGridViewTextBoxColumn.HeaderText = "descriptionInput";
+            this.descriptionInputDataGridViewTextBoxColumn.Name = "descriptionInputDataGridViewTextBoxColumn";
+            // 
+            // statusTypeDataGridViewTextBoxColumn
+            // 
+            this.statusTypeDataGridViewTextBoxColumn.DataPropertyName = "statusType";
+            this.statusTypeDataGridViewTextBoxColumn.HeaderText = "statusType";
+            this.statusTypeDataGridViewTextBoxColumn.Name = "statusTypeDataGridViewTextBoxColumn";
+            // 
+            // timeSpentWorkingDataGridViewTextBoxColumn
+            // 
+            this.timeSpentWorkingDataGridViewTextBoxColumn.DataPropertyName = "timeSpentWorking";
+            this.timeSpentWorkingDataGridViewTextBoxColumn.HeaderText = "timeSpentWorking";
+            this.timeSpentWorkingDataGridViewTextBoxColumn.Name = "timeSpentWorkingDataGridViewTextBoxColumn";
+            // 
+            // userNameDataGridViewTextBoxColumn
+            // 
+            this.userNameDataGridViewTextBoxColumn.DataPropertyName = "userName";
+            this.userNameDataGridViewTextBoxColumn.HeaderText = "userName";
+            this.userNameDataGridViewTextBoxColumn.Name = "userNameDataGridViewTextBoxColumn";
+            // 
+            // ticketBindingSource
+            // 
+            this.ticketBindingSource.DataMember = "Ticket";
+            this.ticketBindingSource.DataSource = this.iTicketDataSet;
+            // 
+            // iTicketDataSet
+            // 
+            this.iTicketDataSet.DataSetName = "ITicketDataSet";
+            this.iTicketDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // ticketTableAdapter
+            // 
+            this.ticketTableAdapter.ClearBeforeFill = true;
             // 
             // Form1
             // 
@@ -448,14 +659,22 @@
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "TCSO Tiket";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel2.ResumeLayout(false);
-            this.splitContainer1.Panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.flowLayoutPanel1.ResumeLayout(false);
+            this.pnlNewTicket.ResumeLayout(false);
+            this.pnlNewTicket.PerformLayout();
+            this.pnlMyTickets.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ticketBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iTicketDataSet)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -472,6 +691,16 @@
         private System.Windows.Forms.Button btnOverview;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Panel pnlMyTickets;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lblWelcome;
+        private System.Windows.Forms.Panel pnlNewTicket;
+        private System.Windows.Forms.ListBox lbPersonAssigned;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblDueDate;
+        private System.Windows.Forms.DateTimePicker dtpDueDate;
         private System.Windows.Forms.Label lblDateCreated;
         private System.Windows.Forms.Button btnSubmit;
         private System.Windows.Forms.Label lblDescription;
@@ -486,10 +715,23 @@
         private System.Windows.Forms.TextBox txtLastName;
         private System.Windows.Forms.Label lblFirstName;
         private System.Windows.Forms.TextBox txtFirstName;
-        private System.Windows.Forms.Label lblDueDate;
-        private System.Windows.Forms.DateTimePicker dtpDueDate;
-        private System.Windows.Forms.ListBox lbPersonAssigned;
-        private System.Windows.Forms.Label label2;
+        private ITicketDataSet iTicketDataSet;
+        private System.Windows.Forms.BindingSource ticketBindingSource;
+        private ITicketDataSetTableAdapters.TicketTableAdapter ticketTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ticketNumDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fnameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn lnameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn emailDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn phoneNumberDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dateCreatedDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dateDueDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn assignedPriorityDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn personOriginallyAssignedDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn personAssignedDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn descriptionInputDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn statusTypeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn timeSpentWorkingDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn userNameDataGridViewTextBoxColumn;
     }
 }
 
