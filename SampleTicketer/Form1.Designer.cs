@@ -40,6 +40,27 @@
             this.btnLookupTickets = new System.Windows.Forms.Button();
             this.btnStatistics = new System.Windows.Forms.Button();
             this.btnSupport = new System.Windows.Forms.Button();
+            this.pnlMyTickets = new System.Windows.Forms.Panel();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.ticketNumDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.emailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.phoneNumberDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dateCreatedDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dateDueDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.assignedPriorityDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.personOriginallyAssignedDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.personAssignedDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.descriptionInputDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.statusTypeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.timeSpentWorkingDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.userNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ticketBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.iTicketDataSet = new SampleTicketer.ITicketDataSet();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
+            this.lblWelcome = new System.Windows.Forms.Label();
             this.pnlNewTicket = new System.Windows.Forms.Panel();
             this.lbPersonAssigned = new System.Windows.Forms.ListBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -87,12 +108,13 @@
             this.splitContainer1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
-            this.pnlNewTicket.SuspendLayout();
             this.pnlMyTickets.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dvgTicketViewer)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ticketBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iTicketDataSet)).BeginInit();
+            this.panel2.SuspendLayout();
+            this.pnlNewTicket.SuspendLayout();
             this.SuspendLayout();
             // 
             // splitContainer1
@@ -231,6 +253,170 @@
             this.btnSupport.TabIndex = 19;
             this.btnSupport.Text = "Support";
             this.btnSupport.UseVisualStyleBackColor = true;
+            // 
+            // pnlMyTickets
+            // 
+            this.pnlMyTickets.AccessibleName = "";
+            this.pnlMyTickets.Controls.Add(this.dataGridView1);
+            this.pnlMyTickets.Controls.Add(this.panel2);
+            this.pnlMyTickets.Location = new System.Drawing.Point(0, 0);
+            this.pnlMyTickets.Name = "pnlMyTickets";
+            this.pnlMyTickets.Size = new System.Drawing.Size(945, 676);
+            this.pnlMyTickets.TabIndex = 52;
+            this.pnlMyTickets.Visible = false;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AutoGenerateColumns = false;
+            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ticketNumDataGridViewTextBoxColumn,
+            this.fnameDataGridViewTextBoxColumn,
+            this.lnameDataGridViewTextBoxColumn,
+            this.emailDataGridViewTextBoxColumn,
+            this.phoneNumberDataGridViewTextBoxColumn,
+            this.dateCreatedDataGridViewTextBoxColumn,
+            this.dateDueDataGridViewTextBoxColumn,
+            this.assignedPriorityDataGridViewTextBoxColumn,
+            this.personOriginallyAssignedDataGridViewTextBoxColumn,
+            this.personAssignedDataGridViewTextBoxColumn,
+            this.descriptionInputDataGridViewTextBoxColumn,
+            this.statusTypeDataGridViewTextBoxColumn,
+            this.timeSpentWorkingDataGridViewTextBoxColumn,
+            this.userNameDataGridViewTextBoxColumn});
+            this.dataGridView1.DataSource = this.ticketBindingSource;
+            this.dataGridView1.Location = new System.Drawing.Point(19, 123);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(906, 211);
+            this.dataGridView1.TabIndex = 1;
+            // 
+            // ticketNumDataGridViewTextBoxColumn
+            // 
+            this.ticketNumDataGridViewTextBoxColumn.DataPropertyName = "ticketNum";
+            this.ticketNumDataGridViewTextBoxColumn.HeaderText = "ticketNum";
+            this.ticketNumDataGridViewTextBoxColumn.Name = "ticketNumDataGridViewTextBoxColumn";
+            // 
+            // fnameDataGridViewTextBoxColumn
+            // 
+            this.fnameDataGridViewTextBoxColumn.DataPropertyName = "fname";
+            this.fnameDataGridViewTextBoxColumn.HeaderText = "fname";
+            this.fnameDataGridViewTextBoxColumn.Name = "fnameDataGridViewTextBoxColumn";
+            // 
+            // lnameDataGridViewTextBoxColumn
+            // 
+            this.lnameDataGridViewTextBoxColumn.DataPropertyName = "lname";
+            this.lnameDataGridViewTextBoxColumn.HeaderText = "lname";
+            this.lnameDataGridViewTextBoxColumn.Name = "lnameDataGridViewTextBoxColumn";
+            // 
+            // emailDataGridViewTextBoxColumn
+            // 
+            this.emailDataGridViewTextBoxColumn.DataPropertyName = "email";
+            this.emailDataGridViewTextBoxColumn.HeaderText = "email";
+            this.emailDataGridViewTextBoxColumn.Name = "emailDataGridViewTextBoxColumn";
+            // 
+            // phoneNumberDataGridViewTextBoxColumn
+            // 
+            this.phoneNumberDataGridViewTextBoxColumn.DataPropertyName = "phoneNumber";
+            this.phoneNumberDataGridViewTextBoxColumn.HeaderText = "phoneNumber";
+            this.phoneNumberDataGridViewTextBoxColumn.Name = "phoneNumberDataGridViewTextBoxColumn";
+            // 
+            // dateCreatedDataGridViewTextBoxColumn
+            // 
+            this.dateCreatedDataGridViewTextBoxColumn.DataPropertyName = "dateCreated";
+            this.dateCreatedDataGridViewTextBoxColumn.HeaderText = "dateCreated";
+            this.dateCreatedDataGridViewTextBoxColumn.Name = "dateCreatedDataGridViewTextBoxColumn";
+            // 
+            // dateDueDataGridViewTextBoxColumn
+            // 
+            this.dateDueDataGridViewTextBoxColumn.DataPropertyName = "dateDue";
+            this.dateDueDataGridViewTextBoxColumn.HeaderText = "dateDue";
+            this.dateDueDataGridViewTextBoxColumn.Name = "dateDueDataGridViewTextBoxColumn";
+            // 
+            // assignedPriorityDataGridViewTextBoxColumn
+            // 
+            this.assignedPriorityDataGridViewTextBoxColumn.DataPropertyName = "assignedPriority";
+            this.assignedPriorityDataGridViewTextBoxColumn.HeaderText = "assignedPriority";
+            this.assignedPriorityDataGridViewTextBoxColumn.Name = "assignedPriorityDataGridViewTextBoxColumn";
+            // 
+            // personOriginallyAssignedDataGridViewTextBoxColumn
+            // 
+            this.personOriginallyAssignedDataGridViewTextBoxColumn.DataPropertyName = "personOriginallyAssigned";
+            this.personOriginallyAssignedDataGridViewTextBoxColumn.HeaderText = "personOriginallyAssigned";
+            this.personOriginallyAssignedDataGridViewTextBoxColumn.Name = "personOriginallyAssignedDataGridViewTextBoxColumn";
+            // 
+            // personAssignedDataGridViewTextBoxColumn
+            // 
+            this.personAssignedDataGridViewTextBoxColumn.DataPropertyName = "personAssigned";
+            this.personAssignedDataGridViewTextBoxColumn.HeaderText = "personAssigned";
+            this.personAssignedDataGridViewTextBoxColumn.Name = "personAssignedDataGridViewTextBoxColumn";
+            // 
+            // descriptionInputDataGridViewTextBoxColumn
+            // 
+            this.descriptionInputDataGridViewTextBoxColumn.DataPropertyName = "descriptionInput";
+            this.descriptionInputDataGridViewTextBoxColumn.HeaderText = "descriptionInput";
+            this.descriptionInputDataGridViewTextBoxColumn.Name = "descriptionInputDataGridViewTextBoxColumn";
+            // 
+            // statusTypeDataGridViewTextBoxColumn
+            // 
+            this.statusTypeDataGridViewTextBoxColumn.DataPropertyName = "statusType";
+            this.statusTypeDataGridViewTextBoxColumn.HeaderText = "statusType";
+            this.statusTypeDataGridViewTextBoxColumn.Name = "statusTypeDataGridViewTextBoxColumn";
+            // 
+            // timeSpentWorkingDataGridViewTextBoxColumn
+            // 
+            this.timeSpentWorkingDataGridViewTextBoxColumn.DataPropertyName = "timeSpentWorking";
+            this.timeSpentWorkingDataGridViewTextBoxColumn.HeaderText = "timeSpentWorking";
+            this.timeSpentWorkingDataGridViewTextBoxColumn.Name = "timeSpentWorkingDataGridViewTextBoxColumn";
+            // 
+            // userNameDataGridViewTextBoxColumn
+            // 
+            this.userNameDataGridViewTextBoxColumn.DataPropertyName = "userName";
+            this.userNameDataGridViewTextBoxColumn.HeaderText = "userName";
+            this.userNameDataGridViewTextBoxColumn.Name = "userNameDataGridViewTextBoxColumn";
+            // 
+            // ticketBindingSource
+            // 
+            this.ticketBindingSource.DataMember = "Ticket";
+            this.ticketBindingSource.DataSource = this.iTicketDataSet;
+            // 
+            // iTicketDataSet
+            // 
+            this.iTicketDataSet.DataSetName = "ITicketDataSet";
+            this.iTicketDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.panel2.Controls.Add(this.label3);
+            this.panel2.Controls.Add(this.lblWelcome);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(945, 100);
+            this.panel2.TabIndex = 0;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Gill Sans MT", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.SystemColors.Window;
+            this.label3.Location = new System.Drawing.Point(346, 35);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(250, 30);
+            this.label3.TabIndex = 1;
+            this.label3.Text = "See what\'s been happening:";
+            // 
+            // lblWelcome
+            // 
+            this.lblWelcome.AutoSize = true;
+            this.lblWelcome.Font = new System.Drawing.Font("Gill Sans MT", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblWelcome.ForeColor = System.Drawing.SystemColors.Window;
+            this.lblWelcome.Location = new System.Drawing.Point(45, 31);
+            this.lblWelcome.Name = "lblWelcome";
+            this.lblWelcome.Size = new System.Drawing.Size(172, 38);
+            this.lblWelcome.TabIndex = 0;
+            this.lblWelcome.Text = "Hello, Default";
             // 
             // pnlNewTicket
             // 
@@ -667,14 +853,16 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.flowLayoutPanel1.ResumeLayout(false);
-            this.pnlNewTicket.ResumeLayout(false);
-            this.pnlNewTicket.PerformLayout();
             this.pnlMyTickets.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dvgTicketViewer)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ticketBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.iTicketDataSet)).EndInit();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            this.pnlNewTicket.ResumeLayout(false);
+            this.pnlNewTicket.PerformLayout();
             this.ResumeLayout(false);
 
         }
