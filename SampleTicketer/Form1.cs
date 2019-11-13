@@ -30,11 +30,11 @@ namespace SampleTicketer
                     string phoneNumber = txtPhoneNumber.Text;
                     var dateCreated = dtpDateCreated.Value.Date;
                     var dateDue = dtpDueDate.Value.Date;
-                    string assignedPriority = null;
+                    string assignedPriority = "TBD";
                     string origPerson = lbPersonAssigned.SelectedItem.ToString();
                     string personAssigned = origPerson;
                     string description = txtDescription.Text;
-                    string status = null;
+                    string status = "Open";
                     int timeSpentWorking = 0;
                     string userName = Environment.UserName;
 
@@ -76,11 +76,11 @@ namespace SampleTicketer
                         cmd.Parameters.Add("@param5", System.Data.SqlDbType.VarChar, 15).Value = phoneNumber;
                         cmd.Parameters.Add("@param6", System.Data.SqlDbType.Date).Value = dateCreated;
                         cmd.Parameters.Add("@param7", System.Data.SqlDbType.Date).Value = dateDue;
-                        cmd.Parameters.Add("@param8", System.Data.SqlDbType.VarChar, 30).Value = DBNull.Value;
+                        cmd.Parameters.Add("@param8", System.Data.SqlDbType.VarChar, 30).Value = assignedPriority;
                         cmd.Parameters.Add("@param9", System.Data.SqlDbType.VarChar, 30).Value = origPerson;
                         cmd.Parameters.Add("@param10", System.Data.SqlDbType.VarChar, 30).Value = personAssigned;
                         cmd.Parameters.Add("@param11", System.Data.SqlDbType.VarChar, 1500).Value = description;
-                        cmd.Parameters.Add("@param12", System.Data.SqlDbType.VarChar, 20).Value = DBNull.Value;
+                        cmd.Parameters.Add("@param12", System.Data.SqlDbType.VarChar, 20).Value = status;
                         cmd.Parameters.Add("@param13", System.Data.SqlDbType.VarChar, 30).Value = timeSpentWorking;
                         cmd.Parameters.Add("@param14", System.Data.SqlDbType.VarChar, 30).Value = userName;
 
