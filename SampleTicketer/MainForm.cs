@@ -175,7 +175,10 @@ namespace SampleTicketer
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-                string description = txtAddNotes.Text + '~';
+            string description = txtAddNotes.Text + '~';
+            this.Validate();
+            this.ticketBindingSource.EndEdit();
+            this.tableAdapterManager.UpdateAll(this.iTicketDataSet);
 
         }
 
