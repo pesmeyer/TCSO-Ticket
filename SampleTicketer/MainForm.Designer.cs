@@ -46,6 +46,8 @@
             this.btnSupport = new System.Windows.Forms.Button();
             this.pnlMyTickets = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.ticketBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.iTicketDataSet = new SampleTicketer.ITicketDataSet();
             this.btnEditTicket = new System.Windows.Forms.Button();
             this.pnlQuickEdit = new System.Windows.Forms.Panel();
             this.txtAddNotes = new System.Windows.Forms.TextBox();
@@ -79,6 +81,9 @@
             this.txtLastName = new System.Windows.Forms.TextBox();
             this.lblFirstName = new System.Windows.Forms.Label();
             this.txtFirstName = new System.Windows.Forms.TextBox();
+            this.ticketTableAdapter = new SampleTicketer.ITicketDataSetTableAdapters.TicketTableAdapter();
+            this.tableAdapterManager = new SampleTicketer.ITicketDataSetTableAdapters.TableAdapterManager();
+            this.iTicketDataSet1 = new SampleTicketer.ITicketDataSet();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -93,11 +98,6 @@
             this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ticketBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.iTicketDataSet = new SampleTicketer.ITicketDataSet();
-            this.ticketTableAdapter = new SampleTicketer.ITicketDataSetTableAdapters.TicketTableAdapter();
-            this.tableAdapterManager = new SampleTicketer.ITicketDataSetTableAdapters.TableAdapterManager();
-            this.iTicketDataSet1 = new SampleTicketer.ITicketDataSet();
             assignedPriorityLabel = new System.Windows.Forms.Label();
             statusTypeLabel = new System.Windows.Forms.Label();
             personAssignedLabel = new System.Windows.Forms.Label();
@@ -110,11 +110,11 @@
             this.flowLayoutPanel1.SuspendLayout();
             this.pnlMyTickets.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ticketBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iTicketDataSet)).BeginInit();
             this.pnlQuickEdit.SuspendLayout();
             this.panel2.SuspendLayout();
             this.pnlNewTicket.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ticketBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.iTicketDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iTicketDataSet1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -319,6 +319,7 @@
             this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.ColumnHeader;
+            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView1.ColumnHeadersHeight = 45;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -342,6 +343,16 @@
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.Size = new System.Drawing.Size(898, 209);
             this.dataGridView1.TabIndex = 4;
+            // 
+            // ticketBindingSource
+            // 
+            this.ticketBindingSource.DataMember = "Ticket";
+            this.ticketBindingSource.DataSource = this.iTicketDataSet;
+            // 
+            // iTicketDataSet
+            // 
+            this.iTicketDataSet.DataSetName = "ITicketDataSet";
+            this.iTicketDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // btnEditTicket
             // 
@@ -773,6 +784,22 @@
             this.txtFirstName.Size = new System.Drawing.Size(174, 23);
             this.txtFirstName.TabIndex = 33;
             // 
+            // ticketTableAdapter
+            // 
+            this.ticketTableAdapter.ClearBeforeFill = true;
+            // 
+            // tableAdapterManager
+            // 
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.Connection = null;
+            this.tableAdapterManager.TicketTableAdapter = null;
+            this.tableAdapterManager.UpdateOrder = SampleTicketer.ITicketDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            // 
+            // iTicketDataSet1
+            // 
+            this.iTicketDataSet1.DataSetName = "ITicketDataSet";
+            this.iTicketDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // dataGridViewTextBoxColumn1
             // 
             this.dataGridViewTextBoxColumn1.DataPropertyName = "ticketNum";
@@ -843,6 +870,7 @@
             this.dataGridViewTextBoxColumn9.HeaderText = "Person Originally Assigned";
             this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
             this.dataGridViewTextBoxColumn9.ReadOnly = true;
+            this.dataGridViewTextBoxColumn9.Visible = false;
             this.dataGridViewTextBoxColumn9.Width = 210;
             // 
             // dataGridViewTextBoxColumn10
@@ -884,33 +912,7 @@
             this.dataGridViewTextBoxColumn14.Name = "dataGridViewTextBoxColumn14";
             this.dataGridViewTextBoxColumn14.ReadOnly = true;
             this.dataGridViewTextBoxColumn14.Visible = false;
-            this.dataGridViewTextBoxColumn14.Width = 78;
-            // 
-            // ticketBindingSource
-            // 
-            this.ticketBindingSource.DataMember = "Ticket";
-            this.ticketBindingSource.DataSource = this.iTicketDataSet;
-            // 
-            // iTicketDataSet
-            // 
-            this.iTicketDataSet.DataSetName = "ITicketDataSet";
-            this.iTicketDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // ticketTableAdapter
-            // 
-            this.ticketTableAdapter.ClearBeforeFill = true;
-            // 
-            // tableAdapterManager
-            // 
-            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager.Connection = null;
-            this.tableAdapterManager.TicketTableAdapter = null;
-            this.tableAdapterManager.UpdateOrder = SampleTicketer.ITicketDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
-            // 
-            // iTicketDataSet1
-            // 
-            this.iTicketDataSet1.DataSetName = "ITicketDataSet";
-            this.iTicketDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.dataGridViewTextBoxColumn14.Width = 110;
             // 
             // MainForm
             // 
@@ -936,14 +938,14 @@
             this.pnlMyTickets.ResumeLayout(false);
             this.pnlMyTickets.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ticketBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iTicketDataSet)).EndInit();
             this.pnlQuickEdit.ResumeLayout(false);
             this.pnlQuickEdit.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.pnlNewTicket.ResumeLayout(false);
             this.pnlNewTicket.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ticketBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.iTicketDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.iTicketDataSet1)).EndInit();
             this.ResumeLayout(false);
 
@@ -997,6 +999,10 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label lblTotalTicketOpen;
         private System.Windows.Forms.Label lblWelcome;
+        private System.Windows.Forms.ListBox descriptionInputListBox;
+        private System.Windows.Forms.TextBox txtAddNotes;
+        private System.Windows.Forms.Label lblAddNotes;
+        public System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
@@ -1011,10 +1017,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn12;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn13;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn14;
-        private System.Windows.Forms.ListBox descriptionInputListBox;
-        private System.Windows.Forms.TextBox txtAddNotes;
-        private System.Windows.Forms.Label lblAddNotes;
-        public System.Windows.Forms.DataGridView dataGridView1;
     }
 }
 

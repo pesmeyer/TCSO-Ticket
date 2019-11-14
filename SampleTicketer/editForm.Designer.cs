@@ -288,6 +288,11 @@
             this.assignedPriorityComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.assignedPriorityComboBox.ForeColor = System.Drawing.SystemColors.Window;
             this.assignedPriorityComboBox.FormattingEnabled = true;
+            this.assignedPriorityComboBox.Items.AddRange(new object[] {
+            "Low",
+            "Medium",
+            "High",
+            "Critical"});
             this.assignedPriorityComboBox.Location = new System.Drawing.Point(624, 32);
             this.assignedPriorityComboBox.Name = "assignedPriorityComboBox";
             this.assignedPriorityComboBox.Size = new System.Drawing.Size(200, 32);
@@ -300,6 +305,10 @@
             this.personAssignedComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.personAssignedComboBox.ForeColor = System.Drawing.SystemColors.Window;
             this.personAssignedComboBox.FormattingEnabled = true;
+            this.personAssignedComboBox.Items.AddRange(new object[] {
+            "Daniel Lutz",
+            "Payton Esmeyer",
+            "Austin Cauley"});
             this.personAssignedComboBox.Location = new System.Drawing.Point(624, 74);
             this.personAssignedComboBox.Name = "personAssignedComboBox";
             this.personAssignedComboBox.Size = new System.Drawing.Size(200, 32);
@@ -312,6 +321,9 @@
             this.statusTypeComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.statusTypeComboBox.ForeColor = System.Drawing.SystemColors.Window;
             this.statusTypeComboBox.FormattingEnabled = true;
+            this.statusTypeComboBox.Items.AddRange(new object[] {
+            "Open",
+            "Closed"});
             this.statusTypeComboBox.Location = new System.Drawing.Point(624, 116);
             this.statusTypeComboBox.Name = "statusTypeComboBox";
             this.statusTypeComboBox.Size = new System.Drawing.Size(200, 32);

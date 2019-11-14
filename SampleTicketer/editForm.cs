@@ -16,15 +16,6 @@ namespace SampleTicketer
         {
             InitializeComponent();
         }
-
-        private void ticketBindingNavigatorSaveItem_Click(object sender, EventArgs e)
-        {
-            this.Validate();
-            this.ticketBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.iTicketDataSet);
-
-        }
-
         private void editForm_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'iTicketDataSet.Ticket' table. You can move, or remove it, as needed.
@@ -34,7 +25,12 @@ namespace SampleTicketer
 
         private void btnUpdateEdit_Click(object sender, EventArgs e)
         {
+            MainForm mform = new MainForm();
+
             
+            this.Validate();
+            this.ticketBindingSource.EndEdit();
+            this.tableAdapterManager.UpdateAll(this.iTicketDataSet);
             this.Close();
         }
     }

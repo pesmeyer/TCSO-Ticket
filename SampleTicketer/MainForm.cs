@@ -174,7 +174,7 @@ namespace SampleTicketer
 
             form2.ShowDialog();
 
-            
+            this.ticketTableAdapter.Fill(this.iTicketDataSet.Ticket);
         }
     }
 }
