@@ -185,12 +185,21 @@ namespace SampleTicketer
 
         private void btnEditTicket_Click(object sender, EventArgs e)
         {
-            editForm form2 = new editForm();
 
-            form2.ShowDialog();
+                string ticketID;
+                if (dataGridView1.SelectedRows.Count > 0)
+                {
+                    ticketID = dataGridView1.SelectedRows[0].Cells[0].Value.ToString();
+                } else {
+                    ticketID = dataGridView1.Rows[dataGridView1.SelectedCells[0].RowIndex].Cells[0].Value.ToString();
+                }
 
-            this.ticketTableAdapter.Fill(this.iTicketDataSet.Ticket);
-            this.ticketTableAdapter.SortByOpen(this.iTicketDataSet.Ticket, getPerson(Environment.UserName.ToString()));
+                editForm form2 = new editForm(ticketID);
+
+                form2.ShowDialog();
+
+                this.ticketTableAdapter.Fill(this.iTicketDataSet.Ticket);
+                this.ticketTableAdapter.SortByOpen(this.iTicketDataSet.Ticket, getPerson(Environment.UserName.ToString()));
         }
     }
 }

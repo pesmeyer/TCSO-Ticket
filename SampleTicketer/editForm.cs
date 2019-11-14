@@ -12,14 +12,16 @@ namespace SampleTicketer
 {
     public partial class editForm : Form
     {
-        public editForm()
+        string updateID;
+        public editForm(string id)
         {
             InitializeComponent();
+            updateID = id;
         }
         private void editForm_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'iTicketDataSet.Ticket' table. You can move, or remove it, as needed.
-            this.ticketTableAdapter.Fill(this.iTicketDataSet.Ticket);
+            this.ticketTableAdapter.FillBy(this.iTicketDataSet.Ticket, Int32.Parse(updateID));
 
         }
 
