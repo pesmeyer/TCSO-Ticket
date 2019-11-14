@@ -121,7 +121,7 @@ namespace SampleTicketer
             {
                 pnlNewTicket.Hide();
                 pnlMyTickets.Hide();
-
+                pnlLookupTickets.Hide();
             }
             catch (Exception ex)
             {
@@ -135,6 +135,7 @@ namespace SampleTicketer
             {
                 pnlNewTicket.Show();
                 pnlMyTickets.Hide();
+                pnlLookupTickets.Hide();
             }
             catch (Exception ex)
             {
@@ -153,8 +154,10 @@ namespace SampleTicketer
             {
                 lblWelcome.Text = "Hello, " + userName;
                 lblTotalTicketOpen.Text = "Total Tickets Open:" + " " + TotalTicketOpen.ToString();
-                pnlMyTickets.Show();
                 pnlNewTicket.Hide();
+                pnlMyTickets.Show();
+                pnlLookupTickets.Hide();
+                
             }
             catch (Exception ex)
             {
@@ -175,9 +178,41 @@ namespace SampleTicketer
         {
             editForm form2 = new editForm();
 
+
             form2.ShowDialog();
 
             this.ticketTableAdapter.Fill(this.iTicketDataSet.Ticket);
+        }
+
+        private void dataGridView1_DoubleClick(object sender, EventArgs e)
+        {
+            editForm form2 = new editForm();
+
+
+            form2.ShowDialog();
+
+            this.ticketTableAdapter.Fill(this.iTicketDataSet.Ticket);
+        }
+
+        private void btnLookupTickets_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                this.ticketTableAdapter.Fill(this.iTicketDataSet.Ticket);
+                pnlNewTicket.Hide();
+                pnlMyTickets.Hide();
+                pnlLookupTickets.Show();
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.ticketTableAdapter.Lookupfname(this.iTicketDataSet.Ticket, txtFirstNameLook.Text);
+            //this.ticketTableAdapter.LookupLName(this.iTicketDataSet.Ticket, txtLastNameLook.Text);
         }
     }
 }
