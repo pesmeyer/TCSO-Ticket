@@ -1337,8 +1337,10 @@ SELECT ticketNum, fname, lname, email, phoneNumber, dateCreated, dateDue, assign
             this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[2] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[2].Connection = this.Connection;
-            this._commandCollection[2].CommandText = "SELECT * FROM dbo.Ticket \r\nWHERE statusType = \'open\';";
+            this._commandCollection[2].CommandText = "SELECT * FROM dbo.Ticket \r\nWHERE statusType = \'open\' AND personAssigned = @person" +
+                "Assigned;";
             this._commandCollection[2].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@personAssigned", global::System.Data.SqlDbType.VarChar, 30, global::System.Data.ParameterDirection.Input, 0, 0, "personAssigned", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1382,8 +1384,14 @@ SELECT ticketNum, fname, lname, email, phoneNumber, dateCreated, dateDue, assign
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
-        public virtual int SortByOpen(ITicketDataSet.TicketDataTable dataTable) {
+        public virtual int SortByOpen(ITicketDataSet.TicketDataTable dataTable, string personAssigned) {
             this.Adapter.SelectCommand = this.CommandCollection[2];
+            if ((personAssigned == null)) {
+                this.Adapter.SelectCommand.Parameters[0].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(personAssigned));
+            }
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
             }

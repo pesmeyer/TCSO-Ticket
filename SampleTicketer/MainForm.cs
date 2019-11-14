@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Windows.Forms;
 
@@ -146,7 +147,7 @@ namespace SampleTicketer
         {
             this.ticketTableAdapter.Fill(this.iTicketDataSet.Ticket);
             string userName = Environment.UserName.ToString();
-            this.ticketTableAdapter.SortByOpen(this.iTicketDataSet.Ticket);
+            this.ticketTableAdapter.SortByOpen(this.iTicketDataSet.Ticket, getPerson(userName));
             int TotalTicketOpen = dataGridView1.RowCount;
             
             try
@@ -160,6 +161,16 @@ namespace SampleTicketer
             {
                 MessageBox.Show(ex.Message);
             }
+        }
+
+        private static string getPerson(string sqlUserName)
+        {
+            //TODO move hash map to a broader scope so that the map isn't generated evertime the function is called
+            var userHashMap = new Dictionary<string, string>();
+            userHashMap.Add("acauley", "Austin Cauley");
+            userHashMap.Add("pesmeyer", "Payton Esmeyer");
+            userHashMap.Add("dlutz", "Daniel Lutz");
+            return userHashMap[sqlUserName];
         }
 
         private void btnUpdate_Click(object sender, EventArgs e)
