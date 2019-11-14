@@ -4,9 +4,9 @@ using System.Windows.Forms;
 
 namespace SampleTicketer
 {
-    public partial class Form1 : Form
+    public partial class MainForm : Form
     {
-        public Form1()
+        public MainForm()
         {
             InitializeComponent();
         }
@@ -33,7 +33,7 @@ namespace SampleTicketer
                     string assignedPriority = "TBD";
                     string origPerson = lbPersonAssigned.SelectedItem.ToString();
                     string personAssigned = origPerson;
-                    string description = txtDescription.Text;
+                    string description = txtDescription.Text + '~';
                     string status = "Open";
                     int timeSpentWorking = 0;
                     string userName = Environment.UserName;
@@ -85,6 +85,14 @@ namespace SampleTicketer
                         cmd.Parameters.Add("@param14", System.Data.SqlDbType.VarChar, 30).Value = userName;
 
                         cmd.ExecuteNonQuery();
+
+                       //Clear the fields when the data is submitted by setting text properties to ""
+                        txtFirstName.Text = "";
+                        txtLastName.Text = "";
+                        txtEmail.Text = "";
+                        txtPhoneNumber.Text = "";
+                        txtDescription.Text = "";
+
                         MessageBox.Show("Finished! :)");
                     }
                 }
@@ -105,6 +113,8 @@ namespace SampleTicketer
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'iTicketDataSet1.Ticket' table. You can move, or remove it, as needed.
+            this.ticketTableAdapter.Fill(this.iTicketDataSet1.Ticket);
             // TODO: This line of code loads data into the 'iTicketDataSet.Ticket' table. You can move, or remove it, as needed.
             this.ticketTableAdapter.Fill(this.iTicketDataSet.Ticket);
             try
@@ -134,9 +144,15 @@ namespace SampleTicketer
 
         private void btnMyTicket_Click(object sender, EventArgs e)
         {
+            this.ticketTableAdapter.Fill(this.iTicketDataSet.Ticket);
+            string userName = Environment.UserName.ToString();
+            this.ticketTableAdapter.SortByOpen(this.iTicketDataSet.Ticket);
+            int TotalTicketOpen = dataGridView1.RowCount;
+            
             try
             {
-                this.ticketTableAdapter.Fill(this.iTicketDataSet.Ticket);
+                lblWelcome.Text = "Hello, " + userName;
+                lblTotalTicketOpen.Text = "Total Tickets Open:" + " " + TotalTicketOpen.ToString();
                 pnlMyTickets.Show();
                 pnlNewTicket.Hide();
             }
@@ -144,6 +160,21 @@ namespace SampleTicketer
             {
                 MessageBox.Show(ex.Message);
             }
+        }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+                string description = txtAddNotes.Text + '~';
+
+        }
+
+        private void btnEditTicket_Click(object sender, EventArgs e)
+        {
+            editForm form2 = new editForm();
+
+            form2.ShowDialog();
+
+            
         }
     }
 }
