@@ -189,6 +189,7 @@ namespace SampleTicketer
             form2.ShowDialog();
 
             this.ticketTableAdapter.Fill(this.iTicketDataSet.Ticket);
+            this.ticketTableAdapter.SortByOpen(this.iTicketDataSet.Ticket, getPerson(Environment.UserName.ToString()));
         }
     }
 }
