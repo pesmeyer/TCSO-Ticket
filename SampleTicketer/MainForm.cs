@@ -179,7 +179,8 @@ namespace SampleTicketer
             this.Validate();
             this.ticketBindingSource.EndEdit();
             this.tableAdapterManager.UpdateAll(this.iTicketDataSet);
-
+            this.ticketTableAdapter.Fill(this.iTicketDataSet.Ticket);
+            this.ticketTableAdapter.SortByOpen(this.iTicketDataSet.Ticket, getPerson(Environment.UserName.ToString()));
         }
 
         private void btnEditTicket_Click(object sender, EventArgs e)
