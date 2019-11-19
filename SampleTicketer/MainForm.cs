@@ -18,10 +18,7 @@ namespace SampleTicketer
             //NOTE:The user account running this program MUST be able to create a remote connection to the server (See: RDP capabilities)
             string connetionString;
             SqlConnection cnn;
-<<<<<<< HEAD:SampleTicketer/Form1.cs
 
-=======
->>>>>>> pesmeyer:SampleTicketer/MainForm.cs
             connetionString = @"Server=tulsa002\sqlexpress;Database=iticket;User ID=iticket;Password=password";
             using (cnn = new SqlConnection(connetionString))
             {
