@@ -45,3 +45,4 @@ C:\Users\pesmeyer\Documents\SampleTicketer V2.0\TCSO-Ticket\SampleTicketer\obj\D
 C:\Users\pesmeyer\Documents\SampleTicketer V2.0\TCSO-Ticket\SampleTicketer\obj\Debug\SampleTicketer.MainForm.resources
 C:\Users\acauley\Desktop\TCSO-Ticket\TCSO-Ticket\SampleTicketer\obj\Debug\SampleTicketer.editForm.resources
 C:\Users\acauley\Desktop\TCSO-Ticket\TCSO-Ticket\SampleTicketer\obj\Debug\SampleTicketer.MainForm.resources
+C:\Users\acauley\Desktop\TCSO-Ticket\TCSO-Ticket\SampleTicketer\obj\Debug\SampleTicketer.csproj.ResolveComReference.cache

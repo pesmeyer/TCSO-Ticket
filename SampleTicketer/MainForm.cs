@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Windows.Forms;
+using Outlook = Microsoft.Office.Interop.Outlook;
 
 namespace SampleTicketer
 {
@@ -246,6 +247,13 @@ namespace SampleTicketer
         {
             this.ticketTableAdapter.Lookupfname(this.iTicketDataSet.Ticket, txtFirstNameLook.Text);
             //this.ticketTableAdapter.LookupLName(this.iTicketDataSet.Ticket, txtLastNameLook.Text);
+        }
+
+        private void btnSupport_Click(object sender, EventArgs e)
+        {
+            Outlook.Application oApp = new Outlook.Application();
+            Outlook.MailItem oMsg = (Outlook.MailItem)oApp.CreateItemFromTemplate(AppDomain.CurrentDomain.BaseDirectory + @"\templates\ITicket Support.oft");
+            oMsg.Display(true);
         }
     }
 }
