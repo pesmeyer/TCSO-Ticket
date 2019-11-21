@@ -168,6 +168,11 @@ namespace SampleTicketer
             }
         }
 
+        private void updateOpenTicketCount()
+        {
+            lblTotalTicketOpen.Text = "Total Tickets Open: " + dataGridView1.RowCount;
+        }
+
         private static string getPerson(string sqlUserName)
         {
             //TODO move hash map to a broader scope so that the map isn't generated evertime the function is called
@@ -186,25 +191,26 @@ namespace SampleTicketer
             this.tableAdapterManager.UpdateAll(this.iTicketDataSet);
             this.ticketTableAdapter.Fill(this.iTicketDataSet.Ticket);
             this.ticketTableAdapter.SortByOpen(this.iTicketDataSet.Ticket, getPerson(Environment.UserName.ToString()));
+            updateOpenTicketCount();
         }
 
         private void btnEditTicket_Click(object sender, EventArgs e)
         {
+            string ticketID;
+            if (dataGridView1.SelectedRows.Count > 0)
+            {
+                ticketID = dataGridView1.SelectedRows[0].Cells[0].Value.ToString();
+            } else {
+                ticketID = dataGridView1.Rows[dataGridView1.SelectedCells[0].RowIndex].Cells[0].Value.ToString();
+            }
 
-                string ticketID;
-                if (dataGridView1.SelectedRows.Count > 0)
-                {
-                    ticketID = dataGridView1.SelectedRows[0].Cells[0].Value.ToString();
-                } else {
-                    ticketID = dataGridView1.Rows[dataGridView1.SelectedCells[0].RowIndex].Cells[0].Value.ToString();
-                }
+            editForm form2 = new editForm(ticketID);
 
-                editForm form2 = new editForm(ticketID);
+            form2.ShowDialog();
 
-                form2.ShowDialog();
-
-                this.ticketTableAdapter.Fill(this.iTicketDataSet.Ticket);
-                this.ticketTableAdapter.SortByOpen(this.iTicketDataSet.Ticket, getPerson(Environment.UserName.ToString()));
+            this.ticketTableAdapter.Fill(this.iTicketDataSet.Ticket);
+            this.ticketTableAdapter.SortByOpen(this.iTicketDataSet.Ticket, getPerson(Environment.UserName.ToString()));
+            updateOpenTicketCount();
         }
 
         private void dataGridView1_DoubleClick(object sender, EventArgs e)
@@ -226,6 +232,7 @@ namespace SampleTicketer
 
             this.ticketTableAdapter.Fill(this.iTicketDataSet.Ticket);
             this.ticketTableAdapter.SortByOpen(this.iTicketDataSet.Ticket, getPerson(Environment.UserName.ToString()));
+            updateOpenTicketCount();
         }
 
         private void btnLookupTickets_Click(object sender, EventArgs e)
