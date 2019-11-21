@@ -1341,14 +1341,43 @@ SELECT ticketNum, fname, lname, email, phoneNumber, dateCreated, dateDue, assign
             this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@personAssigned", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "ticketNum", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[2] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[2].Connection = this.Connection;
-            this._commandCollection[2].CommandText = "SELECT * FROM dbo.Ticket\r\nWHERE fname LIKE \'%\' + @value + \'%\'";
+            this._commandCollection[2].CommandText = @"SELECT * FROM dbo.Ticket
+WHERE fname LIKE '%' + @value1 + '%'
+AND lname LIKE '%' + @value2 + '%'
+AND email LIKE '%' + @value3 + '%'
+AND phoneNumber LIKE '%' + @value4 + '%'
+AND assignedPriority LIKE '%' + @value5 + '%'
+AND personAssigned LIKE '%' + @value6 + '%'
+AND statusType LIKE '%' + @value7 + '%';
+";
             this._commandCollection[2].CommandType = global::System.Data.CommandType.Text;
-            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@value", global::System.Data.SqlDbType.VarChar, 20, global::System.Data.ParameterDirection.Input, 0, 0, "fname", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@value1", global::System.Data.SqlDbType.VarChar, 20, global::System.Data.ParameterDirection.Input, 0, 0, "fname", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@value2", global::System.Data.SqlDbType.VarChar, 20, global::System.Data.ParameterDirection.Input, 0, 0, "lname", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@value3", global::System.Data.SqlDbType.VarChar, 75, global::System.Data.ParameterDirection.Input, 0, 0, "email", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@value4", global::System.Data.SqlDbType.VarChar, 15, global::System.Data.ParameterDirection.Input, 0, 0, "phoneNumber", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@value5", global::System.Data.SqlDbType.VarChar, 30, global::System.Data.ParameterDirection.Input, 0, 0, "assignedPriority", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@value6", global::System.Data.SqlDbType.VarChar, 30, global::System.Data.ParameterDirection.Input, 0, 0, "personAssigned", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@value7", global::System.Data.SqlDbType.VarChar, 20, global::System.Data.ParameterDirection.Input, 0, 0, "statusType", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[3] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[3].Connection = this.Connection;
-            this._commandCollection[3].CommandText = "SELECT * FROM dbo.Ticket\r\nWHERE lname LIKE \'%\' + @value + \'%\'";
+            this._commandCollection[3].CommandText = @"SELECT * FROM dbo.Ticket
+WHERE fname LIKE '%' + @value1 + '%'
+AND lname LIKE '%' + @value2 + '%'
+AND email LIKE '%' + @value3 + '%'
+AND phoneNumber LIKE '%' + @value4 + '%'
+AND assignedPriority LIKE '%' + @value5 + '%'
+AND personAssigned LIKE '%' + @value6 + '%'
+AND statusType LIKE '%' + @value7 + '%'
+AND dateCreated  LIKE '%' + cast(@value8 as varchar(30)) + '%';";
             this._commandCollection[3].CommandType = global::System.Data.CommandType.Text;
-            this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@value", global::System.Data.SqlDbType.VarChar, 20, global::System.Data.ParameterDirection.Input, 0, 0, "lname", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@value1", global::System.Data.SqlDbType.VarChar, 20, global::System.Data.ParameterDirection.Input, 0, 0, "fname", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@value2", global::System.Data.SqlDbType.VarChar, 20, global::System.Data.ParameterDirection.Input, 0, 0, "lname", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@value3", global::System.Data.SqlDbType.VarChar, 75, global::System.Data.ParameterDirection.Input, 0, 0, "email", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@value4", global::System.Data.SqlDbType.VarChar, 15, global::System.Data.ParameterDirection.Input, 0, 0, "phoneNumber", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@value5", global::System.Data.SqlDbType.VarChar, 30, global::System.Data.ParameterDirection.Input, 0, 0, "assignedPriority", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@value6", global::System.Data.SqlDbType.VarChar, 30, global::System.Data.ParameterDirection.Input, 0, 0, "personAssigned", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@value7", global::System.Data.SqlDbType.VarChar, 20, global::System.Data.ParameterDirection.Input, 0, 0, "statusType", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@value8", global::System.Data.SqlDbType.Date, 3, global::System.Data.ParameterDirection.Input, 0, 0, "dateCreated", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[4] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[4].Connection = this.Connection;
             this._commandCollection[4].CommandText = "SELECT ticketNum, fname, lname, email, phoneNumber, dateCreated, dateDue, assigne" +
@@ -1422,13 +1451,49 @@ SELECT ticketNum, fname, lname, email, phoneNumber, dateCreated, dateDue, assign
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
-        public virtual int Lookupfname(ITicketDataSet.TicketDataTable dataTable, string value) {
+        public virtual int LookupQuery(ITicketDataSet.TicketDataTable dataTable, string value1, string value2, string value3, string value4, string value5, string value6, string value7) {
             this.Adapter.SelectCommand = this.CommandCollection[2];
-            if ((value == null)) {
+            if ((value1 == null)) {
                 this.Adapter.SelectCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(value));
+                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(value1));
+            }
+            if ((value2 == null)) {
+                this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[1].Value = ((string)(value2));
+            }
+            if ((value3 == null)) {
+                throw new global::System.ArgumentNullException("value3");
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[2].Value = ((string)(value3));
+            }
+            if ((value4 == null)) {
+                throw new global::System.ArgumentNullException("value4");
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[3].Value = ((string)(value4));
+            }
+            if ((value5 == null)) {
+                this.Adapter.SelectCommand.Parameters[4].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[4].Value = ((string)(value5));
+            }
+            if ((value6 == null)) {
+                this.Adapter.SelectCommand.Parameters[5].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[5].Value = ((string)(value6));
+            }
+            if ((value7 == null)) {
+                this.Adapter.SelectCommand.Parameters[6].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[6].Value = ((string)(value7));
             }
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -1441,13 +1506,55 @@ SELECT ticketNum, fname, lname, email, phoneNumber, dateCreated, dateDue, assign
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
-        public virtual int LookupLName(ITicketDataSet.TicketDataTable dataTable, string value) {
+        public virtual int LookupQueryNoID(ITicketDataSet.TicketDataTable dataTable, string value1, string value2, string value3, string value4, string value5, string value6, string value7, string value8) {
             this.Adapter.SelectCommand = this.CommandCollection[3];
-            if ((value == null)) {
+            if ((value1 == null)) {
                 this.Adapter.SelectCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(value));
+                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(value1));
+            }
+            if ((value2 == null)) {
+                this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[1].Value = ((string)(value2));
+            }
+            if ((value3 == null)) {
+                throw new global::System.ArgumentNullException("value3");
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[2].Value = ((string)(value3));
+            }
+            if ((value4 == null)) {
+                throw new global::System.ArgumentNullException("value4");
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[3].Value = ((string)(value4));
+            }
+            if ((value5 == null)) {
+                this.Adapter.SelectCommand.Parameters[4].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[4].Value = ((string)(value5));
+            }
+            if ((value6 == null)) {
+                this.Adapter.SelectCommand.Parameters[5].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[5].Value = ((string)(value6));
+            }
+            if ((value7 == null)) {
+                this.Adapter.SelectCommand.Parameters[6].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[6].Value = ((string)(value7));
+            }
+            if ((value8 == null)) {
+                throw new global::System.ArgumentNullException("value8");
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[7].Value = ((string)(value8));
             }
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();

@@ -55,14 +55,19 @@
             this.btnStatistics = new System.Windows.Forms.Button();
             this.btnSupport = new System.Windows.Forms.Button();
             this.pnlLookupTickets = new System.Windows.Forms.Panel();
+            this.btnLookEdit = new System.Windows.Forms.Button();
             this.ticketDataGridView = new System.Windows.Forms.DataGridView();
             this.pnlLook = new System.Windows.Forms.Panel();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.cbStatusLook = new System.Windows.Forms.ComboBox();
+            this.cbAssignedLook = new System.Windows.Forms.ComboBox();
+            this.dtpDateDueLook = new System.Windows.Forms.DateTimePicker();
+            this.dtpDateCreatedLook = new System.Windows.Forms.DateTimePicker();
+            this.cbPriorityLook = new System.Windows.Forms.ComboBox();
+            this.txtPhoneNumLook = new System.Windows.Forms.TextBox();
+            this.txtEmailLook = new System.Windows.Forms.TextBox();
             this.txtLastNameLook = new System.Windows.Forms.TextBox();
             this.txtFirstNameLook = new System.Windows.Forms.TextBox();
-            this.txtTicketNum = new System.Windows.Forms.TextBox();
+            this.txtTicketNumLook = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.pnlNewTicket = new System.Windows.Forms.Panel();
@@ -210,7 +215,7 @@
             ticketNumLabel.BackColor = System.Drawing.SystemColors.WindowFrame;
             ticketNumLabel.Font = new System.Drawing.Font("Gill Sans MT", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             ticketNumLabel.ForeColor = System.Drawing.SystemColors.Window;
-            ticketNumLabel.Location = new System.Drawing.Point(16, 60);
+            ticketNumLabel.Location = new System.Drawing.Point(16, 62);
             ticketNumLabel.Name = "ticketNumLabel";
             ticketNumLabel.Size = new System.Drawing.Size(108, 27);
             ticketNumLabel.TabIndex = 0;
@@ -221,7 +226,7 @@
             fnameLabel.AutoSize = true;
             fnameLabel.Font = new System.Drawing.Font("Gill Sans MT", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             fnameLabel.ForeColor = System.Drawing.SystemColors.Window;
-            fnameLabel.Location = new System.Drawing.Point(16, 101);
+            fnameLabel.Location = new System.Drawing.Point(16, 123);
             fnameLabel.Name = "fnameLabel";
             fnameLabel.Size = new System.Drawing.Size(102, 27);
             fnameLabel.TabIndex = 2;
@@ -232,7 +237,7 @@
             lnameLabel.AutoSize = true;
             lnameLabel.Font = new System.Drawing.Font("Gill Sans MT", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             lnameLabel.ForeColor = System.Drawing.SystemColors.Window;
-            lnameLabel.Location = new System.Drawing.Point(15, 136);
+            lnameLabel.Location = new System.Drawing.Point(15, 175);
             lnameLabel.Name = "lnameLabel";
             lnameLabel.Size = new System.Drawing.Size(98, 27);
             lnameLabel.TabIndex = 4;
@@ -243,7 +248,7 @@
             emailLabel.AutoSize = true;
             emailLabel.Font = new System.Drawing.Font("Gill Sans MT", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             emailLabel.ForeColor = System.Drawing.SystemColors.Window;
-            emailLabel.Location = new System.Drawing.Point(18, 178);
+            emailLabel.Location = new System.Drawing.Point(18, 236);
             emailLabel.Name = "emailLabel";
             emailLabel.Size = new System.Drawing.Size(57, 27);
             emailLabel.TabIndex = 6;
@@ -254,7 +259,7 @@
             phoneNumberLabel.AutoSize = true;
             phoneNumberLabel.Font = new System.Drawing.Font("Gill Sans MT", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             phoneNumberLabel.ForeColor = System.Drawing.SystemColors.Window;
-            phoneNumberLabel.Location = new System.Drawing.Point(337, 60);
+            phoneNumberLabel.Location = new System.Drawing.Point(327, 60);
             phoneNumberLabel.Name = "phoneNumberLabel";
             phoneNumberLabel.Size = new System.Drawing.Size(137, 27);
             phoneNumberLabel.TabIndex = 8;
@@ -265,7 +270,7 @@
             assignedPriorityLabel1.AutoSize = true;
             assignedPriorityLabel1.Font = new System.Drawing.Font("Gill Sans MT", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             assignedPriorityLabel1.ForeColor = System.Drawing.SystemColors.Window;
-            assignedPriorityLabel1.Location = new System.Drawing.Point(337, 106);
+            assignedPriorityLabel1.Location = new System.Drawing.Point(327, 118);
             assignedPriorityLabel1.Name = "assignedPriorityLabel1";
             assignedPriorityLabel1.Size = new System.Drawing.Size(74, 27);
             assignedPriorityLabel1.TabIndex = 10;
@@ -276,7 +281,7 @@
             personAssignedLabel1.AutoSize = true;
             personAssignedLabel1.Font = new System.Drawing.Font("Gill Sans MT", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             personAssignedLabel1.ForeColor = System.Drawing.SystemColors.Window;
-            personAssignedLabel1.Location = new System.Drawing.Point(337, 147);
+            personAssignedLabel1.Location = new System.Drawing.Point(327, 176);
             personAssignedLabel1.Name = "personAssignedLabel1";
             personAssignedLabel1.Size = new System.Drawing.Size(143, 27);
             personAssignedLabel1.TabIndex = 12;
@@ -287,7 +292,7 @@
             statusTypeLabel1.AutoSize = true;
             statusTypeLabel1.Font = new System.Drawing.Font("Gill Sans MT", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             statusTypeLabel1.ForeColor = System.Drawing.SystemColors.Window;
-            statusTypeLabel1.Location = new System.Drawing.Point(339, 189);
+            statusTypeLabel1.Location = new System.Drawing.Point(329, 234);
             statusTypeLabel1.Name = "statusTypeLabel1";
             statusTypeLabel1.Size = new System.Drawing.Size(105, 27);
             statusTypeLabel1.TabIndex = 14;
@@ -298,7 +303,7 @@
             dateCreatedLabel.AutoSize = true;
             dateCreatedLabel.Font = new System.Drawing.Font("Gill Sans MT", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dateCreatedLabel.ForeColor = System.Drawing.SystemColors.Window;
-            dateCreatedLabel.Location = new System.Drawing.Point(656, 59);
+            dateCreatedLabel.Location = new System.Drawing.Point(656, 60);
             dateCreatedLabel.Name = "dateCreatedLabel";
             dateCreatedLabel.Size = new System.Drawing.Size(121, 27);
             dateCreatedLabel.TabIndex = 16;
@@ -309,7 +314,7 @@
             dateDueLabel.AutoSize = true;
             dateDueLabel.Font = new System.Drawing.Font("Gill Sans MT", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dateDueLabel.ForeColor = System.Drawing.SystemColors.Window;
-            dateDueLabel.Location = new System.Drawing.Point(656, 106);
+            dateDueLabel.Location = new System.Drawing.Point(656, 120);
             dateDueLabel.Name = "dateDueLabel";
             dateDueLabel.Size = new System.Drawing.Size(91, 27);
             dateDueLabel.TabIndex = 18;
@@ -373,7 +378,7 @@
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 100);
             this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(0);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(200, 585);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(200, 590);
             this.flowLayoutPanel1.TabIndex = 1;
             // 
             // btnOverview
@@ -460,6 +465,7 @@
             // pnlLookupTickets
             // 
             this.pnlLookupTickets.AutoScroll = true;
+            this.pnlLookupTickets.Controls.Add(this.btnLookEdit);
             this.pnlLookupTickets.Controls.Add(this.ticketDataGridView);
             this.pnlLookupTickets.Controls.Add(this.pnlLook);
             this.pnlLookupTickets.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -468,13 +474,29 @@
             this.pnlLookupTickets.Size = new System.Drawing.Size(995, 690);
             this.pnlLookupTickets.TabIndex = 51;
             // 
+            // btnLookEdit
+            // 
+            this.btnLookEdit.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.btnLookEdit.FlatAppearance.BorderSize = 0;
+            this.btnLookEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLookEdit.Font = new System.Drawing.Font("Gill Sans MT", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLookEdit.ForeColor = System.Drawing.SystemColors.Window;
+            this.btnLookEdit.Location = new System.Drawing.Point(854, 331);
+            this.btnLookEdit.Name = "btnLookEdit";
+            this.btnLookEdit.Size = new System.Drawing.Size(106, 37);
+            this.btnLookEdit.TabIndex = 2;
+            this.btnLookEdit.Text = "Edit";
+            this.btnLookEdit.UseVisualStyleBackColor = false;
+            this.btnLookEdit.Click += new System.EventHandler(this.btnLookEdit_Click);
+            // 
             // ticketDataGridView
             // 
             this.ticketDataGridView.AllowUserToAddRows = false;
             this.ticketDataGridView.AllowUserToDeleteRows = false;
             this.ticketDataGridView.AutoGenerateColumns = false;
             this.ticketDataGridView.BackgroundColor = System.Drawing.SystemColors.ControlDark;
-            this.ticketDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.ticketDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.ticketDataGridView.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.ticketDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn15,
             this.dataGridViewTextBoxColumn16,
@@ -493,6 +515,7 @@
             this.ticketDataGridView.DataSource = this.ticketBindingSource;
             this.ticketDataGridView.Location = new System.Drawing.Point(19, 39);
             this.ticketDataGridView.Name = "ticketDataGridView";
+            this.ticketDataGridView.RowHeadersVisible = false;
             this.ticketDataGridView.Size = new System.Drawing.Size(941, 277);
             this.ticketDataGridView.TabIndex = 1;
             // 
@@ -500,12 +523,16 @@
             // 
             this.pnlLook.AutoScroll = true;
             this.pnlLook.BackColor = System.Drawing.SystemColors.WindowFrame;
-            this.pnlLook.Controls.Add(this.comboBox1);
-            this.pnlLook.Controls.Add(this.textBox5);
-            this.pnlLook.Controls.Add(this.textBox4);
+            this.pnlLook.Controls.Add(this.cbStatusLook);
+            this.pnlLook.Controls.Add(this.cbAssignedLook);
+            this.pnlLook.Controls.Add(this.dtpDateDueLook);
+            this.pnlLook.Controls.Add(this.dtpDateCreatedLook);
+            this.pnlLook.Controls.Add(this.cbPriorityLook);
+            this.pnlLook.Controls.Add(this.txtPhoneNumLook);
+            this.pnlLook.Controls.Add(this.txtEmailLook);
             this.pnlLook.Controls.Add(this.txtLastNameLook);
             this.pnlLook.Controls.Add(this.txtFirstNameLook);
-            this.pnlLook.Controls.Add(this.txtTicketNum);
+            this.pnlLook.Controls.Add(this.txtTicketNumLook);
             this.pnlLook.Controls.Add(this.button1);
             this.pnlLook.Controls.Add(this.label4);
             this.pnlLook.Controls.Add(dateDueLabel);
@@ -519,46 +546,81 @@
             this.pnlLook.Controls.Add(fnameLabel);
             this.pnlLook.Controls.Add(ticketNumLabel);
             this.pnlLook.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pnlLook.Location = new System.Drawing.Point(0, 336);
+            this.pnlLook.Location = new System.Drawing.Point(0, 379);
             this.pnlLook.Name = "pnlLook";
-            this.pnlLook.Size = new System.Drawing.Size(995, 354);
+            this.pnlLook.Size = new System.Drawing.Size(995, 311);
             this.pnlLook.TabIndex = 0;
             // 
-            // comboBox1
+            // cbStatusLook
             // 
-            this.comboBox1.ForeColor = System.Drawing.SystemColors.Window;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(486, 106);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(164, 31);
-            this.comboBox1.TabIndex = 27;
+            this.cbStatusLook.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.cbStatusLook.ForeColor = System.Drawing.SystemColors.Window;
+            this.cbStatusLook.FormattingEnabled = true;
+            this.cbStatusLook.Location = new System.Drawing.Point(480, 232);
+            this.cbStatusLook.Name = "cbStatusLook";
+            this.cbStatusLook.Size = new System.Drawing.Size(164, 31);
+            this.cbStatusLook.TabIndex = 31;
             // 
-            // textBox5
+            // cbAssignedLook
             // 
-            this.textBox5.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.textBox5.Font = new System.Drawing.Font("Gill Sans MT", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox5.ForeColor = System.Drawing.SystemColors.Window;
-            this.textBox5.Location = new System.Drawing.Point(486, 59);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(164, 30);
-            this.textBox5.TabIndex = 26;
+            this.cbAssignedLook.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.cbAssignedLook.ForeColor = System.Drawing.SystemColors.Window;
+            this.cbAssignedLook.FormattingEnabled = true;
+            this.cbAssignedLook.Location = new System.Drawing.Point(480, 174);
+            this.cbAssignedLook.Name = "cbAssignedLook";
+            this.cbAssignedLook.Size = new System.Drawing.Size(164, 31);
+            this.cbAssignedLook.TabIndex = 30;
             // 
-            // textBox4
+            // dtpDateDueLook
             // 
-            this.textBox4.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.textBox4.Font = new System.Drawing.Font("Gill Sans MT", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.ForeColor = System.Drawing.SystemColors.Window;
-            this.textBox4.Location = new System.Drawing.Point(140, 175);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(164, 30);
-            this.textBox4.TabIndex = 25;
+            this.dtpDateDueLook.Location = new System.Drawing.Point(773, 118);
+            this.dtpDateDueLook.Name = "dtpDateDueLook";
+            this.dtpDateDueLook.Size = new System.Drawing.Size(200, 26);
+            this.dtpDateDueLook.TabIndex = 29;
+            // 
+            // dtpDateCreatedLook
+            // 
+            this.dtpDateCreatedLook.Location = new System.Drawing.Point(773, 60);
+            this.dtpDateCreatedLook.Name = "dtpDateCreatedLook";
+            this.dtpDateCreatedLook.Size = new System.Drawing.Size(200, 26);
+            this.dtpDateCreatedLook.TabIndex = 28;
+            // 
+            // cbPriorityLook
+            // 
+            this.cbPriorityLook.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.cbPriorityLook.ForeColor = System.Drawing.SystemColors.Window;
+            this.cbPriorityLook.FormattingEnabled = true;
+            this.cbPriorityLook.Location = new System.Drawing.Point(480, 116);
+            this.cbPriorityLook.Name = "cbPriorityLook";
+            this.cbPriorityLook.Size = new System.Drawing.Size(164, 31);
+            this.cbPriorityLook.TabIndex = 27;
+            // 
+            // txtPhoneNumLook
+            // 
+            this.txtPhoneNumLook.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.txtPhoneNumLook.Font = new System.Drawing.Font("Gill Sans MT", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPhoneNumLook.ForeColor = System.Drawing.SystemColors.Window;
+            this.txtPhoneNumLook.Location = new System.Drawing.Point(480, 59);
+            this.txtPhoneNumLook.Name = "txtPhoneNumLook";
+            this.txtPhoneNumLook.Size = new System.Drawing.Size(164, 30);
+            this.txtPhoneNumLook.TabIndex = 26;
+            // 
+            // txtEmailLook
+            // 
+            this.txtEmailLook.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.txtEmailLook.Font = new System.Drawing.Font("Gill Sans MT", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEmailLook.ForeColor = System.Drawing.SystemColors.Window;
+            this.txtEmailLook.Location = new System.Drawing.Point(140, 233);
+            this.txtEmailLook.Name = "txtEmailLook";
+            this.txtEmailLook.Size = new System.Drawing.Size(164, 30);
+            this.txtEmailLook.TabIndex = 25;
             // 
             // txtLastNameLook
             // 
             this.txtLastNameLook.BackColor = System.Drawing.SystemColors.ControlDark;
             this.txtLastNameLook.Font = new System.Drawing.Font("Gill Sans MT", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtLastNameLook.ForeColor = System.Drawing.SystemColors.Window;
-            this.txtLastNameLook.Location = new System.Drawing.Point(140, 136);
+            this.txtLastNameLook.Location = new System.Drawing.Point(140, 175);
             this.txtLastNameLook.Name = "txtLastNameLook";
             this.txtLastNameLook.Size = new System.Drawing.Size(164, 30);
             this.txtLastNameLook.TabIndex = 24;
@@ -568,28 +630,29 @@
             this.txtFirstNameLook.BackColor = System.Drawing.SystemColors.ControlDark;
             this.txtFirstNameLook.Font = new System.Drawing.Font("Gill Sans MT", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtFirstNameLook.ForeColor = System.Drawing.SystemColors.Window;
-            this.txtFirstNameLook.Location = new System.Drawing.Point(140, 95);
+            this.txtFirstNameLook.Location = new System.Drawing.Point(140, 117);
             this.txtFirstNameLook.Name = "txtFirstNameLook";
             this.txtFirstNameLook.Size = new System.Drawing.Size(164, 30);
             this.txtFirstNameLook.TabIndex = 23;
             // 
-            // txtTicketNum
+            // txtTicketNumLook
             // 
-            this.txtTicketNum.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.txtTicketNum.Font = new System.Drawing.Font("Gill Sans MT", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTicketNum.ForeColor = System.Drawing.SystemColors.Window;
-            this.txtTicketNum.Location = new System.Drawing.Point(140, 57);
-            this.txtTicketNum.Name = "txtTicketNum";
-            this.txtTicketNum.Size = new System.Drawing.Size(164, 30);
-            this.txtTicketNum.TabIndex = 22;
+            this.txtTicketNumLook.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.txtTicketNumLook.Font = new System.Drawing.Font("Gill Sans MT", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTicketNumLook.ForeColor = System.Drawing.SystemColors.Window;
+            this.txtTicketNumLook.Location = new System.Drawing.Point(140, 59);
+            this.txtTicketNumLook.Name = "txtTicketNumLook";
+            this.txtTicketNumLook.Size = new System.Drawing.Size(164, 30);
+            this.txtTicketNumLook.TabIndex = 22;
             // 
             // button1
             // 
             this.button1.BackColor = System.Drawing.SystemColors.ControlDark;
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Gill Sans MT", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.SystemColors.Window;
-            this.button1.Location = new System.Drawing.Point(854, 290);
+            this.button1.Location = new System.Drawing.Point(854, 260);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(106, 37);
             this.button1.TabIndex = 21;
@@ -1082,85 +1145,85 @@
             // dataGridViewTextBoxColumn15
             // 
             this.dataGridViewTextBoxColumn15.DataPropertyName = "ticketNum";
-            this.dataGridViewTextBoxColumn15.HeaderText = "ticketNum";
+            this.dataGridViewTextBoxColumn15.HeaderText = "Ticket Number";
             this.dataGridViewTextBoxColumn15.Name = "dataGridViewTextBoxColumn15";
             // 
             // dataGridViewTextBoxColumn16
             // 
             this.dataGridViewTextBoxColumn16.DataPropertyName = "fname";
-            this.dataGridViewTextBoxColumn16.HeaderText = "fname";
+            this.dataGridViewTextBoxColumn16.HeaderText = "First Name";
             this.dataGridViewTextBoxColumn16.Name = "dataGridViewTextBoxColumn16";
             // 
             // dataGridViewTextBoxColumn17
             // 
             this.dataGridViewTextBoxColumn17.DataPropertyName = "lname";
-            this.dataGridViewTextBoxColumn17.HeaderText = "lname";
+            this.dataGridViewTextBoxColumn17.HeaderText = "Last Name";
             this.dataGridViewTextBoxColumn17.Name = "dataGridViewTextBoxColumn17";
             // 
             // dataGridViewTextBoxColumn18
             // 
             this.dataGridViewTextBoxColumn18.DataPropertyName = "email";
-            this.dataGridViewTextBoxColumn18.HeaderText = "email";
+            this.dataGridViewTextBoxColumn18.HeaderText = "Email";
             this.dataGridViewTextBoxColumn18.Name = "dataGridViewTextBoxColumn18";
             // 
             // dataGridViewTextBoxColumn19
             // 
             this.dataGridViewTextBoxColumn19.DataPropertyName = "phoneNumber";
-            this.dataGridViewTextBoxColumn19.HeaderText = "phoneNumber";
+            this.dataGridViewTextBoxColumn19.HeaderText = "Phone Number";
             this.dataGridViewTextBoxColumn19.Name = "dataGridViewTextBoxColumn19";
             // 
             // dataGridViewTextBoxColumn20
             // 
             this.dataGridViewTextBoxColumn20.DataPropertyName = "dateCreated";
-            this.dataGridViewTextBoxColumn20.HeaderText = "dateCreated";
+            this.dataGridViewTextBoxColumn20.HeaderText = "Date Created";
             this.dataGridViewTextBoxColumn20.Name = "dataGridViewTextBoxColumn20";
             // 
             // dataGridViewTextBoxColumn21
             // 
             this.dataGridViewTextBoxColumn21.DataPropertyName = "dateDue";
-            this.dataGridViewTextBoxColumn21.HeaderText = "dateDue";
+            this.dataGridViewTextBoxColumn21.HeaderText = "Date Due";
             this.dataGridViewTextBoxColumn21.Name = "dataGridViewTextBoxColumn21";
             // 
             // dataGridViewTextBoxColumn22
             // 
             this.dataGridViewTextBoxColumn22.DataPropertyName = "assignedPriority";
-            this.dataGridViewTextBoxColumn22.HeaderText = "assignedPriority";
+            this.dataGridViewTextBoxColumn22.HeaderText = "Assigned Priority";
             this.dataGridViewTextBoxColumn22.Name = "dataGridViewTextBoxColumn22";
             // 
             // dataGridViewTextBoxColumn23
             // 
             this.dataGridViewTextBoxColumn23.DataPropertyName = "personOriginallyAssigned";
-            this.dataGridViewTextBoxColumn23.HeaderText = "personOriginallyAssigned";
+            this.dataGridViewTextBoxColumn23.HeaderText = "Person Originally Assigned";
             this.dataGridViewTextBoxColumn23.Name = "dataGridViewTextBoxColumn23";
             // 
             // dataGridViewTextBoxColumn24
             // 
             this.dataGridViewTextBoxColumn24.DataPropertyName = "personAssigned";
-            this.dataGridViewTextBoxColumn24.HeaderText = "personAssigned";
+            this.dataGridViewTextBoxColumn24.HeaderText = "Person Assigned";
             this.dataGridViewTextBoxColumn24.Name = "dataGridViewTextBoxColumn24";
             // 
             // dataGridViewTextBoxColumn25
             // 
             this.dataGridViewTextBoxColumn25.DataPropertyName = "descriptionInput";
-            this.dataGridViewTextBoxColumn25.HeaderText = "descriptionInput";
+            this.dataGridViewTextBoxColumn25.HeaderText = "Description Input";
             this.dataGridViewTextBoxColumn25.Name = "dataGridViewTextBoxColumn25";
             // 
             // dataGridViewTextBoxColumn26
             // 
             this.dataGridViewTextBoxColumn26.DataPropertyName = "statusType";
-            this.dataGridViewTextBoxColumn26.HeaderText = "statusType";
+            this.dataGridViewTextBoxColumn26.HeaderText = "Status Type";
             this.dataGridViewTextBoxColumn26.Name = "dataGridViewTextBoxColumn26";
             // 
             // dataGridViewTextBoxColumn27
             // 
             this.dataGridViewTextBoxColumn27.DataPropertyName = "timeSpentWorking";
-            this.dataGridViewTextBoxColumn27.HeaderText = "timeSpentWorking";
+            this.dataGridViewTextBoxColumn27.HeaderText = "Time Spent Working";
             this.dataGridViewTextBoxColumn27.Name = "dataGridViewTextBoxColumn27";
             // 
             // dataGridViewTextBoxColumn28
             // 
             this.dataGridViewTextBoxColumn28.DataPropertyName = "userName";
-            this.dataGridViewTextBoxColumn28.HeaderText = "userName";
+            this.dataGridViewTextBoxColumn28.HeaderText = "User Name";
             this.dataGridViewTextBoxColumn28.Name = "dataGridViewTextBoxColumn28";
             // 
             // ticketBindingSource
@@ -1409,6 +1472,19 @@
         private System.Windows.Forms.Panel pnlLookupTickets;
         private System.Windows.Forms.Panel pnlLook;
         private System.Windows.Forms.DataGridView ticketDataGridView;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ComboBox cbPriorityLook;
+        private System.Windows.Forms.TextBox txtPhoneNumLook;
+        private System.Windows.Forms.TextBox txtEmailLook;
+        private System.Windows.Forms.TextBox txtLastNameLook;
+        private System.Windows.Forms.TextBox txtFirstNameLook;
+        private System.Windows.Forms.TextBox txtTicketNumLook;
+        private System.Windows.Forms.DateTimePicker dtpDateDueLook;
+        private System.Windows.Forms.DateTimePicker dtpDateCreatedLook;
+        private System.Windows.Forms.ComboBox cbStatusLook;
+        private System.Windows.Forms.ComboBox cbAssignedLook;
+        private System.Windows.Forms.Button btnLookEdit;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn15;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn16;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn17;
@@ -1423,14 +1499,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn26;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn27;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn28;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox txtLastNameLook;
-        private System.Windows.Forms.TextBox txtFirstNameLook;
-        private System.Windows.Forms.TextBox txtTicketNum;
     }
 }
 

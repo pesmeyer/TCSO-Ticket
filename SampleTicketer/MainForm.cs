@@ -243,8 +243,30 @@ namespace SampleTicketer
 
         private void button1_Click(object sender, EventArgs e)
         {
-            this.ticketTableAdapter.Lookupfname(this.iTicketDataSet.Ticket, txtFirstNameLook.Text);
-            //this.ticketTableAdapter.LookupLName(this.iTicketDataSet.Ticket, txtLastNameLook.Text);
+            this.ticketTableAdapter.LookupQuery(this.iTicketDataSet.Ticket, txtFirstNameLook.Text, txtLastNameLook.Text, txtEmailLook.Text, txtPhoneNumLook.Text, cbPriorityLook.Text, cbAssignedLook.Text, cbStatusLook.Text);
+
+
+        }
+
+        private void btnLookEdit_Click(object sender, EventArgs e)
+        {
+            string ticketID;
+            if (dataGridView1.SelectedRows.Count > 0)
+            {
+                ticketID = dataGridView1.SelectedRows[0].Cells[0].Value.ToString();
+            }
+            else
+            {
+                ticketID = ticketDataGridView.Rows[ticketDataGridView.SelectedCells[0].RowIndex].Cells[0].Value.ToString();
+            }
+
+             
+            editForm edit = new editForm(ticketID);
+
+            edit.ShowDialog();
+           
+            this.ticketTableAdapter.Fill(this.iTicketDataSet.Ticket);
+            
         }
     }
 }

@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="ITicket" Class="LookupClassesDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=TULSA002\SQLEXPRESS;Initial Catalog=ITicket;Integrated Security=True" SettingsObjectName="SampleTicketer.Properties.Settings" SettingsPropertyName="ITicketConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Ticket" Member="Tickets">
+    <Type Name="Ticket">
+      <Column Name="ticketNum" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="fname" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="lname" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="email" Type="System.String" DbType="VarChar(75) NOT NULL" CanBeNull="false" />
+      <Column Name="phoneNumber" Type="System.String" DbType="VarChar(15) NOT NULL" CanBeNull="false" />
+      <Column Name="dateCreated" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="dateDue" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="assignedPriority" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="personOriginallyAssigned" Type="System.String" DbType="VarChar(30) NOT NULL" CanBeNull="false" />
+      <Column Name="personAssigned" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="descriptionInput" Type="System.String" DbType="VarChar(1500) NOT NULL" CanBeNull="false" />
+      <Column Name="statusType" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="timeSpentWorking" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="userName" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>
