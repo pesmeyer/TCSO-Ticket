@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Data.SqlClient;
 using System.Windows.Forms;
 
@@ -123,6 +124,7 @@ namespace SampleTicketer
                 pnlNewTicket.Hide();
                 pnlMyTickets.Hide();
                 pnlLookupTickets.Hide();
+                pnlStatistics.Hide();
             }
             catch (Exception ex)
             {
@@ -132,11 +134,17 @@ namespace SampleTicketer
 
         private void btnNewTicket_Click(object sender, EventArgs e)
         {
+            btnNewTicket.BackColor = Color.FromArgb(109, 109, 109);
+            btnMyTicket.BackColor = Color.FromArgb(100, 100, 100);
+            btnLookupTickets.BackColor = Color.FromArgb(100, 100, 100);
+            btnStatistics.BackColor = Color.FromArgb(100, 100, 100);
+
             try
             {
                 pnlNewTicket.Show();
                 pnlMyTickets.Hide();
                 pnlLookupTickets.Hide();
+                pnlStatistics.Hide();
             }
             catch (Exception ex)
             {
@@ -146,6 +154,11 @@ namespace SampleTicketer
 
         private void btnMyTicket_Click(object sender, EventArgs e)
         {
+            btnNewTicket.BackColor = Color.FromArgb(100, 100, 100);
+            btnMyTicket.BackColor = Color.FromArgb(109, 109, 109);
+            btnLookupTickets.BackColor = Color.FromArgb(100, 100, 100);
+            btnStatistics.BackColor = Color.FromArgb(100, 100, 100);
+
             this.ticketTableAdapter.Fill(this.iTicketDataSet.Ticket);
             string userName = Environment.UserName.ToString();
             this.ticketTableAdapter.SortByOpen(this.iTicketDataSet.Ticket, getPerson(userName));
@@ -158,6 +171,7 @@ namespace SampleTicketer
                 pnlNewTicket.Hide();
                 pnlMyTickets.Show();
                 pnlLookupTickets.Hide();
+                pnlStatistics.Hide();
                 
             }
             catch (Exception ex)
@@ -230,10 +244,20 @@ namespace SampleTicketer
         {
             try
             {
+                int TotalTickets = Convert.ToInt32(this.ticketTableAdapter.CountQuery());
+
+                lblTicYTD.Text = TotalTickets.ToString();
+
+                btnNewTicket.BackColor = Color.FromArgb(100, 100, 100);
+                btnLookupTickets.BackColor = Color.FromArgb(109,109,109);
+                btnMyTicket.BackColor = Color.FromArgb(100, 100, 100);
+                btnStatistics.BackColor = Color.FromArgb(100, 100, 100);
+
                 this.ticketTableAdapter.Fill(this.iTicketDataSet.Ticket);
                 pnlNewTicket.Hide();
                 pnlMyTickets.Hide();
                 pnlLookupTickets.Show();
+                pnlStatistics.Hide();
             }
             catch(Exception ex)
             {
@@ -243,7 +267,15 @@ namespace SampleTicketer
 
         private void button1_Click(object sender, EventArgs e)
         {
-            this.ticketTableAdapter.LookupQuery(this.iTicketDataSet.Ticket, txtFirstNameLook.Text, txtLastNameLook.Text, txtEmailLook.Text, txtPhoneNumLook.Text, cbPriorityLook.Text, cbAssignedLook.Text, cbStatusLook.Text);
+            if(txtTicketNumLook.Text != "")
+            {
+                this.ticketTableAdapter.Test(this.iTicketDataSet.Ticket, Convert.ToInt32(txtTicketNumLook.Text), dtpDateCreatedLook.Text);
+            }
+            else
+            {
+                this.ticketTableAdapter.LookupQuery(this.iTicketDataSet.Ticket, txtFirstNameLook.Text, txtLastNameLook.Text, txtEmailLook.Text, txtPhoneNumLook.Text, cbPriorityLook.Text, cbAssignedLook.Text, cbStatusLook.Text, dtpDateCreatedLook.Text, dtpDateDueLook.Text);
+            }
+            
 
 
         }
@@ -267,6 +299,26 @@ namespace SampleTicketer
            
             this.ticketTableAdapter.Fill(this.iTicketDataSet.Ticket);
             
+        }
+
+        private void btnStatistics_Click(object sender, EventArgs e)
+        {
+            btnNewTicket.BackColor = Color.FromArgb(100, 100, 100);
+            btnLookupTickets.BackColor = Color.FromArgb(100, 100, 100);
+            btnMyTicket.BackColor = Color.FromArgb(100, 100, 100);
+            btnStatistics.BackColor = Color.FromArgb(109, 109, 109);
+
+            try
+            {
+                pnlNewTicket.Hide();
+                pnlMyTickets.Hide();
+                pnlLookupTickets.Hide();
+                pnlStatistics.Show();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }

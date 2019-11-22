@@ -54,9 +54,30 @@
             this.btnLookupTickets = new System.Windows.Forms.Button();
             this.btnStatistics = new System.Windows.Forms.Button();
             this.btnSupport = new System.Windows.Forms.Button();
+            this.pnlStatistics = new System.Windows.Forms.Panel();
+            this.lblTicYTD = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.lblTYearToDate = new System.Windows.Forms.Label();
             this.pnlLookupTickets = new System.Windows.Forms.Panel();
+            this.label8 = new System.Windows.Forms.Label();
             this.btnLookEdit = new System.Windows.Forms.Button();
             this.ticketDataGridView = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn17 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn18 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn19 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn20 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn21 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn22 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn23 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn24 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn25 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn26 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn27 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn28 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ticketBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.iTicketDataSet = new SampleTicketer.ITicketDataSet();
             this.pnlLook = new System.Windows.Forms.Panel();
             this.cbStatusLook = new System.Windows.Forms.ComboBox();
             this.cbAssignedLook = new System.Windows.Forms.ComboBox();
@@ -70,6 +91,36 @@
             this.txtTicketNumLook = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
+            this.pnlMyTickets = new System.Windows.Forms.Panel();
+            this.label7 = new System.Windows.Forms.Label();
+            this.lblTotalTicketOpen = new System.Windows.Forms.Label();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lblWelcome = new System.Windows.Forms.Label();
+            this.btnEditTicket = new System.Windows.Forms.Button();
+            this.pnlQuickEdit = new System.Windows.Forms.Panel();
+            this.txtAddNotes = new System.Windows.Forms.TextBox();
+            this.lblAddNotes = new System.Windows.Forms.Label();
+            this.descriptionInputListBox = new System.Windows.Forms.ListBox();
+            this.personAssignedComboBox = new System.Windows.Forms.ComboBox();
+            this.statusTypeComboBox = new System.Windows.Forms.ComboBox();
+            this.assignedPriorityComboBox = new System.Windows.Forms.ComboBox();
+            this.btnUpdate = new System.Windows.Forms.Button();
+            this.lblQuickEdit = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.pnlNewTicket = new System.Windows.Forms.Panel();
             this.lblDescription = new System.Windows.Forms.Label();
             this.txtDescription = new System.Windows.Forms.TextBox();
@@ -89,54 +140,10 @@
             this.dtpDueDate = new System.Windows.Forms.DateTimePicker();
             this.lbPersonAssigned = new System.Windows.Forms.ListBox();
             this.btnSubmit = new System.Windows.Forms.Button();
-            this.pnlMyTickets = new System.Windows.Forms.Panel();
-            this.lblTotalTicketOpen = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.lblWelcome = new System.Windows.Forms.Label();
-            this.btnEditTicket = new System.Windows.Forms.Button();
-            this.pnlQuickEdit = new System.Windows.Forms.Panel();
-            this.txtAddNotes = new System.Windows.Forms.TextBox();
-            this.lblAddNotes = new System.Windows.Forms.Label();
-            this.descriptionInputListBox = new System.Windows.Forms.ListBox();
-            this.personAssignedComboBox = new System.Windows.Forms.ComboBox();
-            this.statusTypeComboBox = new System.Windows.Forms.ComboBox();
-            this.assignedPriorityComboBox = new System.Windows.Forms.ComboBox();
-            this.btnUpdate = new System.Windows.Forms.Button();
-            this.lblQuickEdit = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.dataGridViewTextBoxColumn15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn17 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn18 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn19 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn20 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn21 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn22 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn23 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn24 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn25 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn26 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn27 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn28 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ticketBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.iTicketDataSet = new SampleTicketer.ITicketDataSet();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ticketTableAdapter = new SampleTicketer.ITicketDataSetTableAdapters.TicketTableAdapter();
             this.tableAdapterManager = new SampleTicketer.ITicketDataSetTableAdapters.TableAdapterManager();
             this.iTicketDataSet1 = new SampleTicketer.ITicketDataSet();
+            this.label9 = new System.Windows.Forms.Label();
             assignedPriorityLabel = new System.Windows.Forms.Label();
             statusTypeLabel = new System.Windows.Forms.Label();
             personAssignedLabel = new System.Windows.Forms.Label();
@@ -157,15 +164,16 @@
             this.splitContainer1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
+            this.pnlStatistics.SuspendLayout();
             this.pnlLookupTickets.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ticketDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ticketBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iTicketDataSet)).BeginInit();
             this.pnlLook.SuspendLayout();
-            this.pnlNewTicket.SuspendLayout();
             this.pnlMyTickets.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.pnlQuickEdit.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ticketBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.iTicketDataSet)).BeginInit();
+            this.pnlNewTicket.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iTicketDataSet1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -337,9 +345,10 @@
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.AutoScroll = true;
+            this.splitContainer1.Panel2.Controls.Add(this.pnlStatistics);
             this.splitContainer1.Panel2.Controls.Add(this.pnlLookupTickets);
-            this.splitContainer1.Panel2.Controls.Add(this.pnlNewTicket);
             this.splitContainer1.Panel2.Controls.Add(this.pnlMyTickets);
+            this.splitContainer1.Panel2.Controls.Add(this.pnlNewTicket);
             this.splitContainer1.Size = new System.Drawing.Size(1197, 690);
             this.splitContainer1.SplitterDistance = 201;
             this.splitContainer1.SplitterWidth = 1;
@@ -389,7 +398,7 @@
             this.btnOverview.Location = new System.Drawing.Point(0, 0);
             this.btnOverview.Margin = new System.Windows.Forms.Padding(0);
             this.btnOverview.Name = "btnOverview";
-            this.btnOverview.Size = new System.Drawing.Size(201, 54);
+            this.btnOverview.Size = new System.Drawing.Size(202, 54);
             this.btnOverview.TabIndex = 14;
             this.btnOverview.Text = "Overview";
             this.btnOverview.UseVisualStyleBackColor = true;
@@ -402,7 +411,7 @@
             this.btnNewTicket.Location = new System.Drawing.Point(0, 54);
             this.btnNewTicket.Margin = new System.Windows.Forms.Padding(0);
             this.btnNewTicket.Name = "btnNewTicket";
-            this.btnNewTicket.Size = new System.Drawing.Size(201, 54);
+            this.btnNewTicket.Size = new System.Drawing.Size(202, 54);
             this.btnNewTicket.TabIndex = 15;
             this.btnNewTicket.Text = "New Ticket";
             this.btnNewTicket.UseVisualStyleBackColor = true;
@@ -416,7 +425,7 @@
             this.btnMyTicket.Location = new System.Drawing.Point(0, 108);
             this.btnMyTicket.Margin = new System.Windows.Forms.Padding(0);
             this.btnMyTicket.Name = "btnMyTicket";
-            this.btnMyTicket.Size = new System.Drawing.Size(201, 54);
+            this.btnMyTicket.Size = new System.Drawing.Size(202, 54);
             this.btnMyTicket.TabIndex = 16;
             this.btnMyTicket.Text = "My Tickets";
             this.btnMyTicket.UseVisualStyleBackColor = true;
@@ -430,7 +439,7 @@
             this.btnLookupTickets.Location = new System.Drawing.Point(0, 162);
             this.btnLookupTickets.Margin = new System.Windows.Forms.Padding(0);
             this.btnLookupTickets.Name = "btnLookupTickets";
-            this.btnLookupTickets.Size = new System.Drawing.Size(201, 54);
+            this.btnLookupTickets.Size = new System.Drawing.Size(202, 54);
             this.btnLookupTickets.TabIndex = 17;
             this.btnLookupTickets.Text = "Lookup Tickets";
             this.btnLookupTickets.UseVisualStyleBackColor = true;
@@ -444,10 +453,11 @@
             this.btnStatistics.Location = new System.Drawing.Point(0, 216);
             this.btnStatistics.Margin = new System.Windows.Forms.Padding(0);
             this.btnStatistics.Name = "btnStatistics";
-            this.btnStatistics.Size = new System.Drawing.Size(201, 54);
+            this.btnStatistics.Size = new System.Drawing.Size(202, 54);
             this.btnStatistics.TabIndex = 18;
             this.btnStatistics.Text = "Statistics";
             this.btnStatistics.UseVisualStyleBackColor = true;
+            this.btnStatistics.Click += new System.EventHandler(this.btnStatistics_Click);
             // 
             // btnSupport
             // 
@@ -462,9 +472,54 @@
             this.btnSupport.Text = "Support";
             this.btnSupport.UseVisualStyleBackColor = true;
             // 
+            // pnlStatistics
+            // 
+            this.pnlStatistics.Controls.Add(this.label9);
+            this.pnlStatistics.Controls.Add(this.lblTicYTD);
+            this.pnlStatistics.Controls.Add(this.label5);
+            this.pnlStatistics.Controls.Add(this.lblTYearToDate);
+            this.pnlStatistics.Location = new System.Drawing.Point(0, 0);
+            this.pnlStatistics.Name = "pnlStatistics";
+            this.pnlStatistics.Size = new System.Drawing.Size(995, 690);
+            this.pnlStatistics.TabIndex = 3;
+            // 
+            // lblTicYTD
+            // 
+            this.lblTicYTD.AutoSize = true;
+            this.lblTicYTD.Font = new System.Drawing.Font("Gill Sans MT", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTicYTD.ForeColor = System.Drawing.SystemColors.Window;
+            this.lblTicYTD.Location = new System.Drawing.Point(238, 89);
+            this.lblTicYTD.Name = "lblTicYTD";
+            this.lblTicYTD.Size = new System.Drawing.Size(76, 30);
+            this.lblTicYTD.TabIndex = 2;
+            this.lblTicYTD.Text = "Default";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Gill Sans MT", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.SystemColors.Window;
+            this.label5.Location = new System.Drawing.Point(463, 17);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(69, 38);
+            this.label5.TabIndex = 1;
+            this.label5.Text = "Stats";
+            // 
+            // lblTYearToDate
+            // 
+            this.lblTYearToDate.AutoSize = true;
+            this.lblTYearToDate.Font = new System.Drawing.Font("Gill Sans MT", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTYearToDate.ForeColor = System.Drawing.SystemColors.Window;
+            this.lblTYearToDate.Location = new System.Drawing.Point(41, 89);
+            this.lblTYearToDate.Name = "lblTYearToDate";
+            this.lblTYearToDate.Size = new System.Drawing.Size(199, 30);
+            this.lblTYearToDate.TabIndex = 0;
+            this.lblTYearToDate.Text = "Tickets Year to Date:";
+            // 
             // pnlLookupTickets
             // 
             this.pnlLookupTickets.AutoScroll = true;
+            this.pnlLookupTickets.Controls.Add(this.label8);
             this.pnlLookupTickets.Controls.Add(this.btnLookEdit);
             this.pnlLookupTickets.Controls.Add(this.ticketDataGridView);
             this.pnlLookupTickets.Controls.Add(this.pnlLook);
@@ -473,6 +528,17 @@
             this.pnlLookupTickets.Name = "pnlLookupTickets";
             this.pnlLookupTickets.Size = new System.Drawing.Size(995, 690);
             this.pnlLookupTickets.TabIndex = 51;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Gill Sans MT", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.SystemColors.Window;
+            this.label8.Location = new System.Drawing.Point(403, 9);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(188, 38);
+            this.label8.TabIndex = 3;
+            this.label8.Text = "Lookup Tickets";
             // 
             // btnLookEdit
             // 
@@ -497,6 +563,7 @@
             this.ticketDataGridView.BackgroundColor = System.Drawing.SystemColors.ControlDark;
             this.ticketDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.ticketDataGridView.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.ticketDataGridView.ColumnHeadersHeight = 29;
             this.ticketDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn15,
             this.dataGridViewTextBoxColumn16,
@@ -513,11 +580,106 @@
             this.dataGridViewTextBoxColumn27,
             this.dataGridViewTextBoxColumn28});
             this.ticketDataGridView.DataSource = this.ticketBindingSource;
-            this.ticketDataGridView.Location = new System.Drawing.Point(19, 39);
+            this.ticketDataGridView.Location = new System.Drawing.Point(19, 58);
             this.ticketDataGridView.Name = "ticketDataGridView";
             this.ticketDataGridView.RowHeadersVisible = false;
-            this.ticketDataGridView.Size = new System.Drawing.Size(941, 277);
+            this.ticketDataGridView.Size = new System.Drawing.Size(941, 258);
             this.ticketDataGridView.TabIndex = 1;
+            // 
+            // dataGridViewTextBoxColumn15
+            // 
+            this.dataGridViewTextBoxColumn15.DataPropertyName = "ticketNum";
+            this.dataGridViewTextBoxColumn15.HeaderText = "Ticket Number";
+            this.dataGridViewTextBoxColumn15.Name = "dataGridViewTextBoxColumn15";
+            // 
+            // dataGridViewTextBoxColumn16
+            // 
+            this.dataGridViewTextBoxColumn16.DataPropertyName = "fname";
+            this.dataGridViewTextBoxColumn16.HeaderText = "First Name";
+            this.dataGridViewTextBoxColumn16.Name = "dataGridViewTextBoxColumn16";
+            // 
+            // dataGridViewTextBoxColumn17
+            // 
+            this.dataGridViewTextBoxColumn17.DataPropertyName = "lname";
+            this.dataGridViewTextBoxColumn17.HeaderText = "Last Name";
+            this.dataGridViewTextBoxColumn17.Name = "dataGridViewTextBoxColumn17";
+            // 
+            // dataGridViewTextBoxColumn18
+            // 
+            this.dataGridViewTextBoxColumn18.DataPropertyName = "email";
+            this.dataGridViewTextBoxColumn18.HeaderText = "Email";
+            this.dataGridViewTextBoxColumn18.Name = "dataGridViewTextBoxColumn18";
+            // 
+            // dataGridViewTextBoxColumn19
+            // 
+            this.dataGridViewTextBoxColumn19.DataPropertyName = "phoneNumber";
+            this.dataGridViewTextBoxColumn19.HeaderText = "Phone Number";
+            this.dataGridViewTextBoxColumn19.Name = "dataGridViewTextBoxColumn19";
+            // 
+            // dataGridViewTextBoxColumn20
+            // 
+            this.dataGridViewTextBoxColumn20.DataPropertyName = "dateCreated";
+            this.dataGridViewTextBoxColumn20.HeaderText = "Date Created";
+            this.dataGridViewTextBoxColumn20.Name = "dataGridViewTextBoxColumn20";
+            // 
+            // dataGridViewTextBoxColumn21
+            // 
+            this.dataGridViewTextBoxColumn21.DataPropertyName = "dateDue";
+            this.dataGridViewTextBoxColumn21.HeaderText = "Date Due";
+            this.dataGridViewTextBoxColumn21.Name = "dataGridViewTextBoxColumn21";
+            // 
+            // dataGridViewTextBoxColumn22
+            // 
+            this.dataGridViewTextBoxColumn22.DataPropertyName = "assignedPriority";
+            this.dataGridViewTextBoxColumn22.HeaderText = "Priority";
+            this.dataGridViewTextBoxColumn22.Name = "dataGridViewTextBoxColumn22";
+            // 
+            // dataGridViewTextBoxColumn23
+            // 
+            this.dataGridViewTextBoxColumn23.DataPropertyName = "personOriginallyAssigned";
+            this.dataGridViewTextBoxColumn23.HeaderText = "Person Originally Assigned";
+            this.dataGridViewTextBoxColumn23.Name = "dataGridViewTextBoxColumn23";
+            // 
+            // dataGridViewTextBoxColumn24
+            // 
+            this.dataGridViewTextBoxColumn24.DataPropertyName = "personAssigned";
+            this.dataGridViewTextBoxColumn24.HeaderText = "Person Assigned";
+            this.dataGridViewTextBoxColumn24.Name = "dataGridViewTextBoxColumn24";
+            // 
+            // dataGridViewTextBoxColumn25
+            // 
+            this.dataGridViewTextBoxColumn25.DataPropertyName = "descriptionInput";
+            this.dataGridViewTextBoxColumn25.HeaderText = "Description Input";
+            this.dataGridViewTextBoxColumn25.Name = "dataGridViewTextBoxColumn25";
+            this.dataGridViewTextBoxColumn25.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn26
+            // 
+            this.dataGridViewTextBoxColumn26.DataPropertyName = "statusType";
+            this.dataGridViewTextBoxColumn26.HeaderText = "Status Type";
+            this.dataGridViewTextBoxColumn26.Name = "dataGridViewTextBoxColumn26";
+            // 
+            // dataGridViewTextBoxColumn27
+            // 
+            this.dataGridViewTextBoxColumn27.DataPropertyName = "timeSpentWorking";
+            this.dataGridViewTextBoxColumn27.HeaderText = "Time Spent Working";
+            this.dataGridViewTextBoxColumn27.Name = "dataGridViewTextBoxColumn27";
+            // 
+            // dataGridViewTextBoxColumn28
+            // 
+            this.dataGridViewTextBoxColumn28.DataPropertyName = "userName";
+            this.dataGridViewTextBoxColumn28.HeaderText = "User Name";
+            this.dataGridViewTextBoxColumn28.Name = "dataGridViewTextBoxColumn28";
+            // 
+            // ticketBindingSource
+            // 
+            this.ticketBindingSource.DataMember = "Ticket";
+            this.ticketBindingSource.DataSource = this.iTicketDataSet;
+            // 
+            // iTicketDataSet
+            // 
+            this.iTicketDataSet.DataSetName = "ITicketDataSet";
+            this.iTicketDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // pnlLook
             // 
@@ -556,6 +718,10 @@
             this.cbStatusLook.BackColor = System.Drawing.SystemColors.ControlDark;
             this.cbStatusLook.ForeColor = System.Drawing.SystemColors.Window;
             this.cbStatusLook.FormattingEnabled = true;
+            this.cbStatusLook.Items.AddRange(new object[] {
+            "",
+            "Open",
+            "Closed"});
             this.cbStatusLook.Location = new System.Drawing.Point(480, 232);
             this.cbStatusLook.Name = "cbStatusLook";
             this.cbStatusLook.Size = new System.Drawing.Size(164, 31);
@@ -566,6 +732,11 @@
             this.cbAssignedLook.BackColor = System.Drawing.SystemColors.ControlDark;
             this.cbAssignedLook.ForeColor = System.Drawing.SystemColors.Window;
             this.cbAssignedLook.FormattingEnabled = true;
+            this.cbAssignedLook.Items.AddRange(new object[] {
+            "",
+            "Daniel Lutz",
+            "Payton Esmeyer",
+            "Austin Cauley"});
             this.cbAssignedLook.Location = new System.Drawing.Point(480, 174);
             this.cbAssignedLook.Name = "cbAssignedLook";
             this.cbAssignedLook.Size = new System.Drawing.Size(164, 31);
@@ -590,6 +761,12 @@
             this.cbPriorityLook.BackColor = System.Drawing.SystemColors.ControlDark;
             this.cbPriorityLook.ForeColor = System.Drawing.SystemColors.Window;
             this.cbPriorityLook.FormattingEnabled = true;
+            this.cbPriorityLook.Items.AddRange(new object[] {
+            "",
+            "Low",
+            "Medium",
+            "High",
+            "Critical"});
             this.cbPriorityLook.Location = new System.Drawing.Point(480, 116);
             this.cbPriorityLook.Name = "cbPriorityLook";
             this.cbPriorityLook.Size = new System.Drawing.Size(164, 31);
@@ -670,6 +847,356 @@
             this.label4.Size = new System.Drawing.Size(139, 30);
             this.label4.TabIndex = 20;
             this.label4.Text = "Lookup Ticket";
+            // 
+            // pnlMyTickets
+            // 
+            this.pnlMyTickets.AccessibleName = "";
+            this.pnlMyTickets.Controls.Add(this.label7);
+            this.pnlMyTickets.Controls.Add(this.lblTotalTicketOpen);
+            this.pnlMyTickets.Controls.Add(this.dataGridView1);
+            this.pnlMyTickets.Controls.Add(this.lblWelcome);
+            this.pnlMyTickets.Controls.Add(this.btnEditTicket);
+            this.pnlMyTickets.Controls.Add(this.pnlQuickEdit);
+            this.pnlMyTickets.Controls.Add(this.label3);
+            this.pnlMyTickets.Location = new System.Drawing.Point(0, 0);
+            this.pnlMyTickets.Margin = new System.Windows.Forms.Padding(0);
+            this.pnlMyTickets.Name = "pnlMyTickets";
+            this.pnlMyTickets.Size = new System.Drawing.Size(991, 686);
+            this.pnlMyTickets.TabIndex = 52;
+            this.pnlMyTickets.Visible = false;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Gill Sans MT", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.SystemColors.Window;
+            this.label7.Location = new System.Drawing.Point(403, 17);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(137, 38);
+            this.label7.TabIndex = 5;
+            this.label7.Text = "My Tickets";
+            // 
+            // lblTotalTicketOpen
+            // 
+            this.lblTotalTicketOpen.AutoSize = true;
+            this.lblTotalTicketOpen.Font = new System.Drawing.Font("Gill Sans MT", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotalTicketOpen.ForeColor = System.Drawing.SystemColors.Window;
+            this.lblTotalTicketOpen.Location = new System.Drawing.Point(376, 68);
+            this.lblTotalTicketOpen.Name = "lblTotalTicketOpen";
+            this.lblTotalTicketOpen.Size = new System.Drawing.Size(256, 30);
+            this.lblTotalTicketOpen.TabIndex = 1;
+            this.lblTotalTicketOpen.Text = "Total Tickets Open: Default";
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.AutoGenerateColumns = false;
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.ColumnHeader;
+            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridView1.ColumnHeadersHeight = 32;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn1,
+            this.dataGridViewTextBoxColumn2,
+            this.dataGridViewTextBoxColumn3,
+            this.dataGridViewTextBoxColumn4,
+            this.dataGridViewTextBoxColumn5,
+            this.dataGridViewTextBoxColumn6,
+            this.dataGridViewTextBoxColumn7,
+            this.dataGridViewTextBoxColumn8,
+            this.dataGridViewTextBoxColumn9,
+            this.dataGridViewTextBoxColumn10,
+            this.dataGridViewTextBoxColumn11,
+            this.dataGridViewTextBoxColumn12,
+            this.dataGridViewTextBoxColumn13,
+            this.dataGridViewTextBoxColumn14});
+            this.dataGridView1.DataSource = this.ticketBindingSource;
+            this.dataGridView1.Location = new System.Drawing.Point(45, 151);
+            this.dataGridView1.MultiSelect = false;
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.RowHeadersVisible = false;
+            this.dataGridView1.Size = new System.Drawing.Size(898, 209);
+            this.dataGridView1.TabIndex = 4;
+            this.dataGridView1.DoubleClick += new System.EventHandler(this.dataGridView1_DoubleClick);
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "ticketNum";
+            this.dataGridViewTextBoxColumn1.HeaderText = "Ticket Number";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            this.dataGridViewTextBoxColumn1.Width = 136;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "fname";
+            this.dataGridViewTextBoxColumn2.HeaderText = "First Name";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            this.dataGridViewTextBoxColumn2.Width = 108;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "lname";
+            this.dataGridViewTextBoxColumn3.HeaderText = "Last Name";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
+            this.dataGridViewTextBoxColumn3.Width = 105;
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "email";
+            this.dataGridViewTextBoxColumn4.HeaderText = "Email";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.ReadOnly = true;
+            this.dataGridViewTextBoxColumn4.Width = 70;
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "phoneNumber";
+            this.dataGridViewTextBoxColumn5.HeaderText = "Phone Number";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dataGridViewTextBoxColumn5.ReadOnly = true;
+            this.dataGridViewTextBoxColumn5.Width = 135;
+            // 
+            // dataGridViewTextBoxColumn6
+            // 
+            this.dataGridViewTextBoxColumn6.DataPropertyName = "dateCreated";
+            this.dataGridViewTextBoxColumn6.HeaderText = "Date Created";
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            this.dataGridViewTextBoxColumn6.ReadOnly = true;
+            this.dataGridViewTextBoxColumn6.Width = 124;
+            // 
+            // dataGridViewTextBoxColumn7
+            // 
+            this.dataGridViewTextBoxColumn7.DataPropertyName = "dateDue";
+            this.dataGridViewTextBoxColumn7.HeaderText = "Date Due";
+            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            this.dataGridViewTextBoxColumn7.ReadOnly = true;
+            this.dataGridViewTextBoxColumn7.Width = 99;
+            // 
+            // dataGridViewTextBoxColumn8
+            // 
+            this.dataGridViewTextBoxColumn8.DataPropertyName = "assignedPriority";
+            this.dataGridViewTextBoxColumn8.HeaderText = "Assigned Priority";
+            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
+            this.dataGridViewTextBoxColumn8.ReadOnly = true;
+            this.dataGridViewTextBoxColumn8.Width = 146;
+            // 
+            // dataGridViewTextBoxColumn9
+            // 
+            this.dataGridViewTextBoxColumn9.DataPropertyName = "personOriginallyAssigned";
+            this.dataGridViewTextBoxColumn9.HeaderText = "Person Originally Assigned";
+            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
+            this.dataGridViewTextBoxColumn9.ReadOnly = true;
+            this.dataGridViewTextBoxColumn9.Visible = false;
+            this.dataGridViewTextBoxColumn9.Width = 142;
+            // 
+            // dataGridViewTextBoxColumn10
+            // 
+            this.dataGridViewTextBoxColumn10.DataPropertyName = "personAssigned";
+            this.dataGridViewTextBoxColumn10.HeaderText = "Person Assigned";
+            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
+            this.dataGridViewTextBoxColumn10.ReadOnly = true;
+            this.dataGridViewTextBoxColumn10.Width = 142;
+            // 
+            // dataGridViewTextBoxColumn11
+            // 
+            this.dataGridViewTextBoxColumn11.DataPropertyName = "descriptionInput";
+            this.dataGridViewTextBoxColumn11.HeaderText = "Description Input";
+            this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
+            this.dataGridViewTextBoxColumn11.ReadOnly = true;
+            this.dataGridViewTextBoxColumn11.Width = 149;
+            // 
+            // dataGridViewTextBoxColumn12
+            // 
+            this.dataGridViewTextBoxColumn12.DataPropertyName = "statusType";
+            this.dataGridViewTextBoxColumn12.HeaderText = "Status Type";
+            this.dataGridViewTextBoxColumn12.Name = "dataGridViewTextBoxColumn12";
+            this.dataGridViewTextBoxColumn12.ReadOnly = true;
+            this.dataGridViewTextBoxColumn12.Width = 110;
+            // 
+            // dataGridViewTextBoxColumn13
+            // 
+            this.dataGridViewTextBoxColumn13.DataPropertyName = "timeSpentWorking";
+            this.dataGridViewTextBoxColumn13.HeaderText = "Time Spent Working";
+            this.dataGridViewTextBoxColumn13.Name = "dataGridViewTextBoxColumn13";
+            this.dataGridViewTextBoxColumn13.ReadOnly = true;
+            this.dataGridViewTextBoxColumn13.Width = 172;
+            // 
+            // dataGridViewTextBoxColumn14
+            // 
+            this.dataGridViewTextBoxColumn14.DataPropertyName = "userName";
+            this.dataGridViewTextBoxColumn14.HeaderText = "User Name";
+            this.dataGridViewTextBoxColumn14.Name = "dataGridViewTextBoxColumn14";
+            this.dataGridViewTextBoxColumn14.ReadOnly = true;
+            this.dataGridViewTextBoxColumn14.Visible = false;
+            this.dataGridViewTextBoxColumn14.Width = 78;
+            // 
+            // lblWelcome
+            // 
+            this.lblWelcome.AutoSize = true;
+            this.lblWelcome.Font = new System.Drawing.Font("Gill Sans MT", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblWelcome.ForeColor = System.Drawing.SystemColors.Window;
+            this.lblWelcome.Location = new System.Drawing.Point(48, 62);
+            this.lblWelcome.Name = "lblWelcome";
+            this.lblWelcome.Size = new System.Drawing.Size(172, 38);
+            this.lblWelcome.TabIndex = 0;
+            this.lblWelcome.Text = "Hello, Default";
+            // 
+            // btnEditTicket
+            // 
+            this.btnEditTicket.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.btnEditTicket.FlatAppearance.BorderSize = 0;
+            this.btnEditTicket.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEditTicket.Font = new System.Drawing.Font("Gill Sans MT", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEditTicket.ForeColor = System.Drawing.SystemColors.Window;
+            this.btnEditTicket.Location = new System.Drawing.Point(857, 367);
+            this.btnEditTicket.Name = "btnEditTicket";
+            this.btnEditTicket.Size = new System.Drawing.Size(86, 41);
+            this.btnEditTicket.TabIndex = 3;
+            this.btnEditTicket.Text = "Edit";
+            this.btnEditTicket.UseVisualStyleBackColor = false;
+            this.btnEditTicket.Click += new System.EventHandler(this.btnEditTicket_Click);
+            // 
+            // pnlQuickEdit
+            // 
+            this.pnlQuickEdit.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.pnlQuickEdit.Controls.Add(this.txtAddNotes);
+            this.pnlQuickEdit.Controls.Add(this.lblAddNotes);
+            this.pnlQuickEdit.Controls.Add(descriptionInputLabel);
+            this.pnlQuickEdit.Controls.Add(this.descriptionInputListBox);
+            this.pnlQuickEdit.Controls.Add(personAssignedLabel);
+            this.pnlQuickEdit.Controls.Add(this.personAssignedComboBox);
+            this.pnlQuickEdit.Controls.Add(statusTypeLabel);
+            this.pnlQuickEdit.Controls.Add(this.statusTypeComboBox);
+            this.pnlQuickEdit.Controls.Add(assignedPriorityLabel);
+            this.pnlQuickEdit.Controls.Add(this.assignedPriorityComboBox);
+            this.pnlQuickEdit.Controls.Add(this.btnUpdate);
+            this.pnlQuickEdit.Controls.Add(this.lblQuickEdit);
+            this.pnlQuickEdit.Location = new System.Drawing.Point(0, 417);
+            this.pnlQuickEdit.Name = "pnlQuickEdit";
+            this.pnlQuickEdit.Size = new System.Drawing.Size(988, 267);
+            this.pnlQuickEdit.TabIndex = 2;
+            // 
+            // txtAddNotes
+            // 
+            this.txtAddNotes.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.txtAddNotes.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtAddNotes.ForeColor = System.Drawing.SystemColors.Window;
+            this.txtAddNotes.Location = new System.Drawing.Point(19, 162);
+            this.txtAddNotes.Multiline = true;
+            this.txtAddNotes.Name = "txtAddNotes";
+            this.txtAddNotes.Size = new System.Drawing.Size(924, 47);
+            this.txtAddNotes.TabIndex = 12;
+            // 
+            // lblAddNotes
+            // 
+            this.lblAddNotes.AutoSize = true;
+            this.lblAddNotes.ForeColor = System.Drawing.SystemColors.Window;
+            this.lblAddNotes.Location = new System.Drawing.Point(15, 140);
+            this.lblAddNotes.Name = "lblAddNotes";
+            this.lblAddNotes.Size = new System.Drawing.Size(86, 23);
+            this.lblAddNotes.TabIndex = 11;
+            this.lblAddNotes.Text = "Add Notes:";
+            // 
+            // descriptionInputListBox
+            // 
+            this.descriptionInputListBox.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.descriptionInputListBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.descriptionInputListBox.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.ticketBindingSource, "descriptionInput", true));
+            this.descriptionInputListBox.ForeColor = System.Drawing.SystemColors.Window;
+            this.descriptionInputListBox.FormattingEnabled = true;
+            this.descriptionInputListBox.ItemHeight = 23;
+            this.descriptionInputListBox.Location = new System.Drawing.Point(19, 114);
+            this.descriptionInputListBox.Name = "descriptionInputListBox";
+            this.descriptionInputListBox.ScrollAlwaysVisible = true;
+            this.descriptionInputListBox.Size = new System.Drawing.Size(924, 23);
+            this.descriptionInputListBox.TabIndex = 10;
+            // 
+            // personAssignedComboBox
+            // 
+            this.personAssignedComboBox.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.personAssignedComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.ticketBindingSource, "personAssigned", true));
+            this.personAssignedComboBox.ForeColor = System.Drawing.SystemColors.Window;
+            this.personAssignedComboBox.FormattingEnabled = true;
+            this.personAssignedComboBox.Items.AddRange(new object[] {
+            "Daniel Lutz",
+            "Payton Esmeyer",
+            "Austin Cauley"});
+            this.personAssignedComboBox.Location = new System.Drawing.Point(326, 55);
+            this.personAssignedComboBox.Name = "personAssignedComboBox";
+            this.personAssignedComboBox.Size = new System.Drawing.Size(138, 31);
+            this.personAssignedComboBox.TabIndex = 9;
+            // 
+            // statusTypeComboBox
+            // 
+            this.statusTypeComboBox.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.statusTypeComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.ticketBindingSource, "statusType", true));
+            this.statusTypeComboBox.ForeColor = System.Drawing.SystemColors.Window;
+            this.statusTypeComboBox.FormattingEnabled = true;
+            this.statusTypeComboBox.Items.AddRange(new object[] {
+            "Open",
+            "Closed"});
+            this.statusTypeComboBox.Location = new System.Drawing.Point(805, 55);
+            this.statusTypeComboBox.Name = "statusTypeComboBox";
+            this.statusTypeComboBox.Size = new System.Drawing.Size(138, 31);
+            this.statusTypeComboBox.TabIndex = 8;
+            // 
+            // assignedPriorityComboBox
+            // 
+            this.assignedPriorityComboBox.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.assignedPriorityComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.ticketBindingSource, "assignedPriority", true));
+            this.assignedPriorityComboBox.ForeColor = System.Drawing.SystemColors.Window;
+            this.assignedPriorityComboBox.FormattingEnabled = true;
+            this.assignedPriorityComboBox.Items.AddRange(new object[] {
+            "Low",
+            "Medium",
+            "High",
+            "Critical"});
+            this.assignedPriorityComboBox.Location = new System.Drawing.Point(571, 55);
+            this.assignedPriorityComboBox.Name = "assignedPriorityComboBox";
+            this.assignedPriorityComboBox.Size = new System.Drawing.Size(138, 31);
+            this.assignedPriorityComboBox.TabIndex = 7;
+            // 
+            // btnUpdate
+            // 
+            this.btnUpdate.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.btnUpdate.FlatAppearance.BorderSize = 0;
+            this.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUpdate.Font = new System.Drawing.Font("Gill Sans MT", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUpdate.ForeColor = System.Drawing.SystemColors.Window;
+            this.btnUpdate.Location = new System.Drawing.Point(842, 218);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(101, 41);
+            this.btnUpdate.TabIndex = 3;
+            this.btnUpdate.Text = "Update";
+            this.btnUpdate.UseVisualStyleBackColor = false;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
+            // 
+            // lblQuickEdit
+            // 
+            this.lblQuickEdit.AutoSize = true;
+            this.lblQuickEdit.Font = new System.Drawing.Font("Gill Sans MT", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblQuickEdit.ForeColor = System.Drawing.SystemColors.Window;
+            this.lblQuickEdit.Location = new System.Drawing.Point(13, 14);
+            this.lblQuickEdit.Name = "lblQuickEdit";
+            this.lblQuickEdit.Size = new System.Drawing.Size(127, 34);
+            this.lblQuickEdit.TabIndex = 0;
+            this.lblQuickEdit.Text = "Quick Edits";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Gill Sans MT", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.SystemColors.Window;
+            this.label3.Location = new System.Drawing.Point(15, 112);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(250, 30);
+            this.label3.TabIndex = 1;
+            this.label3.Text = "See what\'s been happening:";
             // 
             // pnlNewTicket
             // 
@@ -919,437 +1446,6 @@
             this.btnSubmit.UseVisualStyleBackColor = false;
             this.btnSubmit.Click += new System.EventHandler(this.btnSubmit_Click);
             // 
-            // pnlMyTickets
-            // 
-            this.pnlMyTickets.AccessibleName = "";
-            this.pnlMyTickets.Controls.Add(this.lblTotalTicketOpen);
-            this.pnlMyTickets.Controls.Add(this.dataGridView1);
-            this.pnlMyTickets.Controls.Add(this.lblWelcome);
-            this.pnlMyTickets.Controls.Add(this.btnEditTicket);
-            this.pnlMyTickets.Controls.Add(this.pnlQuickEdit);
-            this.pnlMyTickets.Controls.Add(this.label3);
-            this.pnlMyTickets.Location = new System.Drawing.Point(0, 0);
-            this.pnlMyTickets.Margin = new System.Windows.Forms.Padding(0);
-            this.pnlMyTickets.Name = "pnlMyTickets";
-            this.pnlMyTickets.Size = new System.Drawing.Size(991, 686);
-            this.pnlMyTickets.TabIndex = 52;
-            this.pnlMyTickets.Visible = false;
-            // 
-            // lblTotalTicketOpen
-            // 
-            this.lblTotalTicketOpen.AutoSize = true;
-            this.lblTotalTicketOpen.Font = new System.Drawing.Font("Gill Sans MT", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTotalTicketOpen.ForeColor = System.Drawing.SystemColors.Window;
-            this.lblTotalTicketOpen.Location = new System.Drawing.Point(375, 40);
-            this.lblTotalTicketOpen.Name = "lblTotalTicketOpen";
-            this.lblTotalTicketOpen.Size = new System.Drawing.Size(256, 30);
-            this.lblTotalTicketOpen.TabIndex = 1;
-            this.lblTotalTicketOpen.Text = "Total Tickets Open: Default";
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.AutoGenerateColumns = false;
-            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.ColumnHeader;
-            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dataGridView1.ColumnHeadersHeight = 45;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1,
-            this.dataGridViewTextBoxColumn2,
-            this.dataGridViewTextBoxColumn3,
-            this.dataGridViewTextBoxColumn4,
-            this.dataGridViewTextBoxColumn5,
-            this.dataGridViewTextBoxColumn6,
-            this.dataGridViewTextBoxColumn7,
-            this.dataGridViewTextBoxColumn8,
-            this.dataGridViewTextBoxColumn9,
-            this.dataGridViewTextBoxColumn10,
-            this.dataGridViewTextBoxColumn11,
-            this.dataGridViewTextBoxColumn12,
-            this.dataGridViewTextBoxColumn13,
-            this.dataGridViewTextBoxColumn14});
-            this.dataGridView1.DataSource = this.ticketBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(45, 151);
-            this.dataGridView1.MultiSelect = false;
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(898, 209);
-            this.dataGridView1.TabIndex = 4;
-            this.dataGridView1.DoubleClick += new System.EventHandler(this.dataGridView1_DoubleClick);
-            // 
-            // lblWelcome
-            // 
-            this.lblWelcome.AutoSize = true;
-            this.lblWelcome.Font = new System.Drawing.Font("Gill Sans MT", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblWelcome.ForeColor = System.Drawing.SystemColors.Window;
-            this.lblWelcome.Location = new System.Drawing.Point(47, 34);
-            this.lblWelcome.Name = "lblWelcome";
-            this.lblWelcome.Size = new System.Drawing.Size(172, 38);
-            this.lblWelcome.TabIndex = 0;
-            this.lblWelcome.Text = "Hello, Default";
-            // 
-            // btnEditTicket
-            // 
-            this.btnEditTicket.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.btnEditTicket.FlatAppearance.BorderSize = 0;
-            this.btnEditTicket.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEditTicket.Font = new System.Drawing.Font("Gill Sans MT", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEditTicket.ForeColor = System.Drawing.SystemColors.Window;
-            this.btnEditTicket.Location = new System.Drawing.Point(857, 367);
-            this.btnEditTicket.Name = "btnEditTicket";
-            this.btnEditTicket.Size = new System.Drawing.Size(86, 41);
-            this.btnEditTicket.TabIndex = 3;
-            this.btnEditTicket.Text = "Edit";
-            this.btnEditTicket.UseVisualStyleBackColor = false;
-            this.btnEditTicket.Click += new System.EventHandler(this.btnEditTicket_Click);
-            // 
-            // pnlQuickEdit
-            // 
-            this.pnlQuickEdit.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.pnlQuickEdit.Controls.Add(this.txtAddNotes);
-            this.pnlQuickEdit.Controls.Add(this.lblAddNotes);
-            this.pnlQuickEdit.Controls.Add(descriptionInputLabel);
-            this.pnlQuickEdit.Controls.Add(this.descriptionInputListBox);
-            this.pnlQuickEdit.Controls.Add(personAssignedLabel);
-            this.pnlQuickEdit.Controls.Add(this.personAssignedComboBox);
-            this.pnlQuickEdit.Controls.Add(statusTypeLabel);
-            this.pnlQuickEdit.Controls.Add(this.statusTypeComboBox);
-            this.pnlQuickEdit.Controls.Add(assignedPriorityLabel);
-            this.pnlQuickEdit.Controls.Add(this.assignedPriorityComboBox);
-            this.pnlQuickEdit.Controls.Add(this.btnUpdate);
-            this.pnlQuickEdit.Controls.Add(this.lblQuickEdit);
-            this.pnlQuickEdit.Location = new System.Drawing.Point(0, 417);
-            this.pnlQuickEdit.Name = "pnlQuickEdit";
-            this.pnlQuickEdit.Size = new System.Drawing.Size(988, 267);
-            this.pnlQuickEdit.TabIndex = 2;
-            // 
-            // txtAddNotes
-            // 
-            this.txtAddNotes.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.txtAddNotes.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtAddNotes.ForeColor = System.Drawing.SystemColors.Window;
-            this.txtAddNotes.Location = new System.Drawing.Point(19, 162);
-            this.txtAddNotes.Multiline = true;
-            this.txtAddNotes.Name = "txtAddNotes";
-            this.txtAddNotes.Size = new System.Drawing.Size(924, 47);
-            this.txtAddNotes.TabIndex = 12;
-            // 
-            // lblAddNotes
-            // 
-            this.lblAddNotes.AutoSize = true;
-            this.lblAddNotes.ForeColor = System.Drawing.SystemColors.Window;
-            this.lblAddNotes.Location = new System.Drawing.Point(15, 140);
-            this.lblAddNotes.Name = "lblAddNotes";
-            this.lblAddNotes.Size = new System.Drawing.Size(86, 23);
-            this.lblAddNotes.TabIndex = 11;
-            this.lblAddNotes.Text = "Add Notes:";
-            // 
-            // descriptionInputListBox
-            // 
-            this.descriptionInputListBox.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.descriptionInputListBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.descriptionInputListBox.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.ticketBindingSource, "descriptionInput", true));
-            this.descriptionInputListBox.ForeColor = System.Drawing.SystemColors.Window;
-            this.descriptionInputListBox.FormattingEnabled = true;
-            this.descriptionInputListBox.ItemHeight = 23;
-            this.descriptionInputListBox.Location = new System.Drawing.Point(19, 114);
-            this.descriptionInputListBox.Name = "descriptionInputListBox";
-            this.descriptionInputListBox.ScrollAlwaysVisible = true;
-            this.descriptionInputListBox.Size = new System.Drawing.Size(924, 23);
-            this.descriptionInputListBox.TabIndex = 10;
-            // 
-            // personAssignedComboBox
-            // 
-            this.personAssignedComboBox.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.personAssignedComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.ticketBindingSource, "personAssigned", true));
-            this.personAssignedComboBox.ForeColor = System.Drawing.SystemColors.Window;
-            this.personAssignedComboBox.FormattingEnabled = true;
-            this.personAssignedComboBox.Items.AddRange(new object[] {
-            "Daniel Lutz",
-            "Payton Esmeyer",
-            "Austin Cauley"});
-            this.personAssignedComboBox.Location = new System.Drawing.Point(326, 55);
-            this.personAssignedComboBox.Name = "personAssignedComboBox";
-            this.personAssignedComboBox.Size = new System.Drawing.Size(138, 31);
-            this.personAssignedComboBox.TabIndex = 9;
-            // 
-            // statusTypeComboBox
-            // 
-            this.statusTypeComboBox.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.statusTypeComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.ticketBindingSource, "statusType", true));
-            this.statusTypeComboBox.ForeColor = System.Drawing.SystemColors.Window;
-            this.statusTypeComboBox.FormattingEnabled = true;
-            this.statusTypeComboBox.Items.AddRange(new object[] {
-            "Open",
-            "Closed"});
-            this.statusTypeComboBox.Location = new System.Drawing.Point(805, 55);
-            this.statusTypeComboBox.Name = "statusTypeComboBox";
-            this.statusTypeComboBox.Size = new System.Drawing.Size(138, 31);
-            this.statusTypeComboBox.TabIndex = 8;
-            // 
-            // assignedPriorityComboBox
-            // 
-            this.assignedPriorityComboBox.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.assignedPriorityComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.ticketBindingSource, "assignedPriority", true));
-            this.assignedPriorityComboBox.ForeColor = System.Drawing.SystemColors.Window;
-            this.assignedPriorityComboBox.FormattingEnabled = true;
-            this.assignedPriorityComboBox.Items.AddRange(new object[] {
-            "Low",
-            "Medium",
-            "High",
-            "Critical"});
-            this.assignedPriorityComboBox.Location = new System.Drawing.Point(571, 55);
-            this.assignedPriorityComboBox.Name = "assignedPriorityComboBox";
-            this.assignedPriorityComboBox.Size = new System.Drawing.Size(138, 31);
-            this.assignedPriorityComboBox.TabIndex = 7;
-            // 
-            // btnUpdate
-            // 
-            this.btnUpdate.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.btnUpdate.FlatAppearance.BorderSize = 0;
-            this.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnUpdate.Font = new System.Drawing.Font("Gill Sans MT", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUpdate.ForeColor = System.Drawing.SystemColors.Window;
-            this.btnUpdate.Location = new System.Drawing.Point(842, 218);
-            this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(101, 41);
-            this.btnUpdate.TabIndex = 3;
-            this.btnUpdate.Text = "Update";
-            this.btnUpdate.UseVisualStyleBackColor = false;
-            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
-            // 
-            // lblQuickEdit
-            // 
-            this.lblQuickEdit.AutoSize = true;
-            this.lblQuickEdit.Font = new System.Drawing.Font("Gill Sans MT", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblQuickEdit.ForeColor = System.Drawing.SystemColors.Window;
-            this.lblQuickEdit.Location = new System.Drawing.Point(13, 14);
-            this.lblQuickEdit.Name = "lblQuickEdit";
-            this.lblQuickEdit.Size = new System.Drawing.Size(127, 34);
-            this.lblQuickEdit.TabIndex = 0;
-            this.lblQuickEdit.Text = "Quick Edits";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Gill Sans MT", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.SystemColors.Window;
-            this.label3.Location = new System.Drawing.Point(15, 112);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(250, 30);
-            this.label3.TabIndex = 1;
-            this.label3.Text = "See what\'s been happening:";
-            // 
-            // dataGridViewTextBoxColumn15
-            // 
-            this.dataGridViewTextBoxColumn15.DataPropertyName = "ticketNum";
-            this.dataGridViewTextBoxColumn15.HeaderText = "Ticket Number";
-            this.dataGridViewTextBoxColumn15.Name = "dataGridViewTextBoxColumn15";
-            // 
-            // dataGridViewTextBoxColumn16
-            // 
-            this.dataGridViewTextBoxColumn16.DataPropertyName = "fname";
-            this.dataGridViewTextBoxColumn16.HeaderText = "First Name";
-            this.dataGridViewTextBoxColumn16.Name = "dataGridViewTextBoxColumn16";
-            // 
-            // dataGridViewTextBoxColumn17
-            // 
-            this.dataGridViewTextBoxColumn17.DataPropertyName = "lname";
-            this.dataGridViewTextBoxColumn17.HeaderText = "Last Name";
-            this.dataGridViewTextBoxColumn17.Name = "dataGridViewTextBoxColumn17";
-            // 
-            // dataGridViewTextBoxColumn18
-            // 
-            this.dataGridViewTextBoxColumn18.DataPropertyName = "email";
-            this.dataGridViewTextBoxColumn18.HeaderText = "Email";
-            this.dataGridViewTextBoxColumn18.Name = "dataGridViewTextBoxColumn18";
-            // 
-            // dataGridViewTextBoxColumn19
-            // 
-            this.dataGridViewTextBoxColumn19.DataPropertyName = "phoneNumber";
-            this.dataGridViewTextBoxColumn19.HeaderText = "Phone Number";
-            this.dataGridViewTextBoxColumn19.Name = "dataGridViewTextBoxColumn19";
-            // 
-            // dataGridViewTextBoxColumn20
-            // 
-            this.dataGridViewTextBoxColumn20.DataPropertyName = "dateCreated";
-            this.dataGridViewTextBoxColumn20.HeaderText = "Date Created";
-            this.dataGridViewTextBoxColumn20.Name = "dataGridViewTextBoxColumn20";
-            // 
-            // dataGridViewTextBoxColumn21
-            // 
-            this.dataGridViewTextBoxColumn21.DataPropertyName = "dateDue";
-            this.dataGridViewTextBoxColumn21.HeaderText = "Date Due";
-            this.dataGridViewTextBoxColumn21.Name = "dataGridViewTextBoxColumn21";
-            // 
-            // dataGridViewTextBoxColumn22
-            // 
-            this.dataGridViewTextBoxColumn22.DataPropertyName = "assignedPriority";
-            this.dataGridViewTextBoxColumn22.HeaderText = "Assigned Priority";
-            this.dataGridViewTextBoxColumn22.Name = "dataGridViewTextBoxColumn22";
-            // 
-            // dataGridViewTextBoxColumn23
-            // 
-            this.dataGridViewTextBoxColumn23.DataPropertyName = "personOriginallyAssigned";
-            this.dataGridViewTextBoxColumn23.HeaderText = "Person Originally Assigned";
-            this.dataGridViewTextBoxColumn23.Name = "dataGridViewTextBoxColumn23";
-            // 
-            // dataGridViewTextBoxColumn24
-            // 
-            this.dataGridViewTextBoxColumn24.DataPropertyName = "personAssigned";
-            this.dataGridViewTextBoxColumn24.HeaderText = "Person Assigned";
-            this.dataGridViewTextBoxColumn24.Name = "dataGridViewTextBoxColumn24";
-            // 
-            // dataGridViewTextBoxColumn25
-            // 
-            this.dataGridViewTextBoxColumn25.DataPropertyName = "descriptionInput";
-            this.dataGridViewTextBoxColumn25.HeaderText = "Description Input";
-            this.dataGridViewTextBoxColumn25.Name = "dataGridViewTextBoxColumn25";
-            // 
-            // dataGridViewTextBoxColumn26
-            // 
-            this.dataGridViewTextBoxColumn26.DataPropertyName = "statusType";
-            this.dataGridViewTextBoxColumn26.HeaderText = "Status Type";
-            this.dataGridViewTextBoxColumn26.Name = "dataGridViewTextBoxColumn26";
-            // 
-            // dataGridViewTextBoxColumn27
-            // 
-            this.dataGridViewTextBoxColumn27.DataPropertyName = "timeSpentWorking";
-            this.dataGridViewTextBoxColumn27.HeaderText = "Time Spent Working";
-            this.dataGridViewTextBoxColumn27.Name = "dataGridViewTextBoxColumn27";
-            // 
-            // dataGridViewTextBoxColumn28
-            // 
-            this.dataGridViewTextBoxColumn28.DataPropertyName = "userName";
-            this.dataGridViewTextBoxColumn28.HeaderText = "User Name";
-            this.dataGridViewTextBoxColumn28.Name = "dataGridViewTextBoxColumn28";
-            // 
-            // ticketBindingSource
-            // 
-            this.ticketBindingSource.DataMember = "Ticket";
-            this.ticketBindingSource.DataSource = this.iTicketDataSet;
-            // 
-            // iTicketDataSet
-            // 
-            this.iTicketDataSet.DataSetName = "ITicketDataSet";
-            this.iTicketDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "ticketNum";
-            this.dataGridViewTextBoxColumn1.HeaderText = "Ticket Number";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            this.dataGridViewTextBoxColumn1.Width = 136;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "fname";
-            this.dataGridViewTextBoxColumn2.HeaderText = "First Name";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.ReadOnly = true;
-            this.dataGridViewTextBoxColumn2.Width = 108;
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "lname";
-            this.dataGridViewTextBoxColumn3.HeaderText = "Last Name";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.ReadOnly = true;
-            this.dataGridViewTextBoxColumn3.Width = 105;
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "email";
-            this.dataGridViewTextBoxColumn4.HeaderText = "Email";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            this.dataGridViewTextBoxColumn4.ReadOnly = true;
-            this.dataGridViewTextBoxColumn4.Width = 70;
-            // 
-            // dataGridViewTextBoxColumn5
-            // 
-            this.dataGridViewTextBoxColumn5.DataPropertyName = "phoneNumber";
-            this.dataGridViewTextBoxColumn5.HeaderText = "Phone Number";
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            this.dataGridViewTextBoxColumn5.ReadOnly = true;
-            this.dataGridViewTextBoxColumn5.Width = 135;
-            // 
-            // dataGridViewTextBoxColumn6
-            // 
-            this.dataGridViewTextBoxColumn6.DataPropertyName = "dateCreated";
-            this.dataGridViewTextBoxColumn6.HeaderText = "Date Created";
-            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-            this.dataGridViewTextBoxColumn6.ReadOnly = true;
-            this.dataGridViewTextBoxColumn6.Width = 124;
-            // 
-            // dataGridViewTextBoxColumn7
-            // 
-            this.dataGridViewTextBoxColumn7.DataPropertyName = "dateDue";
-            this.dataGridViewTextBoxColumn7.HeaderText = "Date Due";
-            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
-            this.dataGridViewTextBoxColumn7.ReadOnly = true;
-            this.dataGridViewTextBoxColumn7.Width = 99;
-            // 
-            // dataGridViewTextBoxColumn8
-            // 
-            this.dataGridViewTextBoxColumn8.DataPropertyName = "assignedPriority";
-            this.dataGridViewTextBoxColumn8.HeaderText = "Assigned Priority";
-            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
-            this.dataGridViewTextBoxColumn8.ReadOnly = true;
-            this.dataGridViewTextBoxColumn8.Width = 146;
-            // 
-            // dataGridViewTextBoxColumn9
-            // 
-            this.dataGridViewTextBoxColumn9.DataPropertyName = "personOriginallyAssigned";
-            this.dataGridViewTextBoxColumn9.HeaderText = "Person Originally Assigned";
-            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
-            this.dataGridViewTextBoxColumn9.ReadOnly = true;
-            this.dataGridViewTextBoxColumn9.Visible = false;
-            this.dataGridViewTextBoxColumn9.Width = 104;
-            // 
-            // dataGridViewTextBoxColumn10
-            // 
-            this.dataGridViewTextBoxColumn10.DataPropertyName = "personAssigned";
-            this.dataGridViewTextBoxColumn10.HeaderText = "Person Assigned";
-            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
-            this.dataGridViewTextBoxColumn10.ReadOnly = true;
-            this.dataGridViewTextBoxColumn10.Width = 142;
-            // 
-            // dataGridViewTextBoxColumn11
-            // 
-            this.dataGridViewTextBoxColumn11.DataPropertyName = "descriptionInput";
-            this.dataGridViewTextBoxColumn11.HeaderText = "Description Input";
-            this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
-            this.dataGridViewTextBoxColumn11.ReadOnly = true;
-            this.dataGridViewTextBoxColumn11.Width = 149;
-            // 
-            // dataGridViewTextBoxColumn12
-            // 
-            this.dataGridViewTextBoxColumn12.DataPropertyName = "statusType";
-            this.dataGridViewTextBoxColumn12.HeaderText = "Status Type";
-            this.dataGridViewTextBoxColumn12.Name = "dataGridViewTextBoxColumn12";
-            this.dataGridViewTextBoxColumn12.ReadOnly = true;
-            this.dataGridViewTextBoxColumn12.Width = 110;
-            // 
-            // dataGridViewTextBoxColumn13
-            // 
-            this.dataGridViewTextBoxColumn13.DataPropertyName = "timeSpentWorking";
-            this.dataGridViewTextBoxColumn13.HeaderText = "Time Spent Working";
-            this.dataGridViewTextBoxColumn13.Name = "dataGridViewTextBoxColumn13";
-            this.dataGridViewTextBoxColumn13.ReadOnly = true;
-            this.dataGridViewTextBoxColumn13.Width = 172;
-            // 
-            // dataGridViewTextBoxColumn14
-            // 
-            this.dataGridViewTextBoxColumn14.DataPropertyName = "userName";
-            this.dataGridViewTextBoxColumn14.HeaderText = "User Name";
-            this.dataGridViewTextBoxColumn14.Name = "dataGridViewTextBoxColumn14";
-            this.dataGridViewTextBoxColumn14.ReadOnly = true;
-            this.dataGridViewTextBoxColumn14.Visible = false;
-            this.dataGridViewTextBoxColumn14.Width = 78;
-            // 
             // ticketTableAdapter
             // 
             this.ticketTableAdapter.ClearBeforeFill = true;
@@ -1364,6 +1460,16 @@
             // 
             this.iTicketDataSet1.DataSetName = "ITicketDataSet";
             this.iTicketDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.ForeColor = System.Drawing.SystemColors.Window;
+            this.label9.Location = new System.Drawing.Point(45, 151);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(49, 23);
+            this.label9.TabIndex = 3;
+            this.label9.Text = "label9";
             // 
             // MainForm
             // 
@@ -1386,19 +1492,22 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.flowLayoutPanel1.ResumeLayout(false);
+            this.pnlStatistics.ResumeLayout(false);
+            this.pnlStatistics.PerformLayout();
             this.pnlLookupTickets.ResumeLayout(false);
+            this.pnlLookupTickets.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ticketDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ticketBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iTicketDataSet)).EndInit();
             this.pnlLook.ResumeLayout(false);
             this.pnlLook.PerformLayout();
-            this.pnlNewTicket.ResumeLayout(false);
-            this.pnlNewTicket.PerformLayout();
             this.pnlMyTickets.ResumeLayout(false);
             this.pnlMyTickets.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.pnlQuickEdit.ResumeLayout(false);
             this.pnlQuickEdit.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ticketBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.iTicketDataSet)).EndInit();
+            this.pnlNewTicket.ResumeLayout(false);
+            this.pnlNewTicket.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iTicketDataSet1)).EndInit();
             this.ResumeLayout(false);
 
@@ -1499,6 +1608,13 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn26;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn27;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn28;
+        private System.Windows.Forms.Panel pnlStatistics;
+        private System.Windows.Forms.Label lblTicYTD;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label lblTYearToDate;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label9;
     }
 }
 
